@@ -1,0 +1,32 @@
+{
+  "src_folders": ["mysite/tests/nightwatch"],
+  "output_folder": "mysite/tests/nightwatch_reports",
+
+"selenium": {
+    "start_process": true,
+    "server_path": "",
+    "log_path": false,
+    "port": 4444,
+    "cli_args": {
+      "webdriver.chrome.driver": ""
+    }
+  },
+
+  "test_settings": {
+    "default": {
+      "launch_url": "http://localhost",
+      "selenium_port": 4444,
+      "selenium_host": "localhost",
+      "silent": true,
+      "screenshots": {
+        "enabled": true,
+        "path": "mysite/tests/nightwatch_screenshots",
+        "on_failure": true,
+        "on_error": true
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome"
+      }
+    }
+  }
+}
