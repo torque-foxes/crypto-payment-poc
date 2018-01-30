@@ -6,7 +6,10 @@ Create a project skeleton for a SilverStripe 4 Platform project. Sets up an empt
 
 ```
 # Checkout the repo
-git clone ssh://git@whatever/skeleton.git
+git clone ssh://git@code.platform.silverstripe.com:222/esawyer/ss4-skeleton.git yourproject
+
+# Change directory to your project
+cd yourproject
 
 # Run composer
 composer install
