@@ -2,9 +2,10 @@
 
 /vendor/
 /resources/
-/node_modules
+/node_modules/
+/mysite/tests/nightwatch_reports/
+/mysite/tests/nightwatch_screenshots/
 .env
 
 .idea
 .DS_Store
-

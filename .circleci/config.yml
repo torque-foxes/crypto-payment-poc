@@ -1,0 +1,77 @@
+# PHP CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-php/ for more details
+#
+version: 2
+jobs:
+  php_tests:
+    docker:
+      - image: brettt89/silverstripe-web:7.1-platform
+        environment:
+          - SS_DATABASE_CLASS=MySQLPDODatabase
+          - SS_DATABASE_SERVER=127.0.0.1
+          - SS_DATABASE_USERNAME=root
+          - SS_DATABASE_PASSWORD=ubuntu
+          - SS_DATABASE_NAME=circle_test
+          - SS_ENVIRONMENT_TYPE=dev
+      - image: circleci/mysql:5.7
+        environment:
+          - MYSQL_USER=root
+          - MYSQL_ROOT_PASSWORD=ubuntu
+          - MYSQL_DATABASE=circle_test
+          - MYSQL_HOST=127.0.0.1
+
+    working_directory: ~/var/www
+    steps:
+      # Install dependancies into image
+      - run: apt-get update && apt-get install --no-install-recommends -y git ssh zip unzip
+      - checkout
+
+      # Composer Cache + Installation
+      - restore_cache:
+          keys:
+            - v1-composer-{{ checksum "composer.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-composer-
+      - run: composer install -n --prefer-dist
+      # Save all dependancies to cache
+      - save_cache:
+          key: v4-composer-{{ checksum "composer.lock" }}
+          paths:
+            - vendor
+            - resources
+
+      # Additional Dependancies
+      - run: vendor/silverstripe/framework/sake dev/build
+
+      # Run PHPUnit tests
+      - run: vendor/bin/phpunit --verbose
+
+  javascript_tests:
+    docker:
+      - image: node:8.9.4
+
+    working_directory: ~/var/www
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-npm-deps-{{ checksum "package.json" }}
+            - v1-npm-deps-
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - ./node_modules
+          key: v1-npm-deps-{{ checksum "package.json" }}
+
+      - run: yarn lint
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - php_tests
+      - javascript_tests
