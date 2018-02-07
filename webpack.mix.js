@@ -16,6 +16,21 @@ mix.js('themes/yourthemename/src/js/app.js', 'resources/')
    .minify("resources/app.css", "resources/app.min.scss")
    .minify("resources/app.js", "resources/app.min.js");
 
+// Lint in development env
+if (process.env.NODE_ENV === 'development') {
+  mix.webpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.(js)$/,
+          exclude: /node_modules/,
+          loader: 'eslint-loader',
+        },
+      ],
+    },
+  });
+}
+
 
 // Full API
 // mix.js(src, output);
