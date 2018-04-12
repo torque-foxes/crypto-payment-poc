@@ -1,6 +1,4 @@
 {
     "/themes/default/dist/app.js": "/themes/default/dist/app.js",
-    "/themes/default/dist/app.css": "/themes/default/dist/app.css",
-    "/themes/default/dist/app.min.css": "/themes/default/dist/app.min.css",
-    "/themes/default/dist/app.min.js": "/themes/default/dist/app.min.js"
+    "/themes/default/dist/app.css": "/themes/default/dist/app.css"
 }
