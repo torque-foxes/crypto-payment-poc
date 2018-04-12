@@ -6,5 +6,4 @@ Name: mysite
 # Caution: Indentation through two spaces, not tabs
 SilverStripe\View\SSViewer:
   themes:
-    - 'yourthemename'
     - '$default'

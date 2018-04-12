@@ -1,23 +1,7 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for your application, as well as bundling up your JS files.
- |
- */
-
-mix.js('themes/yourthemename/src/js/app.js', 'resources/')
-   .sass('themes/yourthemename/src/scss/app.scss', 'resources/')
-   .minify("resources/app.css", "resources/app.min.scss")
-   .minify("resources/app.js", "resources/app.min.js");
-
-// Lint in development env
-if (process.env.NODE_ENV === 'development') {
+if(process.env.NODE_ENV === 'development') {
+  // Setup linting
   mix.webpackConfig({
     module: {
       rules: [
@@ -28,7 +12,18 @@ if (process.env.NODE_ENV === 'development') {
         },
       ],
     },
+    devtool: 'inline-source-map'
   });
+  mix.sourceMaps();
+}
+
+mix.js('themes/default/src/js/app.js', 'themes/default/dist/')
+  .sass('themes/default/src/scss/app.scss', 'themes/default/dist/')
+  .options({ processCssUrls: false });
+
+if(process.env.NODE_ENV === 'production') {
+    mix.minify("themes/default/dist/app.css")
+      .minify("themes/default/dist/app.js");
 }
 
 

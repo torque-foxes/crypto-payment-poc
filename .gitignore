@@ -7,6 +7,8 @@
 /mysite/tests/nightwatch_screenshots/
 /raygun
 .env
+/themes/default/dist/app.js
+/themes/default/dist/app.css
 
 .idea
 .DS_Store

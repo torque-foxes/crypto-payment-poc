@@ -20,14 +20,5 @@
 		"process-timeout": 600
 	},
 	"minimum-stability": "dev",
-	"prefer-stable": true,
-	"scripts": {
-		"post-install-cmd": [
-			"mkdir -p themes/yourthemename/templates/Layout",
-			"mkdir -p themes/yourthemename/src/js",
-			"mkdir -p themes/yourthemename/src/scss",
-			"touch themes/yourthemename/src/scss/app.scss",
-			"touch themes/yourthemename/src/js/app.js"
-		]
-	}
+	"prefer-stable": true
 }

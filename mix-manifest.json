@@ -1,6 +1,6 @@
 {
-    "/resources/app.js": "/resources/app.js",
-    "/resources/app.css": "/resources/app.css",
-    "/resources/app.min.css": "/resources/app.min.css",
-    "/resources/app.min.js": "/resources/app.min.js"
+    "/themes/default/dist/app.js": "/themes/default/dist/app.js",
+    "/themes/default/dist/app.css": "/themes/default/dist/app.css",
+    "/themes/default/dist/app.min.css": "/themes/default/dist/app.min.css",
+    "/themes/default/dist/app.min.js": "/themes/default/dist/app.min.js"
 }
