@@ -16,6 +16,7 @@
     "nightwatch": "nightwatch -c ./.nightwatch.conf.js"
   },
   "devDependencies": {
+    "bootstrap": "^4.1.0",
     "chromedriver": "^2.33.2",
     "cucumber": "^4.0.0",
     "eslint": "^4.17.0",

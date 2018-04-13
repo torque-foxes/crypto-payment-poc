@@ -40,6 +40,7 @@ Nightwatch with cucumber is setup and ready to go. To run the tests you can run 
 
 If you need to run against a custom host name (localhost by default), you can add a custom file named `.nightwatch.custom.json` with the following content:
 
+```
 {
   "test_settings": {
     "default": {
@@ -47,5 +48,4 @@ If you need to run against a custom host name (localhost by default), you can ad
 	}
   }
 }
-```
 ```

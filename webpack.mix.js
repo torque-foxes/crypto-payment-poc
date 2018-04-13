@@ -17,13 +17,13 @@ if(process.env.NODE_ENV === 'development') {
   mix.sourceMaps();
 }
 
-mix.js('themes/default/src/js/app.js', 'themes/default/dist/')
-  .sass('themes/default/src/scss/app.scss', 'themes/default/dist/')
+mix.js('themes/mysite/src/js/app.js', 'themes/mysite/dist/')
+  .sass('themes/mysite/src/scss/app.scss', 'themes/mysite/dist/')
   .options({ processCssUrls: false });
 
 if(process.env.NODE_ENV === 'production') {
-    mix.minify("themes/default/dist/app.css")
-      .minify("themes/default/dist/app.js");
+    mix.minify("themes/mysite/dist/app.css")
+      .minify("themes/mysite/dist/app.js");
 }
 
 
