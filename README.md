@@ -34,18 +34,29 @@ vendor/bin/sake dev/build flush=1
 git push origin master
 ```
 
+## Build Tools
+
+* `yarn` install dependencies
+* `yarn dev` builds dev js and scss
+* `yarn watch` same as `yarn dev` but watches for changes
+* `yarn production` minifies production files
+* `yarn prod` alias for `yarn production`
+* `yarn lint` lints your code
+* `yarn hot` **unsupported** hot module reloading
+
+
 ## Acceptance Tests
 
 Nightwatch with cucumber is setup and ready to go. To run the tests you can run `yarn nightwatch`.
 
-If you need to run against a custom host name (localhost by default), you can add a custom file named `.nightwatch.custom.json` with the following content:
+If you need to run against a custom host name (localhost is default), you can add a custom file named `.nightwatch.custom.json` with the following content:
 
 ```
 {
   "test_settings": {
     "default": {
       "launch_url": "http://mycustomdomain"
-	}
+    }
   }
 }
 ```
