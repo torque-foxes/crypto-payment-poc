@@ -9,7 +9,8 @@
 		"silverstripe/crontask": "^2",
 		"silverstripe/environmentcheck": "^2",
 		"silverstripe/asset-admin": "^1",
-		"silverstripe/raygun": "^2"
+		"silverstripe/raygun": "^2",
+		"benmanu/silverstripe-simple-styleguide": "^2.0"
 
 	},
 	"require-dev": {

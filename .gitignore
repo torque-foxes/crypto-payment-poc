@@ -10,6 +10,7 @@
 /themes/default/dist/app.js
 /themes/default/dist/app.css
 /.nightwatch.custom.json
+/simple-styleguide
 
 .idea
 .DS_Store
