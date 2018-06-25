@@ -70,5 +70,5 @@ jobs:
       - run: yarn nightwatch -- --url http://localhost/
 
       - store_artifacts:
-          path: mysite/tests/nightwatch_screenshots
+          path: app/tests/nightwatch_screenshots
           destination: nightwatch_screenshots

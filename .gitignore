@@ -3,8 +3,8 @@
 /vendor/
 /resources/
 /node_modules/
-/mysite/tests/nightwatch_reports/
-/mysite/tests/nightwatch_screenshots/
+/app/tests/nightwatch_reports/
+/app/tests/nightwatch_screenshots/
 /raygun
 .env
 /themes/default/dist/app.js
