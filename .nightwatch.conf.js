@@ -35,8 +35,8 @@ const mergeDeep = (target, ...sources) => {
 // Initialise cucumber
 cucumber({
   cucumberArgs: [
-    '--require', 'mysite/tests/nightwatch/step_definitions',
-    'mysite/tests/nightwatch'
+    '--require', 'app/tests/nightwatch/step_definitions',
+    'app/tests/nightwatch'
   ]
 });
 
