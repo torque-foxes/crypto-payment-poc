@@ -60,10 +60,7 @@ Vagrant.configure(2) do |config|
     config.cache.enable :composer
     config.cache.enable :npm
   end
- 
-  # Prevent "stdin: not a tty" errors
-  config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
- 
+  
   # Forward SSH agent, important for private git checkouts
   config.ssh.forward_agent = true
  
