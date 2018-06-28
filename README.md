@@ -34,6 +34,14 @@ vendor/bin/sake dev/build flush=1
 git push origin master
 ```
 
+## Environment
+
+Project teams should run their website consistently,
+in order to help each other and avoid confusion by differences in configuration.
+SilverStripe Ltd. prefers [Vagrant](https://www.vagrantup.com/).
+Read the ["Vagrant" Confluence page](https://silverstripe.atlassian.net/wiki/spaces/DEV/pages/401506576/Vagrant)
+for setup and usage details.
+
 ## Build Tools
 
 * `yarn` install dependencies
