@@ -43,7 +43,7 @@ Vagrant.configure(2) do |config|
     o:            'nonempty'
   else
     # For Windows and Linux
-    config.vm.synced_folder WEBROOT_HOST, WEBROOT_GUEST
+    config.vm.synced_folder WEBROOT_HOST, WEBROOT_GUEST, type: "nfs"
   end
  
   # Reduce disk space by cloning from master VM
