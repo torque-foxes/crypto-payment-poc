@@ -27,7 +27,7 @@ Vagrant.configure(2) do |config|
   # See https://www.vagrantup.com/docs/virtualbox/configuration.html#vboxmanage-customizations
   # Needs additional config for other providers, see https://www.vagrantup.com/docs/providers/
   config.vm.provider "virtualbox" do |v, override|
-    v.memory = 1024
+    v.memory = 2048
     v.cpus = 2
   end
  
