@@ -63,7 +63,7 @@ jobs:
       # PHP Tests
       - run: vendor/bin/phpunit --verbose
 
-      # JS Linting
+      # JS and SCSS Linting
       - run: yarn lint
 
       # JS E2E tests
