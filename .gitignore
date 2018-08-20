@@ -11,6 +11,7 @@
 /themes/mysite/dist/app.css
 /.nightwatch.custom.json
 /simple-styleguide
+/.vagrant
 
 .idea
 .DS_Store
