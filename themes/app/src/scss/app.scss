@@ -20,7 +20,7 @@
 @import '~bootstrap/scss/grid';
 // @import "~bootstrap/scss/tables";
 // @import "~bootstrap/scss/forms";
-// @import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/buttons";
 // @import "~bootstrap/scss/transitions";
 // @import "~bootstrap/scss/dropdown";
 // @import "~bootstrap/scss/button-group";
@@ -51,4 +51,10 @@
 
 // @import "components/my-component";
 // @import "components/my-other-component";
-@import 'typography';
+@import "typography";
+
+.flyout-panel__content {
+    padding: 15px;
+    background: white;
+    color: blue;
+}
