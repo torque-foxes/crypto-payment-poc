@@ -3,6 +3,7 @@
 import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
+import { withInfo } from 'storybook-addon-vue-info'
 
 import MyButton from './MyButton.vue';
 import Welcome from './Welcome.vue';
@@ -17,7 +18,7 @@ storiesOf('Welcome', module).add('to Storybook', () => ({
 }));
 
 storiesOf('Flyout Panel', module)
-  .add('slides in from the right', () => ({
+  .add('slides in from the right', withInfo()(() => ({
     components: { FlyoutPanel },
     template: `<div>
       <button class="btn btn-primary" @click="menuOpen = true">Open right</button>
@@ -26,7 +27,8 @@ storiesOf('Flyout Panel', module)
         :open="menuOpen"
         @close="menuOpen = !menuOpen"
       >
-        Slide from right
+        <h1>Flyout Panel</h1>
+        <p>Slides out from the right</p>
       </flyout-panel>
     </div>`,
     data() {
@@ -34,8 +36,8 @@ storiesOf('Flyout Panel', module)
         menuOpen: false,
       }
     },
-  }))
-  .add('slides in from the left', () => ({
+  })))
+  .add('slides in from the left', withInfo()(() => ({
     components: { FlyoutPanel },
     template: `<div>
       <button class="btn btn-primary" @click="menuOpen = true">Open left</button>
@@ -44,7 +46,8 @@ storiesOf('Flyout Panel', module)
         :open="menuOpen"
         @close="menuOpen = !menuOpen"
       >
-        Slide from left
+        <h1>Flyout Panel</h1>
+        <p>Slides out from the left</p>
       </flyout-panel>
     </div>`,
     data() {
@@ -52,11 +55,7 @@ storiesOf('Flyout Panel', module)
         menuOpen: false,
       }
     },
-  }));
-
-storiesOf('Tile', module).add('test', () => ({
-  template: '<button>Hello tile</button>',
-}));
+  })));
 
 storiesOf('Button', module)
   .add('with text', () => ({
