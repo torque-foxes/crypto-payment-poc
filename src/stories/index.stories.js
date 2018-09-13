@@ -18,7 +18,8 @@ storiesOf('Welcome', module).add('to Storybook', () => ({
 }));
 
 storiesOf('Flyout Panel', module)
-  .add('slides in from the right', withInfo()(() => ({
+  .addDecorator((storyFn, context) => withInfo()(storyFn)(context))
+  .add('slides in from the right', () => ({
     components: { FlyoutPanel },
     template: `<div>
       <button class="btn btn-primary" @click="menuOpen = true">Open right</button>
@@ -36,8 +37,8 @@ storiesOf('Flyout Panel', module)
         menuOpen: false,
       }
     },
-  })))
-  .add('slides in from the left', withInfo()(() => ({
+  }))
+  .add('slides in from the left', () => ({
     components: { FlyoutPanel },
     template: `<div>
       <button class="btn btn-primary" @click="menuOpen = true">Open left</button>
@@ -55,7 +56,11 @@ storiesOf('Flyout Panel', module)
         menuOpen: false,
       }
     },
-  })));
+  }));
+
+storiesOf('Tile', module).add('test', () => ({
+  template: '<button>Hello tile</button>',
+}));
 
 storiesOf('Button', module)
   .add('with text', () => ({
