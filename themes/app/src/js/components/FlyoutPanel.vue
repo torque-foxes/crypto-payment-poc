@@ -37,7 +37,7 @@
 .flyout-panel {
     display: flex;
     align-items: flex-end;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
