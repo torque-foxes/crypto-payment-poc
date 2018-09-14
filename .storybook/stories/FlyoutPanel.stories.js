@@ -2,9 +2,9 @@ import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
 import { withKnobs, select } from '@storybook/addon-knobs/vue';
 
-import FlyoutPanel from '../js/components/FlyoutPanel.vue';
+import FlyoutPanel from '../../themes/app/src/js/components/FlyoutPanel.vue';
 
-import '../../dist/app.css';
+import '../../themes/app/dist/app.css';
 
 const flyoutDirections = { left: 'Left', right: 'Right' };
 
@@ -28,7 +28,7 @@ storiesOf('Components/Flyout Panel', module)
       return {
         menuOpen: false,
         direction: select('slideFrom', flyoutDirections, 'right'),
-      }
+      };
     },
   }));
 

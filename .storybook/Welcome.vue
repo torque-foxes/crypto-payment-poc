@@ -34,7 +34,7 @@ storiesOf('Components/MyComponent', module)
     // This describes and creates an instance of your component
     .add('with some prop and some action', () => ({
       components: { MyComponent },
-      template: `<my-component someProp="someProp" @someAction="clicked = true"></my-component>`,
+      template: `&lt;my-component someProp=&quot;someProp&quot; @someAction=&quot;clicked = true&quot;&gt;&lt;/my-component&gt;`,
       data() {
         return {
           clicked: false

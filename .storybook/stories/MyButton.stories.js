@@ -1,11 +1,10 @@
 import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
-import { withInfo } from 'storybook-addon-vue-info'
+import { withInfo } from 'storybook-addon-vue-info';
 
-import MyButton from '../js/components/MyButton.vue';
+import MyButton from '../../themes/app/src/js/components/MyButton.vue';
 
-import '../../dist/app.css';
+import '../../themes/app/dist/app.css';
 
 storiesOf('Styleguide', module)
   .addDecorator((storyFn, context) => withInfo()(storyFn)(context))
@@ -30,6 +29,3 @@ storiesOf('Styleguide', module)
       '<my-button @click="action"><span role="img" aria-label="so cool">😀 😎 👍 💯</span></my-button>',
     methods: { action: action('clicked') },
   }));
-
-/* eslint-enable react/react-in-jsx-scope */
-
