@@ -1,6 +1,6 @@
 <template>
   <div class="welcome">
-    <img src="./silverstripe-logo.png" alt="SilverStripe logo" class="logo" />
+    <img src="./images/silverstripe-logo.png" alt="SilverStripe logo" class="logo" />
     <h1>Welcome to the Project Skeleton</h1>
     <p>
       This is a UI component dev environment for building re-usable components and managing how those components look in your theme.

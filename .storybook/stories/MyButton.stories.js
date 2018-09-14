@@ -8,7 +8,7 @@ import '../../themes/app/dist/app.css';
 
 storiesOf('Styleguide', module)
   .addDecorator((storyFn, context) => withInfo()(storyFn)(context))
-  .add('in-built button styles', () => ({
+  .add('Buttons', () => ({
     template: `
       <div>
         <button type="button" class="btn btn-primary">Primary</button>
@@ -22,10 +22,4 @@ storiesOf('Styleguide', module)
         <button type="button" class="btn btn-link">Link</button>
       </div>
     `,
-  }))
-  .add('with some emoji', () => ({
-    components: { MyButton },
-    template:
-      '<my-button @click="action"><span role="img" aria-label="so cool">😀 😎 👍 💯</span></my-button>',
-    methods: { action: action('clicked') },
   }));
