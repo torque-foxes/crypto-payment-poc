@@ -11,7 +11,7 @@ const flyoutDirections = { left: 'Left', right: 'Right' };
 storiesOf('Components/Flyout Panel', module)
   .addDecorator((storyFn, context) => withInfo()(storyFn)(context))
   .addDecorator(withKnobs)
-  .add('slides in from the specified direction', () => ({
+  .add('with toggle', () => ({
     components: { FlyoutPanel },
     template: `<div>
       <button class="btn btn-primary" @click="menuOpen = true">Open {{direction}}</button>
@@ -28,25 +28,6 @@ storiesOf('Components/Flyout Panel', module)
       return {
         menuOpen: false,
         direction: select('slideFrom', flyoutDirections, 'right'),
-      }
-    },
-  }))
-  .add('slides in from the left', () => ({
-    components: { FlyoutPanel },
-    template: `<div>
-      <button class="btn btn-primary" @click="menuOpen = true">Open left</button>
-      <flyout-panel
-        slideFrom="left"
-        :open="menuOpen"
-        @close="menuOpen = !menuOpen"
-      >
-        <h1>Flyout Panel</h1>
-        <p>Slides out from the left</p>
-      </flyout-panel>
-    </div>`,
-    data() {
-      return {
-        menuOpen: false,
       }
     },
   }));
