@@ -1,28 +1,33 @@
 import { storiesOf } from '@storybook/vue';
-import { withInfo } from 'storybook-addon-vue-info'
+import { withInfo } from 'storybook-addon-vue-info';
+import { withKnobs, select } from '@storybook/addon-knobs/vue';
 
 import FlyoutPanel from '../js/components/FlyoutPanel.vue';
 
 import '../../dist/app.css';
 
+const flyoutDirections = { left: 'Left', right: 'Right' };
+
 storiesOf('Components/Flyout Panel', module)
   .addDecorator((storyFn, context) => withInfo()(storyFn)(context))
-  .add('slides in from the right', () => ({
+  .addDecorator(withKnobs)
+  .add('slides in from the specified direction', () => ({
     components: { FlyoutPanel },
     template: `<div>
-      <button class="btn btn-primary" @click="menuOpen = true">Open right</button>
+      <button class="btn btn-primary" @click="menuOpen = true">Open {{direction}}</button>
       <flyout-panel
-        slideFrom="right"
+        :slideFrom="direction"
         :open="menuOpen"
         @close="menuOpen = !menuOpen"
       >
         <h1>Flyout Panel</h1>
-        <p>Slides out from the right</p>
+        <p>Slides in from the {{direction}}</p>
       </flyout-panel>
     </div>`,
     data() {
       return {
         menuOpen: false,
+        direction: select('slideFrom', flyoutDirections, 'right'),
       }
     },
   }))
