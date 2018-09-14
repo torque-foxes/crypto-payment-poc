@@ -1,6 +1,8 @@
 const mix = require('laravel-mix');
+// eslint-disable-next-line import/no-extraneous-dependencies
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
-if(process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development') {
   // Setup linting
   mix.webpackConfig({
     module: {
@@ -12,7 +14,10 @@ if(process.env.NODE_ENV === 'development') {
         },
       ],
     },
-    devtool: 'inline-source-map'
+    plugins: [
+      new StyleLintPlugin({ context: 'themes/app/src/scss' }),
+    ],
+    devtool: 'inline-source-map',
   });
   mix.sourceMaps();
 }
@@ -21,9 +26,9 @@ mix.js('themes/app/src/js/app.js', 'themes/app/dist/')
   .sass('themes/app/src/scss/app.scss', 'themes/app/dist/')
   .options({ processCssUrls: false });
 
-if(process.env.NODE_ENV === 'production') {
-    mix.minify("themes/app/dist/app.css")
-      .minify("themes/app/dist/app.js");
+if (process.env.NODE_ENV === 'production') {
+  mix.minify('themes/app/dist/app.css')
+    .minify('themes/app/dist/app.js');
 }
 
 
