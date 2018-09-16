@@ -122,7 +122,7 @@ More information can be found at <https://storybook.js.org>
 ### Storybook Addons
 The default setup for Storybook simply renders the component to the page. There are a number of addons that allow inclusion
 of such things as component info, source code, component property summaries etc.
-The project currently includes the following add ons:
+This skeleton project currently has the following addons installed for use:
 - viewport: see the component in various screen sizes/orientations
 - knobs: makes component properties dynamic so that you can play around and test different component states
 - links: link stories together
@@ -135,7 +135,7 @@ are currently using an alpha release, this will hopefully be resolved in the nea
 ### File Structure
 Components can first be developed in isolation from the SilverStripe site, using Storybook as a platform for verifying the components along with its various states.
 
-New components will typically be placed in the `themes/app/src/js/components` directory. Whilst developing the component you can create a corresponding Storybook story in './storybook/stories'.
+New components will typically be placed in the `themes/app/src/js/components` directory. Whilst developing the component you can create a corresponding Storybook story in `./storybook/stories`.
 
 ### Example Story
 ```import { storiesOf } from '@storybook/vue';
