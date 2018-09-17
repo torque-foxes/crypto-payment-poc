@@ -61,7 +61,6 @@ them into a Vue component.
 This skeleton project comes configured with Storybook installed. If it is not required as part of your project you can remove
 it as follows.
 ````
-npm uninstall -save-dev @storybook/addon-actions @storybook/addon-knobs @storybook/addon-links @storybook/addon-viewport
-@storybook/addons @storybook/vue babel-core babel-loader babel-preset-vue storybook-addon-vue-info vue-loader vue-template-compiler
+npm uninstall -save-dev @storybook/addon-actions @storybook/addon-knobs @storybook/addon-links @storybook/addon-viewport @storybook/addons @storybook/vue babel-preset-vue storybook-addon-vue-info vue-loader vue-template-compiler
 ````
 
