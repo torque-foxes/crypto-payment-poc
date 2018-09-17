@@ -55,5 +55,5 @@ for setup and usage details.
 ## Further Documentation
 * [Acceptance Testing with Nightwatch](docs/nightwatch.md)
 * [Building Components with Vue](docs/vue.md)
-* [Component Library with Storybook](docs/storybook.md)
+* [Maintaining a reusable component Library with Storybook](docs/storybook.md)
 
