@@ -1,8 +1,7 @@
 ## Vue Setup
 
 The skeleton project comes ready with Vue installed. To start developing Vue components you'll simply need to update the
-app.js file to start pulling in your dependencies and wrap the page content so that Vue can do its stuff.
-These steps are detailed below.
+app.js file and wrap the page content so that Vue can do its stuff. These steps are detailed below.
 
 ### Update themes/mysite/src/js/app.js
 ```js
