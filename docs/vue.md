@@ -34,8 +34,7 @@ Note: vue replaces the HTML element targeted (ie. #app) so don't apply this to t
 ### Uninstalling Vue dependencies
 If you don't need Vue as part of your project you can remove it as follows.
 ````
-npm uninstall -save-dev eslint-plugin-vue vue-eslint-parser
-npm uninstall -save vue
+yarn remove vue eslint-plugin-vue vue-eslint-parser
 ````
 You can also remove `plugin:vue/essential` from `.eslintrc.json`:
 ```

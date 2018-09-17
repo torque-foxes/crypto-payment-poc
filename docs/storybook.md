@@ -4,6 +4,17 @@
 Storybook is an environment for developing UI components and allows us to maintain a library of components that can be shared between developers/teams.
 More information can be found at <https://storybook.js.org>
 
+### Getting started
+To view Storybook, simply run the following command.
+````
+yarn storybook
+````
+This will build everything required to deploy the story book and once done it can be viewed on port 6006
+````
+http://localhost:6006/
+````
+Any changes that are made to components whilst this is running are automatically deployed.
+
 ### Storybook Addons
 The default setup for Storybook simply renders the component to the page. There are a number of addons that allow inclusion
 of such things as component info, source code, component property summaries etc.
@@ -61,6 +72,6 @@ them into a Vue component.
 This skeleton project comes configured with Storybook installed. If it is not required as part of your project you can remove
 it as follows.
 ````
-npm uninstall -save-dev @storybook/addon-actions @storybook/addon-knobs @storybook/addon-links @storybook/addon-viewport @storybook/addons @storybook/vue babel-preset-vue storybook-addon-vue-info vue-loader vue-template-compiler
+yarn remove @storybook/addon-actions @storybook/addon-knobs @storybook/addon-links @storybook/addon-viewport @storybook/addons @storybook/vue babel-preset-vue storybook-addon-vue-info vue-loader vue-template-compiler
 ````
 
