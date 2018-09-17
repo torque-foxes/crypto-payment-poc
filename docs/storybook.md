@@ -58,7 +58,7 @@ This would allow for the Styleguide and Wecome pages to be pure HTML files rathe
 them into a Vue component.
 
 ### Uninstalling Storybook dependencies
-This skeleton project comes configured with Storybook installed. If it is not required as part of your preject you can remove
+This skeleton project comes configured with Storybook installed. If it is not required as part of your project you can remove
 it as follows.
 ````
 npm uninstall -save-dev @storybook/addon-actions @storybook/addon-knobs @storybook/addon-links @storybook/addon-viewport

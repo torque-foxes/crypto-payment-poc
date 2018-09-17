@@ -1,18 +1,8 @@
 ## Vue Setup
 
-### Install dependencies
-```
-yarn add vue 
-yarn add --dev vue-eslint-parser eslint-plugin-vue
-```
-
-### Update .eslintrc
-```
-  "extends": [
-    "airbnb-base",
-    "plugin:vue/essential"
-  ],
-```
+The skeleton project comes ready with Vue installed. To start developing Vue components you'll simply need to update the
+app.js file to start pulling in your dependencies and wrap the page content so that Vue can do its stuff.
+These steps are detailed below.
 
 ### Update themes/mysite/src/js/app.js
 ```js
@@ -43,11 +33,16 @@ document.addEventListener('DOMContentLoaded', () => {
 Note: vue replaces the HTML element targeted (ie. #app) so don't apply this to the body tag.
 
 ### Uninstalling Vue dependencies
-This skeleton project comes configured with Vue installed. If it is not required as part of your preject you can remove
-it as follows.
+If you don't need Vue as part of your project you can remove it as follows.
 ````
 npm uninstall -save-dev eslint-plugin-vue vue-eslint-parser
 npm uninstall -save vue
 ````
-
+You can also remove `plugin:vue/essential` from `.eslintrc.json`:
+```
+  "extends": [
+    "airbnb-base",
+    "plugin:vue/essential"
+  ],
+```
 
