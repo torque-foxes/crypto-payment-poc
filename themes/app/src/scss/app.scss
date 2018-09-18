@@ -46,14 +46,11 @@
 @import '~bootstrap/scss/print';
 
 /**
- * Include any other components
+ * Include Typography and other theme styles
  */
-
-// @import 'components/my-component';
-// @import 'components/my-other-component';
 @import 'typography';
 
-.flyout-panel__content {
-  padding: 15px;
-  background: white;
-}
+/**
+ * Include components
+ */
+@import 'components/flyout-panel';
