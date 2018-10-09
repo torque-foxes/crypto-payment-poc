@@ -33,6 +33,9 @@
             "install-frameworkmissing.html",
             "install.php",
             "web.config"
+        ],
+        "expose": [
+            "themes/app/dist"
         ]
     }
 }
