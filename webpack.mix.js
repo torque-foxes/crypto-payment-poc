@@ -8,14 +8,17 @@ if (process.env.NODE_ENV === 'development') {
     module: {
       rules: [
         {
-          test: /\.(js)$/,
+          test: /\.(js|vue)$/,
           exclude: /node_modules/,
           loader: 'eslint-loader',
         },
       ],
     },
     plugins: [
-      new StyleLintPlugin({ context: 'themes/app/src/scss' }),
+      new StyleLintPlugin({
+        context: 'themes/app/src/',
+        files: ['**/*.{scss,vue}'],
+      }),
     ],
     devtool: 'inline-source-map',
   });

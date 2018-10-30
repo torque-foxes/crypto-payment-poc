@@ -9,18 +9,18 @@
     name: 'my-button',
 
     methods: {
-      onClick () {
+      onClick() {
         this.$emit('click');
-      }
-    }
-  }
+      },
+    },
+  };
 </script>
 
 <style>
   .button-styles {
-    border: 1px solid #eee;
+    border: 1px solid #EEE;
     border-radius: 3px;
-    background-color: #FFFFFF;
+    background-color: #FFF;
     cursor: pointer;
     font-size: 15pt;
     padding: 3px 10px;

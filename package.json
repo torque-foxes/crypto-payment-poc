@@ -4,21 +4,21 @@
   "main": "index.js",
   "author": "your name <you@silverstripe.com>",
   "license": "MIT",
-  "dependencies": {
-    "laravel-mix": "^2.0.0",
-    "vue": "^2.5.13"
-  },
   "scripts": {
     "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
     "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "lint": "yarn lint-js && yarn lint-scss",
-    "lint-js": "eslint themes/app/src/** --ext .js",
-    "lint-scss": "stylelint themes/app/src/scss",
+    "lint-js": "eslint --ext .js,.vue themes/app/src/js",
+    "lint-scss": "stylelint themes/app/src/scss/**/*.scss themes/app/src/js/**/*.vue",
     "nightwatch": "nightwatch -c ./.nightwatch.conf.js",
     "storybook": "start-storybook -p 6006 -c .storybook",
     "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "laravel-mix": "^2.0.0",
+    "vue": "^2.5.17"
   },
   "devDependencies": {
     "bootstrap": "^4.1.0",
