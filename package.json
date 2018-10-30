@@ -21,6 +21,7 @@
     "vue": "^2.5.17"
   },
   "devDependencies": {
+    "babel-preset-vue": "^2.0.2",
     "bootstrap": "^4.1.0",
     "chromedriver": "^2.33.2",
     "cucumber": "^4.0.0",

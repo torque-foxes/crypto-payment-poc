@@ -6,7 +6,7 @@
     "vue": "^2.5.17"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006 -c .storybook",
+    "storybook": "start-storybook -p 6006 -c .",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
