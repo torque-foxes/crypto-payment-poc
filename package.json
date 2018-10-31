@@ -12,9 +12,7 @@
     "lint": "yarn lint-js && yarn lint-scss",
     "lint-js": "eslint --ext .js,.vue themes/app/src/js",
     "lint-scss": "stylelint themes/app/src/scss/**/*.scss themes/app/src/js/**/*.vue",
-    "nightwatch": "nightwatch -c ./.nightwatch.conf.js",
-    "storybook": "start-storybook -p 6006 -c .storybook",
-    "build-storybook": "build-storybook"
+    "nightwatch": "nightwatch -c ./.nightwatch.conf.js"
   },
   "dependencies": {
     "laravel-mix": "^2.0.0",

@@ -4,6 +4,7 @@
 /.nightwatch.custom.json
 /.storybook/.cache
 /.storybook/node_modules
+/.storybook/storybook-static/
 /.vagrant
 /app/tests/nightwatch_reports/
 /app/tests/nightwatch_screenshots/

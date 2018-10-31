@@ -54,10 +54,10 @@ storiesOf('Components/MyComponent', module)
 
 <style>
   .welcome {
-      padding: 15px;
-      max-width: 960px;
-      margin: 0 auto;
-      width: 100%;
+    padding: 15px;
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .logo {
@@ -66,14 +66,15 @@ storiesOf('Components/MyComponent', module)
     display: block;
     margin: 0 auto;
   }
+
   .code {
     font-size: 15px;
     font-weight: 600;
     padding: 2px 5px;
-    border: 1px solid #eae9e9;
+    border: 1px solid #EAE9E9;
     border-radius: 4px;
-    background-color: #f3f2f2;
-    color: #3a3a3a;
+    background-color: #F3F2F2;
+    color: #3A3A3A;
     margin-top: 15px;
   }
 
@@ -83,7 +84,7 @@ storiesOf('Components/MyComponent', module)
   .welcome h4,
   .welcome h5,
   .welcome h6 {
-      margin-top: 30px;
+    margin-top: 30px;
   }
 
   .welcome h2:before,
@@ -91,7 +92,7 @@ storiesOf('Components/MyComponent', module)
   .welcome h4:before,
   .welcome h5:before,
   .welcome h6:before {
-    content: "→";
+    content: '→';
     margin-right: 10px;
   }
 </style>
