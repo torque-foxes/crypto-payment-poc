@@ -11,7 +11,7 @@
         A story can describe a component, a style or multiple components and styles together. Your theme can easily be integrated with the stories so you can be confident that your component will look the same on the website.
     </p>
     <h3>File Structure</h3>
-    <p>Stories live in the <code class="code">themes/app/src/stories</code> folder and must maintain the naming convention of *.stories.js. eg. FlyoutPanel.stories.js</p>
+    <p>Stories live in the <code class="code">.storybook/stories</code> folder and must maintain the naming convention of *.stories.js. eg. FlyoutPanel.stories.js</p>
     <p>The stories are decoupled from the actual components since stories can be made up of pure theme styles (no components) or can be made up of multiple components.</p>
     <h3>Your first story</h3>
     <pre class="code">

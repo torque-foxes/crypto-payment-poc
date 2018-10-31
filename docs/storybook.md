@@ -5,8 +5,9 @@ Storybook is an environment for developing UI components and allows us to mainta
 More information can be found at <https://storybook.js.org>
 
 ### Getting started
-To view Storybook, simply run the following command.
+To view Storybook, navigate to the `.storybook` folder and simply run the following command.
 ````
+cd .storybook/
 yarn storybook
 ````
 This will build everything required to deploy the story book and once done it can be viewed on port 6006
@@ -25,7 +26,7 @@ This skeleton project currently has the following addons installed for use:
 - actions: inspect/document events relating to your component
 - storybook-addon-vue-info: shows component information including description, story source and property table.
 
-NB: There seems to be a bug with the rendering of the addon tabs rendered in the bottom of the storybook page. Since we 
+NB: There seems to be a bug with the rendering of the addon tabs rendered in the bottom of the storybook page. Since we
 are currently using an alpha release, this will hopefully be resolved in the near future.
 
 ### File Structure
@@ -61,17 +62,29 @@ Starting with the 'storiesOf' function to define which 'chapter' to add the stor
 wish to apply to the story, and then add the story with the template required to define and render the documented
 component in the storybook page.
 
+### Generating a static app for Storybook
+You can also generate a static app for Storybook which could be useful if you need to demo it to a client or host it somewhere for
+easy reference.
+
+```
+  cd .storybook
+  yarn build-storybook
+```
+
 ### Future Storybook development
 There are currently limitations with Storybook in that React and Vue components have to be added to separate Storybooks
 (with Storybook/Vue and Storybook/React libraries) so the current storybook implementation focuses on Vue
 component development. There are plans for Storybook to address this in future releases, and to also allow inclusion of HTML snippets.
-This would allow for the Styleguide and Wecome pages to be pure HTML files rather than the current necessity to wrap
+This would allow for the Styleguide and Welcome pages to be pure HTML files rather than the current necessity to wrap
 them into a Vue component.
 
-### Uninstalling Storybook dependencies
+A future enhancement would also be to modify the storybook command to be able to be run from the project root, instead of inside the
+storybook folder.
+
+### Removing Storybook
 This skeleton project comes configured with Storybook installed. If it is not required as part of your project you can remove
 it as follows.
 ````
-yarn remove @storybook/addon-actions @storybook/addon-knobs @storybook/addon-links @storybook/addon-viewport @storybook/addons @storybook/vue babel-preset-vue storybook-addon-vue-info vue-loader vue-template-compiler
+rm -rf .storybook/
 ````
 
