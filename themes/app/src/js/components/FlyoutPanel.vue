@@ -1,10 +1,6 @@
 <template>
   <transition leave-active-class="flyout-panel--leave" duration="300">
-    <div class="flyout-panel"
-      :class="{
-        'flyout-panel--right': this.slideFrom == 'right',
-        'flyout-panel--left': this.slideFrom == 'left',
-      }"
+    <div :class="`flyout-panel flyout-panel--${panelDirection}`"
       v-show="open"
       @keydown.esc="open ? $emit('close') : false"
       role="dialog"
@@ -33,6 +29,38 @@
     </div>
   </transition>
 </template>
+
+<script>
+  export default {
+    name: 'flyout-panel',
+    props: {
+      open: {
+        type: Boolean,
+        default: false,
+      },
+      slideFrom: {
+        type: String,
+        validator(val) {
+          return ['right', 'left'].indexOf(val) !== -1;
+        },
+        default: 'right',
+      },
+    },
+    computed: {
+      panelDirection() {
+        let value = null;
+
+        if (this.slideFrom === 'right') {
+          value = 'right';
+        } else if (this.slideFrom === 'left') {
+          value = 'left';
+        }
+
+        return value;
+      },
+    },
+  };
+</script>
 
 <style>
 .flyout-panel {
@@ -98,23 +126,3 @@
   left: -100%;
 }
 </style>
-
-<script>
-  export default {
-    name: 'flyout-panel',
-    props: {
-      open: {
-        type: Boolean,
-        default: false,
-      },
-      slideFrom: {
-        type: String,
-        validator(val) {
-          return ['right', 'left'].indexOf(val) !== -1;
-        },
-        default: 'right',
-      },
-    },
-  };
-</script>
-
