@@ -2,8 +2,6 @@ import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from 'storybook-addon-vue-info';
 
-import MyButton from '../../themes/app/src/js/components/MyButton.vue';
-
 import '../../themes/app/dist/app.css';
 
 storiesOf('Styleguide', module)

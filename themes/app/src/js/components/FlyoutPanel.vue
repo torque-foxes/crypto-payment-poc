@@ -7,12 +7,13 @@
       }"
       v-show="open"
       @keydown.esc="open ? $emit('close') : false"
-      role="dialog">
+      role="dialog"
+    >
 
       <transition
         enter-active-class="flyout-panel__background--enter"
         duration="300"
-        >
+      >
         <div class="flyout-panel__background"
           v-if="open"
           role="presentation"
@@ -68,7 +69,6 @@
   top: 0;
   z-index: 20;
   height: 100%;
-  width: 100%;
   width: 320px;
 }
 
@@ -95,7 +95,7 @@
 
 .flyout-panel--left .flyout-panel__content--enter,
 .flyout-panel--left .flyout-panel__content--leave {
-  left: -320px;
+  left: -100%;
 }
 </style>
 
