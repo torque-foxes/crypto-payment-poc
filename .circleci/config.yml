@@ -59,7 +59,7 @@ jobs:
       - run: mkdir /var/www/html/assets
       - run: chown -R www-data:www-data /var/www/html
 
-      # JS Linting
+      # JS and SCSS Linting
       - run: yarn dev
       - run: yarn lint
 
@@ -68,9 +68,6 @@ jobs:
 
       # PHP Tests
       - run: vendor/bin/phpunit --verbose
-
-      # JS and SCSS Linting
-      - run: yarn lint
 
       # JS E2E tests
       - run: yarn nightwatch -- --url http://localhost/
