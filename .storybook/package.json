@@ -6,8 +6,8 @@
     "vue": "^2.5.17"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006 -c .",
-    "build-storybook": "build-storybook -c ."
+    "storybook": "start-storybook -p 6006 -c . -s ./",
+    "build-storybook": "build-storybook -c . -s ./"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^4.0.0-alpha.21",

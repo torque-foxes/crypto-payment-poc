@@ -2,8 +2,6 @@ import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from 'storybook-addon-vue-info';
 
-import '../../themes/app/dist/app.css';
-
 storiesOf('Styleguide', module)
   .addDecorator((storyFn, context) => withInfo()(storyFn)(context))
   .add('Buttons', () => ({

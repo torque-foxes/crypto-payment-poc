@@ -4,8 +4,6 @@ import { withKnobs, select } from '@storybook/addon-knobs/vue';
 
 import FlyoutPanel from '../../themes/app/src/js/components/FlyoutPanel.vue';
 
-import '../../themes/app/dist/app.css';
-
 const flyoutDirections = { left: 'Left', right: 'Right' };
 
 storiesOf('Components/Flyout Panel', module)
