@@ -6,7 +6,7 @@ In order to use the project skeleton on a CWP project, you can simply require th
 $ composer require cwp/cwp-recipe-core
 ```
 
-### Watea theme
+### Wātea theme
 
 Sometimes projects require the watea theme as a base, firstly you'll need to install it (and additional dependencies) with composer.
 
@@ -37,4 +37,52 @@ You can then setup `themes/app/src/app.scss` to use watea as a base for its css:
 
 Note: you will need to do a `yarn install` in the starter theme directory to get the required dependencies for building the css.
 
-You'll also want to adjust your template files to match the watea theme (Page.ss, Header.ss and Footer.ss).
+You'll also want to adjust your template files to match the Wātea theme (Page.ss, Header.ss and Footer.ss) or you could also:
+- Remove these templates:
+    - `themes/app/templates/Layout/Page.ss`
+    - `themes/app/templates/Includes/Footer.ss`
+    - `themes/app/templates/Includes/Header.ss`
+- Copy the `<body>` from `themes/watea/templates/Page.ss` to `themes/app/templates/Page.ss`. The updated body html should look like this:
+```
+<body data-pagetype="$ClassName
+    <% if $SiteConfig.MainFontFamily %>theme-font-{$SiteConfig.MainFontFamily}<% end_if %>
+    <% if $SiteConfig.HeaderBackground %>theme-header-{$SiteConfig.HeaderBackground}<% end_if %>
+    <% if $SiteConfig.NavigationBarBackground %>theme-nav-{$SiteConfig.NavigationBarBackground}<% end_if %>
+    <% if $SiteConfig.CarouselBackground %>theme-carousel-{$SiteConfig.CarouselBackground}<% end_if %>
+    <% if $SiteConfig.FooterBackground %>theme-footer-{$SiteConfig.FooterBackground}<% end_if %>
+    <% if $SiteConfig.AccentColor %>theme-accent-{$SiteConfig.AccentColor}<% end_if %>
+    <% if $SiteConfig.TextLinkColor %>theme-link-{$SiteConfig.TextLinkColor}<% end_if %>">
+    <header class="header">
+        <% include Header %>
+        <% include MainNav %>
+    </header>
+    <main id="main" class="main">
+        $Layout
+    </main>
+    <% include PageShowcase %>
+    <footer class="footer-site">
+        <% include Footer %>
+    </footer>
+
+    <% require javascript('//code.jquery.com/jquery-3.3.1.min.js') %>
+    <% require javascript('themes/starter/dist/js/main.js') %>
+    <% require javascript('themes/watea/dist/js/main.js') %>
+    <% include GoogleAnalytics %>
+
+    <% if $IsDev %>
+        <% require themedJavascript("dist/app") %>
+    <% else %>
+        <% require themedJavascript("dist/app.min") %>
+    <% end_if %>
+</body>
+```
+
+To fix the CSS issues with Bootstrap:
+ - Remove all bootstrap and typography imports from `themes/app/src/scss/app.scss`
+ - Remove `img` styles from `typography.scss` or remove the whole file if there's no custom typography styling
+
+
+#### Wātea Plus (Optional)
+
+This feature allows CMS users to adjust site fonts and colours. It requires CWP 2.x and is disabled by default.
+Follow this [documentation](https://github.com/silverstripe/cwp-agencyextensions/blob/master/docs/en/01_Features/ThemeColors.md) to enable it.
