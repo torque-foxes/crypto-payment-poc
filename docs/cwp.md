@@ -86,3 +86,46 @@ To fix the CSS issues with Bootstrap:
 
 This feature allows CMS users to adjust site fonts and colours. It requires CWP 2.x and is disabled by default.
 Follow this [documentation](https://github.com/silverstripe/cwp-agencyextensions/blob/master/docs/en/01_Features/ThemeColors.md) to enable it.
+
+For custom fonts and colors, add new ones to `config.yml`
+```yaml
+SilverStripe\SiteConfig\SiteConfig:
+  // Theme color picker enabled
+  enable_theme_color_picker: true
+  // Add new font
+  theme_fonts:
+    aleo: Aleo
+  // Add new colors
+  theme_colors:
+    teal:
+      Color: '#A4D3D3' // Adjusting the default teal color
+    light-blue:
+      Title: 'Light blue'
+      CSSClass: 'light-blue'
+      Color: '#C3E8FE'
+    light-yellow:
+      Title: 'Light yellow'
+      CSSClass: 'light-yellow'
+      Color: '#F8FDBF'
+```
+
+and `_variables.scss` to match the color in css. If the new colors are light, add them to `$custom-light-colors`
+so when they are used as background, a dark grey font color will be used against it.
+
+```scss
+$custom-theme-fonts: (
+  aleo: (
+    'Aleo',
+    'sans-serif'
+  )
+);
+$custom-theme-colors: (
+  'teal': #A4D3D3, // Adjusting existing teal color
+  'light-blue': #C3E8FE,
+  'light-yellow': #F8FDBF
+);
+$custom-light-colors: (
+  'light-blue': #C3E8FE,
+  'light-yellow': #F8FDBF
+);
+```
