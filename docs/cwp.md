@@ -44,7 +44,7 @@ You'll also want to adjust your template files to match the Wātea theme (Page.s
     - `themes/app/templates/Includes/Header.ss`
 - Copy the `<body>` from `themes/watea/templates/Page.ss` to `themes/app/templates/Page.ss`. The updated body html should look like this:
 ```
-<body data-pagetype="$ClassName
+<body class="$ClassName
     <% if $SiteConfig.MainFontFamily %>theme-font-{$SiteConfig.MainFontFamily}<% end_if %>
     <% if $SiteConfig.HeaderBackground %>theme-header-{$SiteConfig.HeaderBackground}<% end_if %>
     <% if $SiteConfig.NavigationBarBackground %>theme-nav-{$SiteConfig.NavigationBarBackground}<% end_if %>
