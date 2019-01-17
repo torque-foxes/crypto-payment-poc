@@ -103,13 +103,6 @@ SilverStripe\SiteConfig\SiteConfig:
       Title: 'Light yellow'
       CSSClass: 'light-yellow'
       Color: '#F8FDBF'
-  // There's a few options in the CMS that will only work with colours which contrast against white text.
-  // Set the light colors to exclude them from theme options
-  // (e.g. footer background, accent color, and text link)
-  light_colors:
-    - 'teal'
-    - 'light-blue'
-    - 'light-yellow'
 ```
 
 and `_variables.scss` to match the color in css. If the new colors are light, add them to `$custom-light-colors`
@@ -135,3 +128,7 @@ $custom-light-colors: (
   'light-yellow'
 );
 ```
+
+There's a few options in the CMS that will only work with colours which contrast against white text and you need to add
+your new light colors to this list of colors (white and light grey). You can extend `CWPSiteConfigExtension` and
+update the colors in `updateCMSFields()`. See `CWPSiteConfigExtension::addThemeColorPicker()`.
