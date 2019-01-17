@@ -84,6 +84,7 @@ Follow this [documentation](https://github.com/silverstripe/cwp-agencyextensions
 
 For custom fonts and colors, add new ones to `config.yml`
 ```yaml
+// app/_config/config.yml
 SilverStripe\SiteConfig\SiteConfig:
   // Theme color picker enabled
   enable_theme_color_picker: true
@@ -102,12 +103,21 @@ SilverStripe\SiteConfig\SiteConfig:
       Title: 'Light yellow'
       CSSClass: 'light-yellow'
       Color: '#F8FDBF'
+  // There's a few options in the CMS that will only work with colours which contrast against white text.
+  // Set the light colors to exclude them from theme options
+  // (e.g. footer background, accent color, and text link)
+  light_colors:
+    - 'teal'
+    - 'light-blue'
+    - 'light-yellow'
 ```
 
 and `_variables.scss` to match the color in css. If the new colors are light, add them to `$custom-light-colors`
 so when they are used as background, a dark grey font color will be used against it.
 
 ```scss
+// themes/app/src/scss/_variables.scss
+
 $custom-theme-fonts: (
   aleo: (
     'Aleo',
@@ -120,7 +130,8 @@ $custom-theme-colors: (
   'light-yellow': #F8FDBF
 );
 $custom-light-colors: (
-  'light-blue': #C3E8FE,
-  'light-yellow': #F8FDBF
+  'teal',
+  'light-blue',
+  'light-yellow'
 );
 ```
