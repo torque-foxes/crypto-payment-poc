@@ -42,8 +42,17 @@ You'll also want to adjust your template files to match the Wātea theme (Page.s
     - `themes/app/templates/Layout/Page.ss`
     - `themes/app/templates/Includes/Footer.ss`
     - `themes/app/templates/Includes/Header.ss`
-- Copy the `<body>` from `themes/watea/templates/Page.ss` to `themes/app/templates/Page.ss`. The updated body html should look like this:
-```
+- Copy the html from `themes/watea/templates/Page.ss` to `themes/app/templates/Page.ss`. Make sure to keep the app css and js requirements from the original template. It should look something like this:
+```html
+<head>
+    <!-- watea <head> html tags here -->
+
+    <% if $IsDev %>
+        <% require themedCSS("dist/app") %>
+    <% else %>
+        <% require themedCSS("dist/app.min") %>
+    <% end_if %>
+</head>
 <body class="$ClassName
     <% if $SiteConfig.MainFontFamily %>theme-font-{$SiteConfig.MainFontFamily}<% end_if %>
     <% if $SiteConfig.HeaderBackground %>theme-header-{$SiteConfig.HeaderBackground}<% end_if %>
@@ -52,22 +61,8 @@ You'll also want to adjust your template files to match the Wātea theme (Page.s
     <% if $SiteConfig.FooterBackground %>theme-footer-{$SiteConfig.FooterBackground}<% end_if %>
     <% if $SiteConfig.AccentColor %>theme-accent-{$SiteConfig.AccentColor}<% end_if %>
     <% if $SiteConfig.TextLinkColor %>theme-link-{$SiteConfig.TextLinkColor}<% end_if %>">
-    <header class="header">
-        <% include Header %>
-        <% include MainNav %>
-    </header>
-    <main id="main" class="main">
-        $Layout
-    </main>
-    <% include PageShowcase %>
-    <footer class="footer-site">
-        <% include Footer %>
-    </footer>
 
-    <% require javascript('//code.jquery.com/jquery-3.3.1.min.js') %>
-    <% require javascript('themes/starter/dist/js/main.js') %>
-    <% require javascript('themes/watea/dist/js/main.js') %>
-    <% include GoogleAnalytics %>
+    <!-- watea <body> html tags here -->
 
     <% if $IsDev %>
         <% require themedJavascript("dist/app") %>
