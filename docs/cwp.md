@@ -75,6 +75,8 @@ You'll also want to adjust your template files to match the Wātea theme (Page.s
 To fix the CSS issues with Bootstrap:
  - Remove all bootstrap and typography imports from `themes/app/src/scss/app.scss`
  - Remove `img` styles from `typography.scss` or remove the whole file if there's no custom typography styling
+ 
+Adjust `Page` to extend from `BasePage` instead of SiteTree, and add a `HomePage` which extends from `BaseHomePage`. See the [CWP Installer](https://github.com/silverstripe/cwp-installer/tree/master/app/src) for how these should look.
 
 
 #### Wātea Plus (Optional)
