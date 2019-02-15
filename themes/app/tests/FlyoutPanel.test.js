@@ -24,16 +24,21 @@ describe('FlyoutPanelComponent.test.js', () => {
     });
 
     describe('Validation', () => {
-      const slideFrom = createCmp({ slideFrom: 'right' }).vm.$options.props.slideFrom
+      const slideFromProp = createCmp({ slideFrom: 'right' }).vm.$options.props.slideFrom
+      const openProp = createCmp({ open: true }).vm.$options.props.open
 
       it('validates `slideFrom` is of type string', () => {
-        expect(slideFrom.type).toBe(String);
+        expect(slideFromProp.type).toBe(String);
+      });
+
+      it('validates `open` is of type boolean', () => {
+        expect(openProp.type).toBe(Boolean);
       });
 
       it('validates the value of `slideFrom` property is to be within array [\'right\', \'left\']', () => {
-        expect(slideFrom.validator && slideFrom.validator('invalid-value')).toBeFalsy();
-        expect(slideFrom.validator && slideFrom.validator('right')).toBeTruthy();
-        expect(slideFrom.validator && slideFrom.validator('left')).toBeTruthy();
+        expect(slideFromProp.validator && slideFromProp.validator('invalid-value')).toBeFalsy();
+        expect(slideFromProp.validator && slideFromProp.validator('right')).toBeTruthy();
+        expect(slideFromProp.validator && slideFromProp.validator('left')).toBeTruthy();
       });
     });
   });
