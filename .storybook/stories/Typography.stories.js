@@ -2,10 +2,10 @@ import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
 
 storiesOf('Styleguide', module)
-.addDecorator((storyFn, context) => withInfo()(storyFn)(context))
+.addDecorator(withInfo)
 .add('Typography', () => ({
   template: `
-      <main>
+      <div>
         <h1>Heading 1 <a href="#">link</a></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas, diam sit amet faucibus dictum, turpis libero porttitor diam, id pellentesque orci augue adipiscing risus. Nulla id lacus eros. Nam porttitor semper enim, sit amet vestibulum arcu adipiscing sed. Proin dignissim, ligula id rhoncus fringilla, nunc lectus luctus magna, vitae cursus neque arcu id risus. Phasellus eu risus quis mauris consectetur luctus. Sed facilisis diam mauris, a vulputate ligula. Sed nec purus mauris. Nulla euismod massa ac nisl gravida dictum. Fusce leo turpis, accumsan non ultricies sed, consectetur id dui. Suspendisse porttitor odio in ipsum dignissim mollis.</p>
         <h2>Heading 2 <a href="#">link</a></h2>

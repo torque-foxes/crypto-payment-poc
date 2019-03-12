@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from 'storybook-addon-vue-info';
 
 storiesOf('Styleguide', module)
-  .addDecorator((storyFn, context) => withInfo()(storyFn)(context))
+  .addDecorator(withInfo)
   .add('Buttons', () => ({
     template: `
       <div>

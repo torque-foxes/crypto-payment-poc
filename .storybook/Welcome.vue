@@ -29,7 +29,7 @@ import '../../dist/app.css';
 storiesOf('Components/MyComponent', module)
 
     // This will provide info about how to use your component
-    .addDecorator((storyFn, context) => withInfo()(storyFn)(context))
+    .addDecorator(withInfo)
 
     // This describes and creates an instance of your component
     .add('with some prop and some action', () => ({
