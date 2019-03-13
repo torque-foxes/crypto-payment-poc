@@ -7,7 +7,7 @@
         "silverstripe/dynamodb": "^4",
         "silverstripe/crontask": "^2",
         "silverstripe/environmentcheck": "^2",
-        "silverstripe/raygun": "^2"
+        "silverstripe/raygun": "^3"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",
