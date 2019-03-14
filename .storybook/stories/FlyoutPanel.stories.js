@@ -1,13 +1,13 @@
 import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
-import { withKnobs, select } from '@storybook/addon-knobs/vue';
+import { withKnobs, boolean, select } from '@storybook/addon-knobs/vue';
 
 import FlyoutPanel from '../../themes/app/src/js/components/FlyoutPanel.vue';
 
-const flyoutDirections = { left: 'Left', right: 'Right' };
+const flyoutDirections = { left: 'left', right: 'right' };
 
 storiesOf('Components/Flyout Panel', module)
-  .addDecorator((storyFn, context) => withInfo()(storyFn)(context))
+  .addDecorator(withInfo)
   .addDecorator(withKnobs)
   .add('with toggle', () => ({
     components: { FlyoutPanel },
@@ -22,11 +22,13 @@ storiesOf('Components/Flyout Panel', module)
         <p>Slides in from the {{direction}}</p>
       </flyout-panel>
     </div>`,
-    data() {
-      return {
-        menuOpen: false,
-        direction: select('slideFrom', flyoutDirections, 'right'),
-      };
+    props: {
+      menuOpen: {
+        default: boolean('Open', false),
+      },
+      direction: {
+        default: select('Direction', flyoutDirections, 'right'),
+      }
     },
   }));
 

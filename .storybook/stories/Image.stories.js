@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
 
 storiesOf('Styleguide', module)
-.addDecorator((storyFn, context) => withInfo()(storyFn)(context))
+.addDecorator(withInfo)
 .add('Image', () => ({
   template: `
       <div class="main">
