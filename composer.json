@@ -15,13 +15,24 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",
-        "lekoala/silverstripe-debugbar": "^2"
+        "lekoala/silverstripe-debugbar": "^2",
+        "jdolba/silverstripe-coding-standards": "^0.1"
     },
     "config": {
         "process-timeout": 600
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "scripts": {
+        "silverstripe-standards": [
+            "@php-lint",
+            "@phpcs"
+        ],
+        "php-lint": "parallel-lint app/src app/tests",
+        "phpcs": "phpcs app/src app/tests --standard=vendor/jdolba/silverstripe-coding-standards/definitions/php/phpcs-ss4.xml --extensions=php --encoding=utf-8",
+        "phpcbf": "phpcbf app/src app/tests --standard=vendor/jdolba/silverstripe-coding-standards/definitions/php/phpcs-ss4.xml --extensions=php --encoding=utf-8",
+        "phpcs-fix": "@phpcbf"
+    },
     "extra": {
         "project-files-installed": [
             "app/.htaccess",
