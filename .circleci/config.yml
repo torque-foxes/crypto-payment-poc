@@ -75,3 +75,6 @@ jobs:
       - store_artifacts:
           path: app/tests/nightwatch_screenshots
           destination: nightwatch_screenshots
+
+      # Vue Tests
+      - run: yarn test
