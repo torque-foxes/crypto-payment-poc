@@ -26,7 +26,8 @@
     "scripts": {
         "silverstripe-standards": [
             "@php-lint",
-            "@phpcs"
+            "@phpcs",
+            "yarn lint"
         ],
         "php-lint": "parallel-lint app/src app/tests",
         "phpcs": "phpcs app/src app/tests --standard=vendor/jdolba/silverstripe-coding-standards/definitions/php/phpcs-ss4.xml --extensions=php --encoding=utf-8",
