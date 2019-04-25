@@ -55,5 +55,6 @@ for setup and usage details.
 ## Further Documentation
 * [Acceptance Testing with Nightwatch](docs/nightwatch.md)
 * [Building Components with Vue](docs/vue.md)
+* [Vue Unit Testing](docs/vuetest.md)
 * [Maintaining a reusable component Library with Storybook](docs/storybook.md)
 * [Adding CWP and/or watea theme](docs/cwp.md)
