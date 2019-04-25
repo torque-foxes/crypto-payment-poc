@@ -46,10 +46,21 @@ Vagrant.configure(2) do |config|
     config.vm.synced_folder WEBROOT_HOST, WEBROOT_GUEST, type: "nfs"
   end
 
-  # Reduce disk space by cloning from master VM
-  # See https://www.vagrantup.com/docs/virtualbox/configuration.html#linked-clones
-  config.vm.provider 'virtualbox' do |v|
+  # Update memory settings for Virtualbox
+  # See https://www.vagrantup.com/docs/virtualbox/configuration.html#vboxmanage-customizations
+  # Needs additional config for other providers, see https://www.vagrantup.com/docs/providers/
+  config.vm.provider "virtualbox" do |v, override|
+    v.memory = 2048
+    v.cpus = 2
+    # Reduce disk space by cloning from master VM
+    # See https://www.vagrantup.com/docs/virtualbox/configuration.html#linked-clones
     v.linked_clone = true
+  end
+
+  # For developers using Parallels provider
+  config.vm.provider "parallels" do |prl, override|
+    prl.memory = 2048
+    prl.cpus = 2
   end
 
   # Optional apt and composer cache (shared beween boxes)
@@ -63,6 +74,9 @@ Vagrant.configure(2) do |config|
 
   # Forward SSH agent, important for private git checkouts
   config.ssh.forward_agent = true
+
+  # Switch to 7.1
+  # config.vm.provision "shell", inline: "sudo php-switch 7.1"
 
   # Set default directory to webroot
   config.vm.provision "shell",
