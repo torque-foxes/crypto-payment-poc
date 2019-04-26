@@ -1,8 +1,6 @@
 import { storiesOf } from '@storybook/vue';
-import { withInfo } from 'storybook-addon-vue-info';
 
 storiesOf('Styleguide', module)
-.addDecorator(withInfo)
 .add('List', () => ({
   template: `
       <div class="main">
@@ -99,4 +97,4 @@ storiesOf('Styleguide', module)
         </ol>
       </div>
     `,
-}));
+}), { info: {} });

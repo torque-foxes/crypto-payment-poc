@@ -1,19 +1,10 @@
 import { storiesOf } from '@storybook/vue';
-import { withInfo } from 'storybook-addon-vue-info';
-import { withKnobs, boolean, number, select } from '@storybook/addon-knobs/vue';
 import VueTinySlider from 'vue-tiny-slider';
 
 // Default styles - remove this if necesary to display the styles of your project accurately
 import 'tiny-slider/src/tiny-slider.scss';
 
-const navPositions = {
-  top: 'top',
-  bottom: 'bottom',
-};
-
 storiesOf('Components/Tiny Slider', module)
-  .addDecorator(withInfo)
-  .addDecorator(withKnobs)
   .add('Standard', () => ({
     components: {
       'tiny-slider': VueTinySlider,

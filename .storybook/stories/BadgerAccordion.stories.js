@@ -1,16 +1,7 @@
 import { storiesOf } from '@storybook/vue';
-import { withInfo } from 'storybook-addon-vue-info';
-import { withKnobs, boolean, select } from '@storybook/addon-knobs/vue';
 import { BadgerAccordion, BadgerAccordionItem } from 'vue-badger-accordion'
 
-const customIcons = {
-  opened: '<button class="btn">&#x25B2;</button>',
-  closed:  '<button class="btn">&#x25BC;</button>',
-};
-
 storiesOf('Components/Badger Accordion', module)
-  .addDecorator(withInfo)
-  .addDecorator(withKnobs)
   .add('Standard', () => ({
     components: { BadgerAccordion, BadgerAccordionItem },
     template: `<div>
@@ -26,7 +17,7 @@ storiesOf('Components/Badger Accordion', module)
           </badger-accordion-item>
       </badger-accordion>
     </div>`,
-  }))
+  }), { info: {} })
 
   .add('Without icons', () => ({
     components: { BadgerAccordion, BadgerAccordionItem },
@@ -43,7 +34,7 @@ storiesOf('Components/Badger Accordion', module)
           </badger-accordion-item>
       </badger-accordion>
     </div>`,
-  }))
+  }), { info: {} })
 
   .add('With custom icons', () => ({
     components: { BadgerAccordion, BadgerAccordionItem },
@@ -62,10 +53,13 @@ storiesOf('Components/Badger Accordion', module)
     </div>`,
     data() {
       return {
-        customIcons: customIcons,
+        customIcons: {
+          opened: '<button class="btn">&#x25B2;</button>',
+          closed:  '<button class="btn">&#x25BC;</button>',
+        },
       };
     },
-  }))
+  }), { info: {} })
 
   .add('With collapse all', () => ({
     components: { BadgerAccordion, BadgerAccordionItem },
@@ -94,5 +88,5 @@ storiesOf('Components/Badger Accordion', module)
         this.$refs.myAccordion.closeAll();
       },
     },
-  }));
+  }), { info: {} });
 
