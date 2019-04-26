@@ -15,7 +15,9 @@
 </head>
     <body data-pagetype="$ClassName">
 
-        $Layout
+        <div id="app">
+            $Layout
+        </div>
 
         <% if $IsDev %>
             <% require themedJavascript("dist/app") %>
