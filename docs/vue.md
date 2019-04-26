@@ -34,7 +34,7 @@ Note: vue replaces the HTML element targeted (ie. #app) so don't apply this to t
 ### Uninstalling Vue dependencies
 If you don't need Vue as part of your project you can remove it as follows.
 ````
-yarn remove vue eslint-plugin-vue babel-preset-vue
+yarn remove vue eslint-plugin-vue babel-preset-vue vuex
 ````
 You can also remove `plugin:vue/essential` as well as the vue `overrides` section from `.eslintrc.json`:
 ```
@@ -71,3 +71,12 @@ and `vue` from the eslint and stylelint config `webpack.mix.js`
     context: 'themes/app/src/',
     files: ['**/*.{scss,vue}'],
   }),
+
+## State Management with Vuex
+
+Vuex is included and added to the main vue app instance by default. This is accessible to all components within the app using `this.$store`.
+
+Most simple components will not need to use the store and will still have props passed down to them. However, when you find multiple components depending on each other, whether that's triggering the same event or rely on something being in a specific state (ie. is an overlay showing?) then the store should be used and the events/state managed centrally.
+
+[Learn more about Vuex](https://vuex.vuejs.org/)
+
