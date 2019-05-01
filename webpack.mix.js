@@ -31,8 +31,9 @@ if (process.env.NODE_ENV === 'development') {
   mix.sourceMaps();
 }
 
+
 mix.setPublicPath(distFolder); // Places images processed in scss into themes/app/dist folder
-mix.setResourceRoot(`resources/${distFolder}/`); // Prefixes urls in processed css with resources/themes/app/dist
+mix.setResourceRoot(`/resources/${distFolder}/`); // Prefixes urls in processed css with resources/themes/app/dist
 
 mix.js(`${srcFolder}/js/app.js`, distFolder)
   .sass(`${srcFolder}/scss/app.scss`, distFolder)
