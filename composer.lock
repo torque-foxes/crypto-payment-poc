@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6052dd4250f504fedf9c5ee4e05a9645",
+    "content-hash": "aa9e872973287b0ec9fca17033c768b2",
     "packages": [
         {
             "name": "asyncphp/doorman",
@@ -4572,7 +4572,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "backendtea@gmail.com"
+                    "email": "BackEndTea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -5155,16 +5155,16 @@
         },
         {
             "name": "lekoala/silverstripe-debugbar",
-            "version": "dev-master",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lekoala/silverstripe-debugbar.git",
-                "reference": "ad7e69b0c659331c728c81e5a16744e13bfe366b"
+                "reference": "f8e48c274c02a160ede880e98db5d41ed7273cc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lekoala/silverstripe-debugbar/zipball/ad7e69b0c659331c728c81e5a16744e13bfe366b",
-                "reference": "ad7e69b0c659331c728c81e5a16744e13bfe366b",
+                "url": "https://api.github.com/repos/lekoala/silverstripe-debugbar/zipball/f8e48c274c02a160ede880e98db5d41ed7273cc9",
+                "reference": "f8e48c274c02a160ede880e98db5d41ed7273cc9",
                 "shasum": ""
             },
             "require": {
@@ -5182,9 +5182,6 @@
             },
             "type": "silverstripe-vendormodule",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "2.x-dev"
-                },
                 "expose": [
                     "assets",
                     "javascript"
@@ -5213,7 +5210,7 @@
                 "module",
                 "silverstripe"
             ],
-            "time": "2019-04-05T02:58:51+00:00"
+            "time": "2019-04-05T02:56:35+00:00"
         },
         {
             "name": "maximebf/debugbar",
@@ -6126,9 +6123,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "lekoala/silverstripe-debugbar": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
