@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>UI / Icons / Close -- Dark</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="UI-/-Icons-/-Close----Dark" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M2.22044605e-16,13 C-0.55228475,13 -1,12.5522847 -1,12 C-1,11.4477153 -0.55228475,11 2.22044605e-16,11 L23.7963777,11 C24.3486624,11 24.7963777,11.4477153 24.7963777,12 C24.7963777,12.5522847 24.3486624,13 23.7963777,13 L2.22044605e-16,13 Z" id="Line-3" fill="#000000" fill-rule="nonzero" transform="translate(11.898189, 12.000000) rotate(-45.000000) translate(-11.898189, -12.000000) "></path>
+        <path d="M2.22044605e-16,13 C-0.55228475,13 -1,12.5522847 -1,12 C-1,11.4477153 -0.55228475,11 2.22044605e-16,11 L23.7963777,11 C24.3486624,11 24.7963777,11.4477153 24.7963777,12 C24.7963777,12.5522847 24.3486624,13 23.7963777,13 L2.22044605e-16,13 Z" id="Line-3-Copy" fill="#000000" fill-rule="nonzero" transform="translate(11.898189, 12.000000) rotate(45.000000) translate(-11.898189, -12.000000) "></path>
+    </g>
+</svg>

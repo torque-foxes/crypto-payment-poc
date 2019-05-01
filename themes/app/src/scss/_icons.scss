@@ -1,0 +1,23 @@
+$icons: (
+  close
+);
+
+// Files must be in the 'icons' folder and the file name must
+// be the same name as the icon name in the list below.
+
+@each $icon in $icons {
+  .icon.icon--#{$icon} {
+    background-image: url('../../icons/#{$icon}.svg');
+  }
+}
+
+.icon {
+  background: no-repeat center top;
+  background-size: contain;
+  display: inline-block;
+  height: 2rem;
+  min-height: 2rem;
+  min-width: 2rem;
+  vertical-align: middle;
+  width: 2rem;
+}

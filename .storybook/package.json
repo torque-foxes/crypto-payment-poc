@@ -6,7 +6,7 @@
     "vue": "^2.6.8"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006 -c . -s ./",
+    "storybook": "start-storybook -p 6006 -c . -s ./,../public",
     "build-storybook": "build-storybook -c . -s ./"
   },
   "devDependencies": {
@@ -19,6 +19,8 @@
     "@storybook/vue": "^5.0.1",
     "babel-loader": "^8.0.5",
     "babel-preset-vue": "^2.0.2",
+    "resolve-url-loader": "^3.1.0",
+    "sass-loader": "^7.1.0",
     "storybook-addon-vue-info": "^1.0.0",
     "style-loader": "^0.23.0",
     "vue-eslint-parser": "^6.0.3",
