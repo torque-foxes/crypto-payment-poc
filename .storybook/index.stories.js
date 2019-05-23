@@ -5,7 +5,8 @@ import { withInfo } from 'storybook-addon-vue-info';
 
 import Welcome from './Welcome.vue';
 
-import '../themes/app/dist/app.css';
+import '../themes/app/src/scss/app.scss';
+
 
 storiesOf('Welcome', module).add('to project skeleton', () => ({
   components: { Welcome },
