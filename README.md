@@ -25,7 +25,7 @@ yarn
 yarn dev
 
 # create a .env file from the template
-cp .env.example .env
+cp .env.dist .env
 
 # run a dev/build
 vendor/bin/sake dev/build flush=1
