@@ -6,8 +6,8 @@
     "vue": "^2.6.8"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006 -c . -s ./,../public",
-    "build-storybook": "build-storybook -c . -s ./"
+    "storybook": "start-storybook -p 6006 -c . -s ../themes/app/src/,./",
+    "build-storybook": "build-storybook -c . -s ../themes/app/src/,./"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
