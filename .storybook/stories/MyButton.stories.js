@@ -1,9 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
-import { withInfo } from 'storybook-addon-vue-info';
 
 storiesOf('Styleguide', module)
-  .addDecorator(withInfo)
   .add('Buttons', () => ({
     template: `
       <div>
@@ -18,4 +16,4 @@ storiesOf('Styleguide', module)
         <button type="button" class="btn btn-link">Link</button>
       </div>
     `,
-  }));
+  }), { info: {} });

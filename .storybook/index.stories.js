@@ -8,8 +8,15 @@ import Welcome from './Welcome.vue';
 import '../themes/app/src/scss/app.scss';
 
 
-storiesOf('Welcome', module).add('to project skeleton', () => ({
-  components: { Welcome },
-  template: '<welcome />',
-  methods: { action: linkTo('Button') },
-}));
+storiesOf('Welcome', module)
+  .add(
+    'to project skeleton',
+    () => ({
+      components: { Welcome },
+      template: '<welcome />',
+      methods: { action: linkTo('Button') },
+    }),
+    {
+      info: {},
+    }
+  );
