@@ -65,6 +65,7 @@ jobs:
 
       # JS and SCSS Linting
       - run: yarn dev
+      - run: yarn production
       - run: yarn lint
 
       # dev/build

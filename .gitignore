@@ -16,5 +16,6 @@
 /simple-styleguide/
 /themes/app/dist/app.js
 /themes/app/dist/app.css
+/themes/app/dist/editor.css
 /vendor/
 /themes/app/dist/mix-manifest.json
