@@ -66,7 +66,8 @@ jobs:
       # JS and SCSS Linting
       - run: yarn dev
       - run: yarn production
-      - run: yarn lint
+
+      - run: composer silverstripe-standards
 
       # dev/build
       - run: vendor/bin/sake dev/build flush=1
