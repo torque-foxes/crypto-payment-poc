@@ -1,7 +1,7 @@
 User-agent: *
 Disallow: /admin
 Disallow: /Security/
-Sitemap: https://www.example.com/sitemap.xml
+# Sitemap: https://www.example.com/sitemap.xml
 
 User-agent: AhrefsBot
 Crawl-delay: 60
