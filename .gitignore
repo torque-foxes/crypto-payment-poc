@@ -6,6 +6,7 @@
 /.storybook/node_modules
 /.storybook/storybook-static/
 /.vagrant
+/Vagrantfile
 /app/tests/nightwatch_reports/
 /app/tests/nightwatch_screenshots/
 /mix-manifest.json
