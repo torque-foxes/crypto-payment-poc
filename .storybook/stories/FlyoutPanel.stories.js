@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { withKnobs, boolean, select } from '@storybook/addon-knobs/vue';
 
-import FlyoutPanel from '../../themes/app/src/js/components/FlyoutPanel.vue';
+import FlyoutPanel from '../../themes/app/src/js/components/FlyoutPanel/FlyoutPanel.vue';
 
 const flyoutDirections = { left: 'left', right: 'right' };
 

@@ -64,8 +64,6 @@
 
 <style>
   .flyout-panel {
-    align-items: flex-end;
-    display: flex;
     left: 0;
     height: 100%;
     max-width: 100%;
