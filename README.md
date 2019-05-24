@@ -1,8 +1,9 @@
-## Overview
+# Overview
 
-Create a project skeleton for a SilverStripe 4 Platform project. Sets up an empty theme and nightwatch for testing.
+Create a project skeleton for a SilverStripe 4 Platform project. 
+Sets up an empty theme and nightwatch for testing.
 
-## Installation
+## How to setup new project by using this skeleton
 
 ```
 # Checkout the repo
@@ -15,20 +16,10 @@ cd <yourproject>
 git remote remove skeleton
 git remote add origin git://git@whatever.com/your/project.git
 
-# Run composer
-composer install
+# it is good idea to adjust content of `.project.skeleton.README.md` file now
 
-# install yarn dependencies
-yarn
-
-# compile your CSS. This is empty initially
-yarn dev
-
-# create a .env file from the template
-cp .env.example .env
-
-# run a dev/build
-vendor/bin/sake dev/build flush=1
+# change this readme file with project-skeleton readme and commit
+git mv -f .project.skeleton.README.md README.md && git commit -m "Init project from Skeleton"
 
 # push to master
 git push origin master
@@ -45,20 +36,3 @@ for setup and usage details.
 ## Robots.txt
 
 Default robots.txt example file. Remember to update the sitemap location.
-
-## Build Tools
-
-* `yarn` install dependencies
-* `yarn dev` builds dev js and scss
-* `yarn watch` same as `yarn dev` but watches for changes
-* `yarn production` minifies production files
-* `yarn prod` alias for `yarn production`
-* `yarn lint` lints your code
-* `yarn hot` **unsupported** hot module reloading
-
-## Further Documentation
-* [Acceptance Testing with Nightwatch](docs/nightwatch.md)
-* [Building Components with Vue](docs/vue.md)
-* [Vue Unit Testing](docs/vuetest.md)
-* [Maintaining a reusable component Library with Storybook](docs/storybook.md)
-* [Adding CWP and/or watea theme](docs/cwp.md)
