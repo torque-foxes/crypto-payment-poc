@@ -1,4 +1,3 @@
-/* eslint-env jasmine */
 import { mount } from '@vue/test-utils';
 import Vue from 'vue';
 import Tabs from './Tabs.vue';
@@ -39,7 +38,7 @@ describe('Tabs', () => {
   });
 });
 
-describe('Tab', () => {
+describe('TabItem', () => {
   // Mount an instance and inspect the computed value
   it('generates the correct name value', () => {
     const { vm } = mount(Tab, {
