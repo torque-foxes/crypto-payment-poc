@@ -16,7 +16,7 @@ storiesOf('Components/Mega nav', module)
         <div class="sb__story-container">
           <section class="sb__group">
             <h2 class="sb__header">Main navigation</h2>
-            <nav>
+            <nav aria-label="Main Navigation">
               <ul class="mega-nav" tabindex="-1">
                 <li
                   class="mega-nav__item mega-nav__item--with-children"
@@ -172,12 +172,14 @@ storiesOf('Components/Mega nav', module)
         <div class="sb__story-container">
           <section class="sb__group">
             <h2 class="sb__header">Minimal</h2>
-            <nav>
+            <nav aria-label="Main Navigation">
               <ul class="mega-nav">
 
                 <!--
                   A single Meganav Item given the reference of item[0].
                   The item index is used with toggle to toggle the menu. ie. toggle(0).
+
+                  In SilverStripe templating "0" would be the $ID of the page.
                 -->
                 <li
                   class="mega-nav__item mega-nav__item--with-children"
@@ -202,8 +204,8 @@ storiesOf('Components/Mega nav', module)
                   <div class="mega-nav__overlay" ref="overlay" @click.prevent="toggle(null)" id="megaNav0" role="dialog" :style="{ height: offsetHeight }">
 
                     <!--
-                      Mega nav content goes here. Replace this with whatever you want and
-                      style it appropriately.
+                      Mega nav content goes inside here. This can be customised to whatever your requirements are.
+                      Padding and other base styles can be adjusted in _variables.scss.
                     -->
                     <div class="mega-nav__content" @click.stop>
                       <p>Example Text</p>

@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/vue';
 const icons = [
   // 'my-icon',
   // 'my-other-icon',
+  'chev-down',
 ];
 
 
@@ -26,13 +27,18 @@ storiesOf('Styleguide', module)
               </div>
             </div>
           </div>
+        </section>
 
-          <div class="row" v-if="icons.length === 0">
+        <section class="sb__group">
+          <div class="row">
             <div class="col">
-              <p>No icons have been configured yet.</p>
-              <p>To get started add your svg icons to <code><em>./themes/src/app/icons</em></code> then add references in the icons array in <code><em>./storybook/stories/Icons.stories.js</em></code> and <code><em>.storybook/_icons.scss</em></code>.</p>
+              <h2 class="sb__header">Adding icons</h2>
+              <p>To use new icons within your project, all you need to do is add them to the <code>themes/app/src/icons</code> folder and use them with the mixin as shown below. You can also reference them using <code>#{$icon-path}/my-icon.svg</code>.</p>
+
+              <p>To add them to this page, you will need to add a new row to <code>.storybook/_icons.scss</code> and <code>./storybook/stories/Icons.stories.js</code>.</p>
             </div>
           </div>
+
         </section>
 
         <section class="sb__group">
