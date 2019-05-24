@@ -51,8 +51,10 @@
 @import 'core/mixins';
 @import 'core/fonts';
 @import 'core/typography';
+@import 'core/animations';
 
 /**
  * Include components
  */
 @import 'components/flyout-panel';
+@import 'components/meganav';
