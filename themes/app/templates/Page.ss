@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
+    <% base_tag %>
+    <%-- Required meta tags --%>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    $MetaTags(false)
 
     <% if $IsDev %>
         <% require themedCSS("dist/app") %>
@@ -26,4 +28,3 @@
         <% end_if %>
     </body>
 </html>
-
