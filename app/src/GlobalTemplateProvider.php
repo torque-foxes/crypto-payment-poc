@@ -1,5 +1,7 @@
 <?php
 
+namespace App;
+
 use SilverStripe\View\TemplateGlobalProvider;
 use SilverStripe\Control\Director;
 
@@ -27,4 +29,3 @@ class GlobalTemplateProvider implements TemplateGlobalProvider
         return Director::isDev();
     }
 }
-

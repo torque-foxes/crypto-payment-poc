@@ -6,6 +6,7 @@ Name: app
 # Caution: Indentation through two spaces, not tabs
 SilverStripe\View\SSViewer:
   themes:
+    - '$public'
     - 'app'
     - '$default'
 
