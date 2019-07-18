@@ -4,6 +4,12 @@
 $font-path: '../fonts' !default;
 $icon-path: '../icons' !default;
 
+$meganav-content-bg: var(--white);
+$meganav-border-color: var(--grey);
+$meganav-link-color: var(--primary);
+$meganav-padding-y: 2rem;
+$meganav-animation-time: 0.3s; // CAUTION: This time is tied to a setTimeout in Meganav.vue
+
 /**
  * Bootstrap variable overrides
  */
