@@ -37,6 +37,7 @@ $icon-path: '../themes/app/src/icons';
   &__story-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 10px;
   }
 
   &__group {
@@ -56,5 +57,22 @@ $icon-path: '../themes/app/src/icons';
   &__subheader {
     margin-top: 30px;
     margin-bottom: 10px;
+  }
+
+  &__color-palette-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 16rem);
+    grid-gap: 4rem;
+
+    .box {
+      display: grid;
+      height: 8rem;
+      padding: 2rem;
+      grid-template-rows: repeat(2, 1fr);
+
+      :last-child {
+        align-self: end;
+      }
+    }
   }
 }
