@@ -12,8 +12,8 @@ git clone git@github.com:silverstripeltd/project-skeleton.git <yourproject> -o s
 # Change directory to your project
 cd <yourproject>
 
-# change this readme file with project-skeleton readme and commit
-git mv -f .project.skeleton.README.md README.md 
+# change this readme file with project-skeleton readme
+git mv -f .project.skeleton.README.md README.md
 
 # it is good idea to adjust content of `README.md` file now
 
@@ -24,10 +24,9 @@ rm -rf .git && git init
 git remote remove skeleton 
 git remote add origin git://git@whatever.com/your/project.git
 
+# Commit and push to master
 git commit -m "Init project from Skeleton"
-
-# push to master
-git push origin master
+git push -u origin master
 ```
 
 ## Environment
