@@ -23,7 +23,6 @@ jobs:
     steps:
       # Use correct php/node versions
       - run: php-switch 7.3
-      - run: nvm install 10
 
       # Start Apache, Nginx and Xvfb
       - run: sudo service apache2 start
