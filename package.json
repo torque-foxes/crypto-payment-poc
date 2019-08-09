@@ -27,7 +27,7 @@
     "babel-jest": "^24.5.0",
     "babel-preset-vue": "^2.0.2",
     "bootstrap": "^4.1.0",
-    "chromedriver": "^2.33.2",
+    "chromedriver": "^76.0.0",
     "cucumber": "^4.0.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
