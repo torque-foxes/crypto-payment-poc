@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import FlyoutPanel from './components/FlyoutPanel.vue';
+import Meganav from './components/Meganav.vue';
 
 /**
  * Enable Vuex
@@ -32,6 +33,7 @@ new Vue({
   components: {
     FlyoutPanel,
   },
+  mixins: [Meganav],
   data() {
     return {
       mobileMenuOpen: false,

@@ -19,3 +19,12 @@
   background-image: url('#{$icon-path}/#{$icon}.svg');
   content: '';
 }
+
+@mixin heading-link() {
+  color: $heading-link-color;
+
+  &:hover {
+    color: $heading-link-hover-color;
+    text-decoration: none;
+  }
+}
