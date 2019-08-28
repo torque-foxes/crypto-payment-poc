@@ -46,7 +46,6 @@
     methods: {
       opacity(percent) {
         const hex = this.getHex();
-        console.log(hex, 'opacity');
 
         const r = parseInt(hex.substr(1,2), 16);
         const g = parseInt(hex.substr(3,2), 16);
@@ -57,13 +56,10 @@
         return `rgba(${r}, ${g}, ${b}, ${alpha})`;
       },
       getHex() {
-        console.log(this.cssvariable);
         if (this.cssvariable) {
           const hex = getComputedStyle(document.getElementsByTagName('body')[0]).getPropertyValue(this.cssvariable);
-          console.log(hex, 22);
           return hex;
         } else if (this.hex) {
-          console.log(this.hex);
           return this.hex;
         }
       }
