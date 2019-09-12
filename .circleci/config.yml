@@ -6,7 +6,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: scott1702/silverstripe-platform-java:1.0
+      - image: silverstripe/bespoke-ci-base:1.0.0
         environment:
           - DISPLAY=:99
           - CHROME_BIN=/usr/bin/google-chrome-stable
