@@ -52,6 +52,7 @@
         ],
         "expose": [
             "themes/app/dist"
-        ]
+        ],
+        "resources-dir": "_resources"
     }
 }
