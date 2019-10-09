@@ -59,7 +59,7 @@ jobs:
           key: v1-npm-deps-{{ checksum "package.json" }}
 
       - run: mv .circleci/.env.circleci .env
-      - run: chown -R www-data:www-data /var/www/mysite/www
+      - run: chown -R vagrant:vagrant /var/www/mysite/www
 
       # JS and SCSS Linting
       - run: yarn dev
