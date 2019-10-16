@@ -60,6 +60,7 @@ jobs:
 
       - run: mv .circleci/.env.circleci .env
       - run: chown -R vagrant:vagrant /var/www/mysite/www
+      - run: chmod g+s /var/www/mysite/www/public
 
       # JS and SCSS Linting
       - run: yarn dev
@@ -68,7 +69,7 @@ jobs:
       - run: composer silverstripe-standards
 
       # dev/build
-      - run: vendor/bin/sake dev/build flush=1
+      - run: sudo -u vagrant vendor/bin/sake dev/build flush=1
 
       # PHP Tests
       - run: vendor/bin/phpunit --verbose
