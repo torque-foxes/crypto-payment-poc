@@ -1,0 +1,14 @@
+name: delete_branch
+
+on:
+  pull_request:
+    types: ["closed", "merged"]
+    branches:
+      - develop
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jessfraz/branch-cleanup-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
