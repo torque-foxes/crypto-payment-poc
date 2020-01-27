@@ -29,6 +29,13 @@ git commit -m "Init project from Skeleton"
 git push -u origin master
 ```
 
+## GitHub Actions
+
+if you are using GitHub you can enable some Actions to automate some tasks.
+
+To know how to enable and use it, [read it here](../docs/actions/delete-merged-branch-config.md)!
+
+
 ## Environment
 
 Project teams should run their website consistently,
