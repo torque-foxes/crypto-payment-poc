@@ -29,7 +29,6 @@ git commit -m "Init project from Skeleton"
 git push -u origin master
 ```
 
-
 ## Environment
 
 Project teams should run their website consistently,
