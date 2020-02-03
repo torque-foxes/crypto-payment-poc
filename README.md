@@ -37,6 +37,14 @@ SilverStripe Ltd. prefers [Vagrant](https://www.vagrantup.com/).
 Read the ["Vagrant" Confluence page](https://silverstripe.atlassian.net/wiki/spaces/DEV/pages/401506576/Vagrant)
 for setup and usage details.
 
+#### Windows environments
+
+Because Windows can't handle symlinks, an additional step when transpiling dependencies is needed.
+Transpiled dependencies need to be copied from the dist directory to the public resources directory.
+This will automatically be done when you run `yarn watch` with the transpiled dependencies being
+copied to the default `public\_resources` directory. To change the destination directory, redefine
+the `publicResourcesFolder` variable in `webpack.mix.js`.
+
 ## Robots.txt
 
 Default robots.txt example file. Remember to update the sitemap location.
