@@ -7,6 +7,10 @@ const themeFolder = 'themes/app';
 const srcFolder = `${themeFolder}/src`;
 const distFolder = `${themeFolder}/dist`;
 
+// Windows specific. Set the public resources directory.
+// This needs to match the "resources-dir" in the composer.json file
+const publicResourcesFolder = `public/_resources/${distFolder}`;
+
 if (process.env.NODE_ENV === 'development') {
   // Setup linting
   mix.webpackConfig({
@@ -44,7 +48,15 @@ if (process.env.NODE_ENV === 'production') {
     .minify(`${distFolder}/app.js`)
     .minify(`${distFolder}/editor.css`);
 }
-
+/**
+ * Windows specific!!!
+ * Because windows can't handle symlinks we need to copy the
+ * transpiled dependencies to the public directory.
+ * NOTE: This needs to be run after all other transpile actions.
+ */
+if (process.platform === 'win32') {
+  mix.copyDirectory(distFolder, publicResourcesFolder);
+}
 
 // Full API
 // mix.js(src, output);
