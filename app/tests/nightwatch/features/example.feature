@@ -1,3 +1,4 @@
+@example
 Feature: Example feature
 
 Scenario: My site renders correctly

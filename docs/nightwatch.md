@@ -12,6 +12,21 @@ yarn nightwatch --skiptags search // skip search test
 yarn nightwatch --skiptags login,something_else // skip search and something_else tests
 ```
 
+To tag a test, simply add a string prefaced with `@` symbol.
+Example:
+```html
+# tag example
+@example
+Feature: Example feature
+
+# multiple tags
+@mysite @smoke
+Scenario: My site renders correctly
+  Given I open my site
+  Then the title is "Home :: Your Site Name"
+
+```
+
 If you need to run against a custom host name (localhost is default), you can do one of the following options:
 
 ### Specify URL (every time)
