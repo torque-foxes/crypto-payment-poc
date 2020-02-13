@@ -14,7 +14,7 @@
                     :class="['h5 btn--link tabs__nav-link', {'tabs__nav-link--active': selected === key}]"
                     :id="`${tab.nameToLowercase}`"
                     :key="key"
-                    :tabindex="!(selected === key) ? '-1' : 0"
+                    :tabindex="selected === key ? 0 : -1"
                 >{{tab.name}}</button>
             </div>
             <select class="tabs__select"
@@ -84,7 +84,6 @@
 
   @media (min-width: 768px) { // stylelint-disable-line scss/media-feature-value-dollar-variable
     .tabs__nav-list {
-      display: -ms-flexbox;
       display: flex;
     }
 

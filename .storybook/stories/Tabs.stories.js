@@ -30,4 +30,4 @@ storiesOf('Components/Tabs', module)
         selected: 0,
       };
     },
-  }));
+  }), { info: {} });
