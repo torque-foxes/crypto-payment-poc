@@ -1,10 +1,10 @@
 import { shallowMount } from '@vue/test-utils';
-import FlyoutPanelComponent from '../src/js/components/FlyoutPanel';
+import FlyoutPanel from './FlyoutPanel.vue';
 
-const createCmp = propsData => shallowMount(FlyoutPanelComponent, { propsData })
+const createCmp = propsData => shallowMount(FlyoutPanel, { propsData });
 
-describe('FlyoutPanelComponent.test.js', () => {
-  let cmp
+describe('FlyoutPanel', () => {
+  let cmp;
 
   beforeEach(() => {
     cmp = createCmp({});
@@ -24,8 +24,8 @@ describe('FlyoutPanelComponent.test.js', () => {
     });
 
     describe('Validation', () => {
-      const slideFromProp = createCmp({ slideFrom: 'right' }).vm.$options.props.slideFrom
-      const openProp = createCmp({ open: true }).vm.$options.props.open
+      const slideFromProp = createCmp({ slideFrom: 'right' }).vm.$options.props.slideFrom;
+      const openProp = createCmp({ open: true }).vm.$options.props.open;
 
       it('validates `slideFrom` is of type string', () => {
         expect(slideFromProp.type).toBe(String);
