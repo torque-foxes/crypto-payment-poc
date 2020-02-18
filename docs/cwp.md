@@ -1,4 +1,4 @@
-## CWP setup
+# CWP setup
 
 In order to use the project skeleton on a CWP project, you can simply require the cwp recipe with composer.
 
@@ -6,7 +6,7 @@ In order to use the project skeleton on a CWP project, you can simply require th
 $ composer require cwp/cwp-recipe-core
 ```
 
-### Wātea theme
+## Wātea theme
 
 Sometimes projects require the watea theme as a base, firstly you'll need to install it (and additional dependencies) with composer.
 
@@ -79,7 +79,7 @@ To fix the CSS issues with Bootstrap:
 Adjust `Page` to extend from `BasePage` instead of SiteTree, and add a `HomePage` which extends from `BaseHomePage`. See the [CWP Installer](https://github.com/silverstripe/cwp-installer/tree/master/app/src) for how these should look.
 
 
-#### Wātea Plus (Optional)
+### Wātea Plus (Optional)
 
 This feature allows CMS users to adjust site fonts and colours. It requires CWP 2.x and is disabled by default.
 Follow this [documentation](https://github.com/silverstripe/cwp-agencyextensions/blob/master/docs/en/01_Features/ThemeColors.md) to enable it.

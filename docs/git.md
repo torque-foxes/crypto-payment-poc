@@ -57,7 +57,7 @@ that succinct title aiming to be under 50, which at the very least, means you're
 
 From your project root directory, run the following:
 ```
-git config --local commit.template .github/COMMIT_MESSAGE_TEMPLATE.md
+$ git config --local commit.template .github/COMMIT_MESSAGE_TEMPLATE.md
 ```
 
 This will set the template only for this project.
