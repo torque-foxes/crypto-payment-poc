@@ -4,7 +4,7 @@
 
 ## Installation
 
-Selecte the desired script inside __.github__ and copy it to __.github/workspace__
+Select the desired script inside __.github__ and copy it to __.github/workspace__
 
 ## Actions Available
 
