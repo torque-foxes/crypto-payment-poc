@@ -1,7 +1,7 @@
 # Overview
 
-Create a project skeleton for a SilverStripe 4 Platform project. 
-Sets up an empty theme and nightwatch for testing.
+Create a project skeleton for a SilverStripe 4 Platform project.
+Sets up an empty theme and cypress for testing.
 
 ## How to setup new project by using this skeleton
 
@@ -21,7 +21,7 @@ git mv -f .project.skeleton.README.md README.md
 rm -rf .git && git init
 
 # replace the remote origin with your own
-git remote remove skeleton 
+git remote remove skeleton
 git remote add origin git://git@whatever.com/your/project.git
 
 # Commit and push to master
