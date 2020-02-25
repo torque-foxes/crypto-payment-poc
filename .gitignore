@@ -2,14 +2,11 @@ Vagrantfile
 /.DS_Store
 /.env
 /.idea
-/.nightwatch.custom.json
 /.storybook/.cache
 /.storybook/node_modules
 /.storybook/storybook-static/
 /.vagrant
 /Vagrantfile
-/app/tests/nightwatch_reports/
-/app/tests/nightwatch_screenshots/
 /mix-manifest.json
 /node_modules/
 /public/_resources/
@@ -22,3 +19,6 @@ Vagrantfile
 /vendor/
 /themes/app/dist/mix-manifest.json
 /themes/app/dist/editor.css
+/cypress/screenshots
+/cypress/videos
+cypress.env.json

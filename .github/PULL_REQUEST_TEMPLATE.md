@@ -11,7 +11,7 @@
 - [ ] Relevant caching applied
 - [ ] No red flags in Accessiblity Audit ([Chrome Extension](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd))
 - [ ] Unit test(s) added
-- [ ] Test(s) added to Nightwatch suite
+- [ ] Test(s) added to Cypress suite
 - [ ] Pattern library / styleguide is updated
 - [ ] Branch rebased against `develop`
 

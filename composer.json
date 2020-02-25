@@ -30,9 +30,9 @@
             "@phpcs",
             "yarn lint"
         ],
-        "php-lint": "parallel-lint app/src app/tests",
-        "phpcs": "phpcs app/src app/tests --standard=vendor/jdolba/silverstripe-coding-standards/definitions/php/phpcs-ss4.xml --extensions=php --encoding=utf-8",
-        "phpcbf": "phpcbf app/src app/tests --standard=vendor/jdolba/silverstripe-coding-standards/definitions/php/phpcs-ss4.xml --extensions=php --encoding=utf-8",
+        "php-lint": "parallel-lint app",
+        "phpcs": "phpcs app --standard=vendor/jdolba/silverstripe-coding-standards/definitions/php/phpcs-ss4.xml --extensions=php --encoding=utf-8",
+        "phpcbf": "phpcbf app --standard=vendor/jdolba/silverstripe-coding-standards/definitions/php/phpcs-ss4.xml --extensions=php --encoding=utf-8",
         "phpcs-fix": "@phpcbf"
     },
     "extra": {
