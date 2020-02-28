@@ -18,6 +18,7 @@ const cucumber = require('cypress-cucumber-preprocessor').default;
  */
 module.exports = (on, config) => {
   on('file:preprocessor', cucumber());
+  on('task', require('@cypress/code-coverage/task'));
 
   if (config.env.baseUrl !== undefined) {
     config.baseUrl = config.env.baseUrl;
