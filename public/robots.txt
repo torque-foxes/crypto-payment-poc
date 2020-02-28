@@ -7,4 +7,4 @@ User-agent: AhrefsBot
 Crawl-delay: 60
 
 User-agent: Swiftbot
-Crawl-delay: 5
+Crawl-delay: 2
