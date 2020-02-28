@@ -85,7 +85,6 @@ jobs:
       # Generate coverage reports
       - run: yarn coverage
 
-      # Uncomment this to have codecov reports on each PR
       # Requires $CODECOV_TOKEN variable set in CircleCI
       - run: bash <(curl -s https://codecov.io/bash)
 
