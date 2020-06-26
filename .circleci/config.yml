@@ -40,6 +40,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-composer-
       - run: composer install -n --prefer-dist
+      - run: composer vendor-expose # always expose: cached content is never exposed automatically
       # Save all dependancies to cache
       - save_cache:
           key: v1-composer-{{ checksum "composer.lock" }}
