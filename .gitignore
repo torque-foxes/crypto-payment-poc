@@ -1,6 +1,7 @@
 Vagrantfile
 /.DS_Store
 /.env
+/.vm_aliases
 /.idea
 /.storybook/.cache
 /.storybook/node_modules
