@@ -4,6 +4,7 @@ use SilverStripe\CMS\Controllers\ContentController;
 
 class PageController extends ContentController
 {
+
     /**
      * An array of actions that can be accessed via a request. Each array element should be an action name, and the
      * permissions or conditions required to allow the user to access it.
@@ -19,13 +20,15 @@ class PageController extends ContentController
      *
      * @var array
      */
-    private static $allowed_actions = array (
-    );
+    private static $allowed_actions = [];
 
-    protected function init()
+    /**
+     * You can include any CSS or JS required by your project after parent::init().
+     * See: http://doc.silverstripe.org/framework/en/reference/requirements
+     */
+    protected function init() // phpcs:ignore SlevomatCodingStandard.TypeHints
     {
         parent::init();
-        // You can include any CSS or JS required by your project here.
-        // See: http://doc.silverstripe.org/framework/en/reference/requirements
     }
+
 }

@@ -1,7 +1,7 @@
 <?php
 
-use SilverStripe\Security\PasswordValidator;
 use SilverStripe\Security\Member;
+use SilverStripe\Security\PasswordValidator;
 
 // remove PasswordValidator for SilverStripe 5.0
 $validator = PasswordValidator::create();
