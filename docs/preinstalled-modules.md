@@ -13,6 +13,12 @@ For example, if your application is running the same database query multiple tim
 action is taking a long time to run, Debug Bar will highlight these bottlenecks so you can take steps to improve your
 overall site performance.
 
+## BetterNavigator
+_[Repo](https://github.com/jonom/silverstripe-betternavigator)_
+
+Better navigator is a handy module which provides dev tools for developers but is also useful for Content authors for
+quickly navigating to the page they want to edit.
+
 ## Shared draft content
 _[Repo](https://github.com/silverstripe/silverstripe-sharedraftcontent)_
 
