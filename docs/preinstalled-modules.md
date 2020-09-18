@@ -13,6 +13,8 @@ For example, if your application is running the same database query multiple tim
 action is taking a long time to run, Debug Bar will highlight these bottlenecks so you can take steps to improve your
 overall site performance.
 
+Can be disabled when not being used via the `DEBUGBAR_DISABLE` environment variable.
+
 ## BetterNavigator
 _[Repo](https://github.com/jonom/silverstripe-betternavigator)_
 
