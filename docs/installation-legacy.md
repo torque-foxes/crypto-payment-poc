@@ -1,4 +1,4 @@
-# Legacy Installation
+# Installation - Legacy
 
 These instructions are for folks who might be running < `1.3.0` of `silverstripeltd/dev-ssp`
 
