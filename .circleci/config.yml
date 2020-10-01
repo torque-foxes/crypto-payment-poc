@@ -6,7 +6,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: silverstripe/bespoke-ci-base:1.0.0
+      - image: silverstripe/bespoke-ci-base:3.0.0
         environment:
           - DISPLAY=:99
           - CHROME_BIN=/usr/bin/google-chrome-stable
@@ -22,7 +22,7 @@ jobs:
 
     steps:
       # Use correct php/node versions
-      - run: php-switch 7.3
+      - run: php-switch 7.4
 
       # Start Apache, Nginx and Xvfb
       - run: sudo service apache2 start
