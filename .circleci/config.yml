@@ -21,7 +21,7 @@ jobs:
     working_directory: /var/www/mysite/www
 
     steps:
-      # Use correct php/node versions
+      # Use correct php version
       - run: php-switch 7.4
 
       # Start Apache, Nginx and Xvfb
@@ -32,6 +32,9 @@ jobs:
           background: true
 
       - checkout
+
+      # Use correct node version
+      - run: nvm alias default $(cat .nvmrc)
 
       # Composer Cache + Installation
       - restore_cache:
