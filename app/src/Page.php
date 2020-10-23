@@ -5,14 +5,8 @@ use SilverStripe\CMS\Model\SiteTree;
 class Page extends SiteTree
 {
 
-    /**
-     * @var array
-     */
-    private static $db = [];
+    private static array $db = [];
 
-    /**
-     * @var array
-     */
-    private static $has_one = [];
+    private static array $has_one = [];
 
 }

@@ -17,10 +17,8 @@ class PageController extends ContentController
      *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
      * );
      * </code>
-     *
-     * @var array
      */
-    private static $allowed_actions = [];
+    private static array $allowed_actions = [];
 
     /**
      * You can include any CSS or JS required by your project after parent::init().

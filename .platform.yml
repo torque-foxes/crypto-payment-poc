@@ -1,5 +1,5 @@
 php_settings:
-  version: 7.3
+  version: 7.4
 crons:
   queuedjobs_task:
     time: '* * * * *'
