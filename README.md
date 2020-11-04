@@ -1,5 +1,7 @@
 # Overview
 
+[![CircleCI](https://circleci.com/gh/silverstripeltd/project-skeleton.svg?style=svg&circle-token=9d372cee4fd356d9f6b420952633a766fca15784)](https://circleci.com/gh/silverstripeltd/project-skeleton)
+
 Create a project skeleton for a SilverStripe 4 Platform project.
 Sets up an empty theme and cypress for testing.
 
@@ -28,6 +30,8 @@ git remote add origin git://git@whatever.com/your/project.git
 git commit -m "Init project from Skeleton"
 git push -u origin master
 ```
+
+After enabling the project on CircleCI, don't forget to update the status badge in this README file.
 
 ## Environment
 
