@@ -13,7 +13,8 @@
         "silverstripe/auditor": "^2.0",
         "silverstripe/totp-authenticator": "^4.0",
         "silverstripe/sharedraftcontent": "^2.3",
-        "jonom/silverstripe-betternavigator": "^5.0"
+        "jonom/silverstripe-betternavigator": "^5.0",
+        "kinglozzer/metatitle": "^2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",
@@ -42,6 +43,8 @@
         "project-files-installed": [
             "app/.htaccess",
             "app/_config.php",
+            "app/_config/database.yml",
+            "app/_config/mimevalidator.yml",
             "app/_config/mysite.yml",
             "app/src/Page.php",
             "app/src/PageController.php"

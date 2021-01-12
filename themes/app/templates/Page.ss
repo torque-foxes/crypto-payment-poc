@@ -12,7 +12,7 @@
         <% require themedCSS("dist/app.min") %>
     <% end_if %>
 
-    <title><% if Title %>$Title :: <% end_if %>$SiteConfig.Title</title>
+    <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> :: $SiteConfig.Title</title>
 </head>
     <body data-pagetype="$ClassName">
 
