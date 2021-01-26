@@ -7,6 +7,8 @@ Sets up an empty theme and cypress for testing.
 
 ## How to setup new project by using this skeleton
 
+1. Setup the codebase
+
 ```
 # Checkout the repo
 git clone git@github.com:silverstripeltd/project-skeleton.git <yourproject> -o skeleton
@@ -16,8 +18,6 @@ cd <yourproject>
 
 # change this readme file with project-skeleton readme
 git mv -f .project.skeleton.README.md README.md
-
-# it is good idea to adjust content of `README.md` file now
 
 # Optionally drop all history of this repo
 rm -rf .git && git init
@@ -31,7 +31,11 @@ git commit -m "Init project from Skeleton"
 git push -u origin master
 ```
 
-After enabling the project on CircleCI, don't forget to update the status badge in this README file.
+2. Update the README file with project details
+
+3. Enable the project on CircleCI, and add the status badge to the README ([instructions](https://silverstripe.atlassian.net/wiki/spaces/DEV/pages/1626013805/How+to+setup+CircleCI+for+Project+Skeleton))
+
+4. Enable the project on Codecov.io ([instructions](docs/code-coverage.md))
 
 ## Environment
 
