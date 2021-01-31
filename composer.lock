@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a85aab819da7fbc1cc424d690feab12",
+    "content-hash": "573dfcb7729fc93fe285e1719662ef2a",
     "packages": [
         {
             "name": "asyncphp/doorman",
@@ -133,6 +133,52 @@
                 "source": "https://github.com/aws/aws-sdk-php/tree/3.172.4"
             },
             "time": "2021-01-29T19:17:51+00:00"
+        },
+        {
+            "name": "axllent/silverstripe-trailing-slash",
+            "version": "2.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/axllent/silverstripe-trailing-slash.git",
+                "reference": "30c140d0c90d54ea488c6af401b152a239421850"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/axllent/silverstripe-trailing-slash/zipball/30c140d0c90d54ea488c6af401b152a239421850",
+                "reference": "30c140d0c90d54ea488c6af401b152a239421850",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "^4.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "autoload": {
+                "psr-4": {
+                    "Axllent\\TrailingSlash\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ralph Slooten",
+                    "homepage": "http://www.axllent.org/"
+                }
+            ],
+            "description": "Ensure that a single trailing slash is always added to the URL",
+            "homepage": "https://github.com/axllent/silverstripe-trailing-slash",
+            "keywords": [
+                "seo",
+                "silverstripe",
+                "urls"
+            ],
+            "support": {
+                "issues": "https://github.com/axllent/silverstripe-trailing-slash/issues",
+                "source": "https://github.com/axllent/silverstripe-trailing-slash/tree/2.2.4"
+            },
+            "time": "2020-11-27T07:09:59+00:00"
         },
         {
             "name": "beberlei/assert",
@@ -1878,6 +1924,56 @@
                 "source": "https://github.com/justinrainbow/json-schema/tree/5.2.10"
             },
             "time": "2020-05-27T16:41:55+00:00"
+        },
+        {
+            "name": "kinglozzer/metatitle",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kinglozzer/silverstripe-metatitle.git",
+                "reference": "cef7853f1b696b5bb030a988a795d8ad4e3c8f27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kinglozzer/silverstripe-metatitle/zipball/cef7853f1b696b5bb030a988a795d8ad4e3c8f27",
+                "reference": "cef7853f1b696b5bb030a988a795d8ad4e3c8f27",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": "^4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "silverstripe-vendormodule",
+            "autoload": {
+                "psr-4": {
+                    "Kinglozzer\\SilverStripeMetaTitle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Loz Calver",
+                    "email": "lozcalver@bigfork.co.uk"
+                }
+            ],
+            "description": "Re-adds the 'MetaTitle' field for SilverStripe 4",
+            "homepage": "https://github.com/kinglozzer/silverstripe-metatitle",
+            "keywords": [
+                "meta",
+                "metatitle",
+                "silverstripe",
+                "title"
+            ],
+            "support": {
+                "issues": "https://github.com/kinglozzer/silverstripe-metatitle/issues",
+                "source": "https://github.com/kinglozzer/silverstripe-metatitle/tree/master"
+            },
+            "time": "2020-06-22T13:28:54+00:00"
         },
         {
             "name": "league/csv",
