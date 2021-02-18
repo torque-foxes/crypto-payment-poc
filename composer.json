@@ -14,7 +14,8 @@
         "silverstripe/totp-authenticator": "^4.0",
         "silverstripe/sharedraftcontent": "^2.3",
         "jonom/silverstripe-betternavigator": "^5.0",
-        "kinglozzer/metatitle": "^2.0"
+        "kinglozzer/metatitle": "^2.0",
+        "axllent/silverstripe-trailing-slash": "^2.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",
