@@ -54,14 +54,14 @@ jobs:
       # NPM Cache + Installation
       - restore_cache:
           keys:
-            - v1-npm-deps-{{ checksum "package.json" }}
+            - v1-npm-deps-{{ checksum "yarn.lock" }}
             - v1-npm-deps-
       - run: yarn install --frozen-lockfile
       - save_cache:
           paths:
             - ./node_modules
             - /root/.cache/Cypress
-          key: v1-npm-deps-{{ checksum "package.json" }}
+          key: v1-npm-deps-{{ checksum "yarn.lock" }}
 
       - run: mv .circleci/.env.circleci .env
       - run: chown -R vagrant:vagrant /var/www/mysite/www
