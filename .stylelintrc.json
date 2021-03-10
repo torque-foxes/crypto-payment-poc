@@ -8,13 +8,13 @@
         "max-nesting-depth": [4, { "severity": "warning" }],
         "selector-max-id": [0, { "severity": "warning" }],
         "declaration-no-important": [true, { "severity": "warning" }],
-        "declaration-property-unit-blacklist": [{
+        "declaration-property-unit-disallowed-list": [{
             "line-height": ["px", "rem", "em"]
         }],
-        "declaration-property-value-blacklist": [{
+        "declaration-property-value-disallowed-list": [{
             "border": ["none"]
         }],
-        "function-url-scheme-blacklist": ["/^http/"],
+        "function-url-scheme-disallowed-list": ["/^http/"],
         "function-url-quotes": ["always"],
         "string-quotes": ["single"],
         "at-rule-no-unknown": null,

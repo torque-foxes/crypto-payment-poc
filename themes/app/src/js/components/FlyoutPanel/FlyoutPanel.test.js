@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils';
 import FlyoutPanel from './FlyoutPanel.vue';
 
-const createCmp = propsData => shallowMount(FlyoutPanel, { propsData });
+const createCmp = (propsData) => shallowMount(FlyoutPanel, { propsData });
 
 describe('FlyoutPanel', () => {
   let cmp;

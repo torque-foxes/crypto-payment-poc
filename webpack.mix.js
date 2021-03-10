@@ -26,7 +26,7 @@ if (process.env.NODE_ENV === 'development') {
     },
     plugins: [
       new StyleLintPlugin({
-        context: 'themes/app/src/',
+        context: 'themes/app/src',
         files: ['**/*.{scss,vue}'],
       }),
     ],

@@ -21,6 +21,14 @@ jobs:
     working_directory: /var/www/mysite/www
 
     steps:
+
+      # Update and add dependency for Cypress
+      # TODO: this should be moved to the silverstripe/bespoke-ci-base container
+      - run: rm /etc/apt/sources.list.d/mysql_56.list
+      - run: rm /etc/apt/sources.list.d/php_sury.list
+      - run: apt-get update
+      - run: apt-get install -y libgbm-dev
+
       # Use correct php version
       - run: php-switch 7.4
 

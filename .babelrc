@@ -1,7 +1,7 @@
 {
   "presets": [
     [
-      "babel-preset-env",
+      "@babel/preset-env",
       {
         "modules": false,
         "targets": {
@@ -16,7 +16,7 @@
   ],
   "env": {
     "test": {
-      "presets": [["env", { "targets": { "node": "current" } }]]
+      "presets": [["@babel/preset-env", { "targets": { "node": "current" } }]]
     },
     "development": {
       "plugins": ["istanbul"]
