@@ -23,11 +23,13 @@ jobs:
     steps:
 
       # Update and add dependency for Cypress
-      # TODO: this should be moved to the silverstripe/bespoke-ci-base container
-      - run: rm /etc/apt/sources.list.d/mysql_56.list
-      - run: rm /etc/apt/sources.list.d/php_sury.list
-      - run: apt-get update
-      - run: apt-get install -y libgbm-dev
+      - run:
+          name: Update and add dependency for Cypress v6
+          command: |
+            rm /etc/apt/sources.list.d/mysql_56.list
+            rm /etc/apt/sources.list.d/php_sury.list
+            apt-get update
+            apt-get install -y libgbm-dev
 
       # Use correct php version
       - run: php-switch 7.4

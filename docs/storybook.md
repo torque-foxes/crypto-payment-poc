@@ -11,6 +11,7 @@ To view Storybook, navigate to the `.storybook` folder and simply run the follow
 
 ```
 $ cd .storybook/
+$ yarn
 $ yarn storybook
 ```
 

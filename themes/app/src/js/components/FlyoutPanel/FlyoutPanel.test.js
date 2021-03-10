@@ -11,7 +11,7 @@ describe('FlyoutPanel', () => {
   });
 
   it('is a Vue instance', () => {
-    expect(cmp.isVueInstance()).toBeTruthy();
+    expect(cmp.vm).toBeTruthy();
   });
 
   describe('Properties', () => {
