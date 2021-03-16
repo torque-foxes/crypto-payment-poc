@@ -9,10 +9,10 @@
 - [ ] Browser tested (IE 11, Edge, Chrome, Firefox, Safari)
 - [ ] Go-Live / Project/ Code / User Documentation added
 - [ ] Relevant caching applied
-- [ ] No red flags in Accessiblity Audit ([Chrome Extension](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd))
+- [ ] No red flags in Accessibility Audit ([Chrome Extension](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd))
 - [ ] Unit test(s) added
 - [ ] Test(s) added to Cypress suite
-- [ ] Pattern library / styleguide is updated
+- [ ] Pattern library / style guide is updated
 - [ ] Branch rebased against `develop`
 
 #### Peer Review Checklist
