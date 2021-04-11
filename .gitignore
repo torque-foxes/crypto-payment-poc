@@ -1,27 +1,29 @@
-Vagrantfile
+# Default OS files
 /.DS_Store
-/.env
-/.vm_aliases
-/.idea
-/.storybook/.cache
-/.storybook/node_modules
-/.storybook/storybook-static/
-/.vagrant
+
+# Vagrant/VM related files
 /Vagrantfile
+/.vm_aliases
+/.vagrant
+
+# IDE/Editor files
+/.idea
+
+# Frontend files
 /mix-manifest.json
 /node_modules/
-/public/_resources/
-/public/assets/
-/raygun/
-/simple-styleguide/
-/themes/app/dist/app.js
-/themes/app/dist/app.css
-/themes/app/dist/editor.css
-/vendor/
-/themes/app/dist/mix-manifest.json
-/themes/app/dist/editor.css
+/storybook-static/
+/themes/app/dist
 /cypress/screenshots
 /cypress/videos
 cypress.env.json
 /coverage
 /.nyc_output
+
+# Assets
+/public/assets/
+
+# Silverstripe/PHP specific
+/.env
+/public/_resources/
+/vendor/

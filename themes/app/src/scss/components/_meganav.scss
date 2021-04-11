@@ -1,3 +1,6 @@
+@import '~bootstrap/scss/mixins/breakpoints';
+@import "../core/variables";
+
 .mega-nav {
   display: none;
 
@@ -12,7 +15,7 @@
   &__overlay {
     display: none;
     width: 100%;
-    border-top: 1px solid $meganav-border-color;
+    border-top: 1px solid $color-grey-dark;
     position: absolute;
     left: 0;
     margin-top: 24px;
@@ -22,7 +25,7 @@
   }
 
   &__content {
-    background: $meganav-content-bg;
+    background: $color-white;
     padding-top: $meganav-padding-y;
     padding-bottom: $meganav-padding-y;
   }
@@ -59,7 +62,7 @@
     display: none;
     border-left: 13px solid transparent;
     border-right: 13px solid transparent;
-    border-top: 13px solid $meganav-border-color;
+    border-top: 13px solid $color-grey-dark;
     content: '';
     position: absolute;
     bottom: -41px;
@@ -85,7 +88,7 @@
     }
 
     &--current .mega-nav__link {
-      color: $meganav-link-color;
+      color: $color-primary;
       font-weight: $font-weight-bold;
     }
 
@@ -93,7 +96,7 @@
     &:hover,
     &:focus {
       .mega-nav__link {
-        color: $meganav-link-color;
+        color: $color-primary;
       }
     }
 

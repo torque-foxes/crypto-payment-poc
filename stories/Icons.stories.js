@@ -1,20 +1,18 @@
-import { storiesOf } from '@storybook/vue';
+import { storiesOf } from "@storybook/vue3";
 
 const icons = [
   // 'my-icon',
   // 'my-other-icon',
-  'chev-down',
+  "chev-down",
 ];
 
-
-storiesOf('Styleguide', module)
-  .add('Icons', () => ({
-    data() {
-        return {
-            icons,
-        };
-    },
-    template: `
+storiesOf("Styleguide", module).add("Icons", () => ({
+  data() {
+    return {
+      icons,
+    };
+  },
+  template: `
       <div class="sb__story-container">
         <section class="sb__group">
           <h2 class="sb__header">Available icons</h2>
@@ -60,5 +58,4 @@ storiesOf('Styleguide', module)
         </section>
       </div>
     `,
-  }), { info: {} });
-
+}));

@@ -1,7 +1,6 @@
-import { storiesOf } from '@storybook/vue';
+import { storiesOf } from "@storybook/vue3";
 
-storiesOf('Styleguide', module)
-.add('List', () => ({
+storiesOf("Styleguide", module).add("List", () => ({
   template: `
       <div class="main">
         <h3>Unordered list (Short)</h3>
@@ -97,4 +96,4 @@ storiesOf('Styleguide', module)
         </ol>
       </div>
     `,
-}), { info: {} });
+}));

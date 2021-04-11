@@ -1,43 +1,19 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import Promise from 'promise-polyfill';
-import Meganav from './components/Meganav.vue';
-import FlyoutPanel from './components/FlyoutPanel/FlyoutPanel.vue';
-import Tabs from './components/Tabs/Tabs.vue';
-import Tab from './components/Tabs/TabItem.vue';
+import { createApp } from "vue";
+import { createStore } from "vuex";
+import Promise from "promise-polyfill";
+import Meganav from "./components/Meganav.vue";
+import FlyoutPanel from "./components/FlyoutPanel/FlyoutPanel.vue";
+import Tabs from "./components/Tabs/Tabs.vue";
+import Tab from "./components/Tabs/Tab.vue";
 
-// IE support
+/**
+ * IE support, if you're not supporting IE remove this and update your babel yo
+ */
 if (!window.Promise) {
   window.Promise = Promise;
 }
 
-/**
- * Enable Vuex
- *
- * This should be used when we need to share state amongst components or actions
- * occur across components.
- */
-Vue.use(Vuex);
-
-/**
- * Setup our vuex store
- */
-const store = new Vuex.Store({
-  state: { },
-
-  getters: { },
-
-  /* eslint-disable no-param-reassign */
-  mutations: { },
-  /* eslint-enable no-param-reassign */
-
-  actions: { },
-});
-
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  store,
+const RootApp = {
   components: {
     FlyoutPanel,
     Tabs,
@@ -57,7 +33,27 @@ new Vue({
       this.mobileMenuOpen = true;
     },
   },
-});
-/* eslint-enable no-new */
+};
 
-export default {};
+const app = createApp(RootApp);
+app.mount("#app");
+
+/**
+ * Enable and setup Vuex
+ *
+ * This should be used when we need to share state amongst components or actions
+ * occur across components.
+ */
+const store = createStore({
+  state: {},
+
+  getters: {},
+
+  /* eslint-disable no-param-reassign */
+  mutations: {},
+  /* eslint-enable no-param-reassign */
+
+  actions: {},
+});
+
+app.use(store);

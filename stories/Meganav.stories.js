@@ -1,17 +1,18 @@
-import { storiesOf } from '@storybook/vue';
-import { action } from '@storybook/addon-actions';
+import { storiesOf } from "@storybook/vue3";
 
-import Meganav from '../../themes/app/src/js/components/Meganav.vue';
+import Meganav from "../themes/app/src/js/components/Meganav.vue";
 
-storiesOf('Components/Mega nav', module)
-  .add('Interactive Meganav', () => ({
-    mixins: [Meganav],
-    data() {
-      return {
-        focusSelector: '.mega-nav a:focus',
-      }
-    },
-    template: `
+storiesOf("Components/Mega nav", module)
+  .add(
+    "Interactive Meganav",
+    () => ({
+      mixins: [Meganav],
+      data() {
+        return {
+          focusSelector: ".mega-nav a:focus",
+        };
+      },
+      template: `
       <div class="container">
         <div class="sb__story-container">
           <section class="sb__group">
@@ -159,13 +160,15 @@ storiesOf('Components/Mega nav', module)
         </div>
       </div>
     `,
-  }), { info: {} })
-  .add('Minimal Meganav', () => ({
+    }),
+    { info: {} }
+  )
+  .add("Minimal Meganav", () => ({
     mixins: [Meganav],
     data() {
       return {
-        focusSelector: '.mega-nav a:focus',
-      }
+        focusSelector: ".mega-nav a:focus",
+      };
     },
     template: `
       <div class="container">
@@ -220,6 +223,5 @@ storiesOf('Components/Mega nav', module)
           </section>
         </div>
       </div>
-    `
-  }), { info: {} });
-
+    `,
+  }));

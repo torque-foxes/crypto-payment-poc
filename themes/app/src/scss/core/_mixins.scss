@@ -1,3 +1,5 @@
+@import "../core/variables";
+
 /**
  * Mixin to allow easy use of icons.
  *
@@ -21,10 +23,10 @@
 }
 
 @mixin heading-link() {
-  color: $heading-link-color;
+  color: $color-blue;
 
   &:hover {
-    color: $heading-link-hover-color;
+    color: $color-red;
     text-decoration: none;
   }
 }

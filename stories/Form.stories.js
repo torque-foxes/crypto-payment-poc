@@ -1,7 +1,6 @@
-import { storiesOf } from '@storybook/vue';
+import { storiesOf } from "@storybook/vue3";
 
-storiesOf('Styleguide', module)
-.add('Form', () => ({
+storiesOf("Styleguide", module).add("Form", () => ({
   template: `
       <div class="main">
          <form action="" method="post" enctype="application/x-www-form-urlencoded">
@@ -102,4 +101,4 @@ storiesOf('Styleguide', module)
         </form>
       </div>
     `,
-}), { info: {} });
+}));

@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     $MetaTags(false)
 
-    <% if $IsDev %>
-        <% require themedCSS("dist/app") %>
-    <% else %>
-        <% require themedCSS("dist/app.min") %>
-    <% end_if %>
+    <% require themedCSS("dist/app") %>
 
     <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> :: $SiteConfig.Title</title>
 </head>
@@ -20,10 +16,6 @@
             $Layout
         </div>
 
-        <% if $IsDev %>
-            <% require themedJavascript("dist/app") %>
-        <% else %>
-            <% require themedJavascript("dist/app.min") %>
-        <% end_if %>
+        <% require themedJavascript("dist/app") %>
     </body>
 </html>

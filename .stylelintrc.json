@@ -1,5 +1,8 @@
 {
-    "extends": "stylelint-config-standard",
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-prettier"
+    ],
     "plugins": [
         "stylelint-scss"
     ],
@@ -16,7 +19,6 @@
         }],
         "function-url-scheme-disallowed-list": ["/^http/"],
         "function-url-quotes": ["always"],
-        "string-quotes": ["single"],
         "at-rule-no-unknown": null,
         "scss/at-rule-no-unknown": true,
         "scss/at-import-no-partial-leading-underscore": true,

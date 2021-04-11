@@ -6,19 +6,19 @@ $icon-path: '../../icons' !default;
 
 $font-size-base: 1.6rem !default; // ~16px - body font-size set to 10px for easy px-rem conversion
 
-$meganav-content-bg: var(--white);
-$meganav-border-color: var(--grey);
-$meganav-link-color: var(--primary);
 $meganav-padding-y: 3.2rem;
 $meganav-animation-time: 0.3s; // CAUTION: This time is tied to a setTimeout in Meganav.vue
 
-$blockquote-bg: #EEE;
-$blockquote-color: #6A787B;
-$cite-color: #6A787B;
+/* Colors */
+$color-blue: var(--blue);
+$color-grey-dark: var(--grey);
+$color-grey-light: #EEE;
+$color-grey-mid: #ADB6B8;
+$color-primary: var(--primary);
+$color-red: var(--red);
+$color-white: var(--white);
 
-$heading-link-color: var(--blue);
-$heading-link-hover-color: var(--red);
-
+/* Font weights */
 $font-weight-normal: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;

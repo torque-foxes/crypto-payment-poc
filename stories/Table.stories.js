@@ -1,7 +1,6 @@
-import { storiesOf } from '@storybook/vue';
+import { storiesOf } from "@storybook/vue3";
 
-storiesOf('Styleguide', module)
-.add('Table', () => ({
+storiesOf("Styleguide", module).add("Table", () => ({
   template: `
       <div class="main">
         <table>
@@ -36,4 +35,4 @@ storiesOf('Styleguide', module)
         </table>
       </div>
     `,
-}), { info: {} });
+}));

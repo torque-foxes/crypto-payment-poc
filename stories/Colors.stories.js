@@ -1,12 +1,11 @@
-import { storiesOf } from '@storybook/vue';
-import Color from '../components/Color.vue';
+import { storiesOf } from "@storybook/vue3";
+import Color from "./components/Color.vue";
 
-storiesOf('Styleguide', module)
-  .add('Colour Palette', () => ({
-    components: {
-      Color,
-    },
-    template: `
+storiesOf("Styleguide", module).add("Colour Palette", () => ({
+  components: {
+    Color,
+  },
+  template: `
       <div class="sb__story-container">
         <section class="sb__group">
           <h2 class="sb__header">Default Bootstrap Colours</h2>
@@ -85,4 +84,4 @@ storiesOf('Styleguide', module)
         </section>
       </div>
     `,
-  }));
+}));
