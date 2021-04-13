@@ -45,6 +45,9 @@ SilverStripe Ltd. prefers [Vagrant](https://www.vagrantup.com/).
 Read the ["Vagrant" Confluence page](https://silverstripe.atlassian.net/wiki/spaces/DEV/pages/401506576/Vagrant)
 for setup and usage details.
 
+## Github
+Set up your branches to be deleted after merge, docs are [here](https://docs.github.com/en/github/administering-a-repository/managing-the-automatic-deletion-of-branches).
+
 #### Windows environments
 
 Because Windows can't handle symlinks, an additional step when transpiling dependencies is needed.
