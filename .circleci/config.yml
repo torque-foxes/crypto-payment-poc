@@ -83,13 +83,13 @@ jobs:
       - run: vendor/bin/phpunit --verbose --coverage-html coverage/php  --coverage-clover coverage/php/clover.xml
 
       # Vue Tests
-      - run: yarn jest
+      - run: yarn test:app
 
       # JS E2E tests
-      - run: yarn cypress:test
+      - run: yarn test:e2e
 
       # Generate coverage reports
-      - run: yarn coverage
+      - run: yarn test:coverage
 
       # Requires $CODECOV_TOKEN variable set in CircleCI
       - run: bash <(curl -s https://codecov.io/bash)

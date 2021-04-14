@@ -35,6 +35,13 @@
             "@phpcs",
             "yarn lint"
         ],
+        "dev-build": [
+            "sake dev/build flush=1"
+        ],
+        "test": [
+            "@test-phpunit"
+        ],
+        "test-phpunit": "phpunit -d memory_limit=512M -d flush=1",
         "php-lint": "parallel-lint app",
         "phpcs": "phpcs app --standard=phpcs.xml --extensions=php --encoding=utf-8",
         "phpcbf": "phpcbf app --standard=phpcs.xml --extensions=php --encoding=utf-8",
