@@ -1,4 +1,4 @@
 {
   "ignoreTestFiles": "*.js",
-  "baseUrl": "http://myproject.test/"
+  "baseUrl": "http://localhost/"
 }
