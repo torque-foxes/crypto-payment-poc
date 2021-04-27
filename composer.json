@@ -8,8 +8,6 @@
         "silverstripe/crontask": "^2",
         "silverstripe/environmentcheck": "^2",
         "silverstripe/raygun": "^3",
-        "bringyourownideas/silverstripe-composer-security-checker": "^2.0",
-        "bringyourownideas/silverstripe-composer-update-checker": "^2.0",
         "silverstripe/auditor": "^2.0",
         "silverstripe/totp-authenticator": "^4.0",
         "silverstripe/sharedraftcontent": "^2.3",
