@@ -46,13 +46,14 @@
 @import "~bootstrap/scss/print";
 
 /**
- * Include Typography and other theme styles
+ * Include core theme styles
  */
 @import "core/mixins";
 @import "core/accessibility";
 @import "core/fonts";
 @import "core/typography";
 @import "core/animations";
+@import "core/responsive-video";
 
 /**
  * Include components
