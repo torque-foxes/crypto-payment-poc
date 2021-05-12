@@ -2,7 +2,6 @@
 
 namespace App\View;
 
-use SilverStripe\View\Parsers\ShortcodeParser;
 use SilverStripe\View\Shortcodes\EmbedShortcodeProvider;
 
 class CustomEmbedShortcodeProvider extends EmbedShortcodeProvider
@@ -31,24 +30,19 @@ class CustomEmbedShortcodeProvider extends EmbedShortcodeProvider
     }
 
     /**
-     * @param array $arguments
-     * @param string $content
-     * @param ShortcodeParser $parser
-     * @param string $shortcode
-     * @param array $extra
-     * @return string
-     * @phpcs:disable
+     * Handle the shortcode call, setting defaults for video dimensions
+     * and adding the padding ratio
+     *
+     * @inheritDoc
      */
     public static function handle_shortcode($arguments, $content, $parser, $shortcode, $extra = array()): string
     {
         // Ensure we define a height and width
         $arguments['width'] ??= self::DEFAULT_WIDTH;
         $arguments['height'] ??= self::DEFAULT_HEIGHT;
-        $arguments['ratioPadding'] = self::calculateRatioPadding(
-            (int)$arguments['width'],
-            (int)$arguments['height']
-        );
+        $arguments['ratioPadding'] = self::calculateRatioPadding((int)$arguments['width'], (int)$arguments['height']);
 
         return parent::handle_shortcode($arguments, $content, $parser, $shortcode, $extra);
     }
+
 }
