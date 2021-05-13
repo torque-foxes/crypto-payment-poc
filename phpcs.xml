@@ -59,7 +59,7 @@
         <exclude name="SlevomatCodingStandard.Namespaces.UseOnlyWhitelistedNamespaces"/>
         <!-- Not something we do in SS -->
         <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes"/>
-        <!-- Array type hint syntax is very useful -->
+        <!-- Array type hint syntax is very useful until IDEs support new array phpdoc -->
         <exclude name="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax"/>
         <!-- Using mixed type is a way to get around the fact that we often cannot strictly type our methods if we -->
         <!-- are extending a base SS method -->
@@ -68,8 +68,6 @@
         <exclude name="SlevomatCodingStandard.Classes.UnusedPrivateElements.UnusedProperty"/>
         <!-- disable until php 7.3 is implemented in the project -->
         <exclude name="SlevomatCodingStandard.Functions.TrailingCommaInCall.MissingTrailingComma"/>
-        <!-- disable until IDEs support new array phpdoc -->
-        <exclude name="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax"/>
         <!-- Don't require traversable type hints -->
         <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingTraversableTypeHintSpecification"/>
         <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingTraversableTypeHintSpecification"/>
