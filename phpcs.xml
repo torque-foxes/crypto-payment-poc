@@ -53,8 +53,6 @@
         <!-- There are two rules which conflict. NewWithoutParentheses and UselessParentheses. One must be disabled -->
         <!-- We allow new Class(); rather than new Class;-->
         <exclude name="SlevomatCodingStandard.ControlStructures.NewWithoutParentheses"/>
-        <!-- Do not require fully qualified class names in annotation -->
-        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation.NonFullyQualifiedClassName"/>
         <!-- We generally allow the use of any namespace -->
         <exclude name="SlevomatCodingStandard.Namespaces.UseOnlyWhitelistedNamespaces"/>
         <!-- Not something we do in SS -->
@@ -78,8 +76,11 @@
         <exclude name="SlevomatCodingStandard.Commenting.UselessFunctionDocComment.UselessDocComment"/>
         <!-- Don't require literal numeric seperator -->
         <exclude name="SlevomatCodingStandard.Numbers.RequireNumericLiteralSeparator.RequiredNumericLiteralSeparator"/>
-        <!-- Do not require fully qualified function names -->
-        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions.NonFullyQualified"/>
+        <!-- Do not require fully qualified (we prefer to import with use statements) -->
+        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation"/>
+        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedExceptions"/>
+        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalConstants"/>
+        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions"/>
     </rule>
 
     <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses">
