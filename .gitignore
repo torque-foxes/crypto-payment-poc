@@ -28,3 +28,4 @@ cypress.env.json
 /.env
 /public/_resources/
 /vendor/
+/silverstripe.log
