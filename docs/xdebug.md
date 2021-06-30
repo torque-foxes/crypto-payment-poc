@@ -1,5 +1,7 @@
 # XDebug
 
+For specific set up instructions for PHPStorm, please see our [PHPStorm](phpstorm.md) docs.
+
 Once you setup XDebug, you should be able to enable or disable it.
 Please refer to https://silverstripe.atlassian.net/l/c/17B1GV8d for more information.
 
