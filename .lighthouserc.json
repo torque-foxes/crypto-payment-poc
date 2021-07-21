@@ -1,7 +1,7 @@
 {
   "ci": {
     "upload": {
-      "target": "filesystem"
+      "serverBaseUrl": "https://lighthouse-silverstripe.herokuapp.com"
     },
     "assert": {
       "assertions": {
