@@ -1,0 +1,17 @@
+{
+  "ci": {
+    "upload": {
+      "target": "lhci"
+    },
+    "collect": {
+      "settings": {
+        "output": "html",
+        "outputPath": "./lighthouse-report.html"
+      },
+      "url": [
+        "http://localhost/",
+        "http://localhost/about-us"
+      ]
+    }
+  }
+}

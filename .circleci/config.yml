@@ -104,7 +104,7 @@ jobs:
       - run: chmod g+s /var/www/mysite/www/public
 
       # Ensure production build runs, but use dev output for coverage
-      - run: yarn build
+      # - run: yarn build
       - run: yarn dev
 
       # JS/SCSS/PHP Linting
@@ -114,9 +114,12 @@ jobs:
       - run: sudo -u vagrant vendor/bin/sake dev/build flush=1
 
       # run test suites
-      - php-tests
-      - js-tests
-      - e2e-tests
+      # - php-tests
+      # - js-tests
+      # - e2e-tests
+      - run: |
+          npm install -g @lhci/cli@0.8.x
+          lhci autorun
 
       # Generate coverage reports
       - run: yarn test:coverage
