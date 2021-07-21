@@ -31,6 +31,12 @@ commands:
   dependencies:
     description: Install dependencies
     steps:
+      - run:
+          name: install the latest chrome
+          command: |
+            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            sudo apt install ./google-chrome-stable_current_amd64.deb
+
       # Composer Cache + Installation
       - restore_cache:
           keys:
@@ -103,8 +109,7 @@ jobs:
       - run: chown -R vagrant:vagrant /var/www/mysite/www
       - run: chmod g+s /var/www/mysite/www/public
 
-      # Ensure production build runs, but use dev output for coverage
-      # - run: yarn build
+      # Build dev files for output
       - run: yarn dev
 
       # JS/SCSS/PHP Linting
@@ -114,10 +119,11 @@ jobs:
       - run: sudo -u vagrant vendor/bin/sake dev/build flush=1
 
       # run test suites
-      # - php-tests
-      # - js-tests
-      # - e2e-tests
+      - php-tests
+      - js-tests
+      - e2e-tests
       - run: |
+          yarn build
           npm install -g @lhci/cli@0.8.x
           lhci autorun
 
@@ -141,3 +147,6 @@ jobs:
 
       - store_artifacts:
           path: coverage
+
+      - store_artifacts:
+          path: .lighthouseci
