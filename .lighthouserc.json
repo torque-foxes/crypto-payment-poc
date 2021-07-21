@@ -12,7 +12,6 @@
       }
     },
     "collect": {
-      "numberOfRuns": 1,
       "settings": {
         "chromeFlags": "--no-sandbox"
       },
