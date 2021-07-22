@@ -10,8 +10,9 @@
 
     <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> :: $SiteConfig.Title</title>
 </head>
-    <body data-pagetype="$ClassName" style="background: #000;">
-
+    <body data-pagetype="$ClassName">
+    <button></button>
+    <a href="/"></a>
         <div id="app">
             $Layout
         </div>
