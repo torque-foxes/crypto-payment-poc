@@ -127,7 +127,7 @@ jobs:
           command: |
             yarn build
             npm install -g @lhci/cli@0.8.x
-            lhci autorun
+            lhci autorun --upload.basicAuth.username=silverstripe --upload.basicAuth.password=${LHCI_BASIC_AUTH_PASSWORD}
 
       # Generate coverage reports
       - run: yarn test:coverage
@@ -149,6 +149,3 @@ jobs:
 
       - store_artifacts:
           path: coverage
-
-      - store_artifacts:
-          path: .lighthouseci
