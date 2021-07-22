@@ -7,7 +7,7 @@ version: 2.1
 executors:
   docker-executor:
     docker:
-      - image: ghcr.io/silverstripeltd/bespoke-ci-base:3.2.0
+      - image: ghcr.io/silverstripeltd/bespoke-ci-base:3.2.1
         environment:
           DISPLAY: :99
           CHROME_BIN: /usr/bin/google-chrome-stable
@@ -31,12 +31,6 @@ commands:
   dependencies:
     description: Install dependencies
     steps:
-      - run:
-          name: install the latest chrome
-          command: |
-            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-            sudo apt install ./google-chrome-stable_current_amd64.deb
-
       # Composer Cache + Installation
       - restore_cache:
           keys:
@@ -109,7 +103,7 @@ jobs:
       - run: chown -R vagrant:vagrant /var/www/mysite/www
       - run: chmod g+s /var/www/mysite/www/public
 
-      # Build dev files for output
+      # Build dev files for coverage instrumentation
       - run: yarn dev
 
       # JS/SCSS/PHP Linting
