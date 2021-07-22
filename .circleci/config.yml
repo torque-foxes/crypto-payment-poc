@@ -7,7 +7,7 @@ version: 2.1
 executors:
   docker-executor:
     docker:
-      # Details of what this image contains at https://github.com/silverstripeltd/bespoke-ci-base/
+      # Details of what this image contains available at https://github.com/silverstripeltd/bespoke-ci-base/
       - image: ghcr.io/silverstripeltd/bespoke-ci-base:3.2.1
         environment:
           DISPLAY: :99
