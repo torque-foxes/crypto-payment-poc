@@ -9,26 +9,17 @@ Sets up an empty theme and cypress for testing.
 
 1. Setup the codebase
 
+Press the green 'Use this template' button on Github (see [Creating a repository from a template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template#creating-a-repository-from-a-template)). You will be prompted to create a new repository using project-skeleton as the initial commit.
+
 ```
-# Checkout the repo
-git clone git@github.com:silverstripeltd/project-skeleton.git <yourproject> -o skeleton
+# Checkout the new repo
+git clone git@github.com:silverstripeltd/<yourproject>
 
 # Change directory to your project
 cd <yourproject>
 
-# change this readme file with project-skeleton readme
+# replace this readme file with project-skeleton readme
 git mv -f .project.skeleton.README.md README.md
-
-# Optionally drop all history of this repo
-rm -rf .git && git init
-
-# replace the remote origin with your own
-git remote remove skeleton
-git remote add origin git://git@whatever.com/your/project.git
-
-# Commit and push to master
-git commit -m "Init project from Skeleton"
-git push -u origin master
 ```
 
 2. Update the README file with project details
@@ -48,7 +39,7 @@ for setup and usage details.
 ## Github
 Set up your branches to be deleted after merge, docs are [here](https://docs.github.com/en/github/administering-a-repository/managing-the-automatic-deletion-of-branches).
 
-#### Windows environments
+## Windows environments
 
 Because Windows can't handle symlinks, an additional step when transpiling dependencies is needed.
 Transpiled dependencies need to be copied from the dist directory to the public resources directory.
