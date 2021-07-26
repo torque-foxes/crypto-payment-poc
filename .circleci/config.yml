@@ -7,7 +7,8 @@ version: 2.1
 executors:
   docker-executor:
     docker:
-      - image: ghcr.io/silverstripeltd/bespoke-ci-base:3.2.0
+      # Details of what this image contains available at https://github.com/silverstripeltd/bespoke-ci-base/
+      - image: ghcr.io/silverstripeltd/bespoke-ci-base:3.2.1
         environment:
           DISPLAY: :99
           CHROME_BIN: /usr/bin/google-chrome-stable
@@ -84,6 +85,16 @@ commands:
     description: JS E2E tests
     steps:
       - run: yarn test:e2e
+  lighthouse-checks:
+    description: Lighthouse checks
+    steps:
+      - run:
+          name: Lighthouse checks
+          command: |
+            yarn build
+            npm install -g @lhci/cli@0.8.x
+            lhci autorun --upload.basicAuth.username=silverstripe --upload.basicAuth.password=${LHCI_BASIC_AUTH_PASSWORD}
+
 jobs:
   build:
     executor: docker-executor
@@ -103,8 +114,7 @@ jobs:
       - run: chown -R vagrant:vagrant /var/www/mysite/www
       - run: chmod g+s /var/www/mysite/www/public
 
-      # Ensure production build runs, but use dev output for coverage
-      - run: yarn build
+      # Build dev files for coverage instrumentation
       - run: yarn dev
 
       # JS/SCSS/PHP Linting
@@ -117,6 +127,7 @@ jobs:
       - php-tests
       - js-tests
       - e2e-tests
+      - lighthouse-checks
 
       # Generate coverage reports
       - run: yarn test:coverage

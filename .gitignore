@@ -20,6 +20,7 @@
 cypress.env.json
 /coverage
 /.nyc_output
+/.lighthouseci
 
 # Assets
 /public/assets/
