@@ -21,8 +21,7 @@
         "phpunit/phpunit": "^5.7",
         "lekoala/silverstripe-debugbar": "^2",
         "slevomat/coding-standard": "~6.0",
-        "php-parallel-lint/php-parallel-lint": "^1.2",
-        "pcov/clobber": "^2.0"
+        "php-parallel-lint/php-parallel-lint": "^1.2"
     },
     "config": {
         "process-timeout": 600

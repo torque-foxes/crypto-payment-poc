@@ -72,7 +72,11 @@ commands:
             PHPUNITARGS=""
             if << parameters.coverage >>;
             then
+                # enable the line below if you are requiring private repos (e.g. silverstripeltd/elasticsearchapp)
+                # see https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
+                # composer config http-basic.github.com $SERVICE_ACCOUNT_USERNAME $SERVICE_ACCOUNT_GITHUB_API_TOKEN
                 phpenmod -v 7.4 pcov
+                composer require pcov/clobber
                 vendor/bin/pcov clobber
                 PHPUNITARGS=" --coverage-html coverage/php  --coverage-clover coverage/php/clover.xml"
             fi
