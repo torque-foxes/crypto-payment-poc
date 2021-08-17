@@ -1,5 +1,5 @@
 @import '~bootstrap/scss/mixins/breakpoints';
-@import "../core/variables";
+@import '../core/variables';
 
 .mega-nav {
   display: none;
@@ -15,10 +15,10 @@
   &__overlay {
     display: none;
     width: 100%;
-    border-top: 1px solid $color-grey-dark;
+    border-top: 0.1rem solid $color-grey-dark;
     position: absolute;
     left: 0;
-    margin-top: 24px;
+    margin-top: 2.4rem;
     z-index: 20;
     height: 100%;
     background: rgba($black, 0.5);
@@ -32,7 +32,7 @@
 
   &__link {
     position: relative;
-    padding-right: 20px;
+    padding-right: 2.0rem;
   }
 
   /**
@@ -45,30 +45,30 @@
    */
   &__item &__link::after {
     display: none;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-    border-top: 12px solid $white;
+    border-left: 1.2rem solid transparent;
+    border-right: 1.2rem solid transparent;
+    border-top: 1.2rem solid $white;
     content: '';
     position: absolute;
-    bottom: -41px;
+    bottom: -4.1rem;
     right: 50%;
     transform: rotate(180deg) translateX(-50%);
-    transform: rotate(180deg) translateX(calc(-50% - 20px));
+    transform: rotate(180deg) translateX(calc(-50% - 2.0rem));
     transform-origin: top left;
     z-index: 30;
   }
 
   &__item &__link::before {
     display: none;
-    border-left: 13px solid transparent;
-    border-right: 13px solid transparent;
-    border-top: 13px solid $color-grey-dark;
+    border-left: 1.3rem solid transparent;
+    border-right: 1.3rem solid transparent;
+    border-top: 1.3rem solid $color-grey-dark;
     content: '';
     position: absolute;
-    bottom: -41px;
-    right: calc(50% - 2px);
+    bottom: -4.1rem;
+    right: calc(50% - 0.2rem);
     transform: rotate(180deg) translateX(-50%);
-    transform: rotate(180deg) translateX(calc(-50% - 20px));
+    transform: rotate(180deg) translateX(calc(-50% - 2.0rem));
     transform-origin: top left;
     z-index: 30;
   }
@@ -81,10 +81,10 @@
       @include icon('chev-down', 8px, 5px);
 
       transition: transform 0.2s;
-      margin-left: 4px;
-      margin-top: -2px;
+      margin-left: 0.4rem;
+      margin-top: -0.2rem;
       position: relative;
-      left: -20px;
+      left: -2.0rem;
     }
 
     &--current .mega-nav__link {

@@ -1,11 +1,13 @@
 @import '~bootstrap/scss/mixins/breakpoints';
 @import '~bootstrap/scss/variables';
-@import "../core/variables";
-@import "../core/mixins";
+@import '../core/variables';
+@import '../core/mixins';
 
 html,
 body {
+  /* stylelint-disable unit-disallowed-list */
   font-size: 10px; // For easy conversion of px to rem, 18px = 1.8rem
+  /* stylelint-enable unit-disallowed-list */
 }
 
 body,
@@ -42,7 +44,7 @@ p {
   }
 
   + p {
-    margin-top: 35px;
+    margin-top: 3.5rem;
   }
 }
 
@@ -184,32 +186,32 @@ img {
 
   &.left {
     float: left;
-    margin: 0 25px 25px 0;
+    margin: 0 2.5rem 2.5rem 0;
   }
 
   &.right {
     float: right;
-    margin: 0 0 25px 25px;
+    margin: 0 0 2.5rem 2.5rem;
     clear: none;
   }
 
   &.center {
-    margin: 25px auto;
+    margin: 2.5rem auto;
   }
 
   &.rightAlone {
     float: right;
-    margin: 25px 0;
+    margin: 2.5rem 0;
     clear: both;
   }
 
   &.leftAlone {
-    margin: 25px 0;
+    margin: 2.5rem 0;
   }
 
   + .caption {
     position: relative;
-    top: -15px;
+    top: -1.5rem;
     font-size: 1.4rem;
     color: $blue;
   }
@@ -218,7 +220,7 @@ img {
 .captionImage {
   &.left {
     float: left;
-    margin: 25px 25px 0 0;
+    margin: 2.5rem 2.5rem 0 0;
 
     + p {
       clear: none;
@@ -227,7 +229,7 @@ img {
 
   &.right {
     float: right;
-    margin: 0 0 25px 25px;
+    margin: 0 0 2.5rem 2.5rem;
 
     + p {
       clear: none;
@@ -258,17 +260,17 @@ blockquote {
   font-size: 1.8rem;
   line-height: 1.4;
   background: $color-grey-light;
-  border-radius: 8px;
-  padding: 25px 50px 25px 40px;
+  border-radius: 0.8rem;
+  padding: 2.5rem 5.0rem 2.5rem 4.0rem;
   color: $color-grey-mid;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 4.0rem;
 
   cite {
     display: block;
     position: absolute;
-    bottom: -66px;
-    left: 40px;
+    bottom: -6.6rem;
+    left: 4.0rem;
     color: $color-grey-dark;
     font-size: 1.6rem;
     line-height: 1.3;
