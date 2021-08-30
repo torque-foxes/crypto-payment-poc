@@ -21,7 +21,6 @@
     "function-url-scheme-disallowed-list": ["/^http/"],
     "function-url-quotes": ["always"],
     "string-quotes": ["single"],
-    "unit-disallowed-list": ["px"],
     "at-rule-no-unknown": null,
     "no-descending-specificity": null,
     "block-no-empty": true,
