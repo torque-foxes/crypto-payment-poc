@@ -13,7 +13,8 @@
     "selector-max-id": [0, { "severity": "warning" }],
     "declaration-no-important": [true, { "severity": "warning" }],
     "declaration-property-unit-disallowed-list": [{
-        "line-height": ["px", "rem", "em"]
+        "line-height": ["px", "rem", "em"],
+        "font-size": ["px"]
     }],
     "declaration-property-value-disallowed-list": [{
         "border": ["none"]
