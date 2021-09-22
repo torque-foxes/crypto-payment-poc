@@ -23,6 +23,25 @@
 }
 
 /**
+ * Convert a scss map of colours into CSS variables
+ */
+@mixin convertColoursToCssVars($colours) {
+  @each $name, $hex in $colours {
+    --color-#{$name}: #{$hex};
+    --color-#{$name}--rgb: #{hextorgb($hex)};
+  }
+}
+
+/**
+ * Convert a scss map of variables into CSS variables
+ */
+@mixin convertVariablesToCssVars($variables) {
+  @each $name, $var in $variables {
+    --#{$name}: #{$var};
+  }
+}
+
+/**
  * Convert hex colours to rgb() syntax
  * this is useful if you want to add an opacity
  *
@@ -30,9 +49,9 @@
  *
  * @example
  * .btn {
- *   background-color: rgba(#{hexToRGB($color-blue)}, 0.4);
+ *   background-color: rgba(#{hextorgb($color-blue)}, 0.4);
  * }
  */
-@function hexToRGB($hex) {
+@function hextorgb($hex) {
   @return red($hex), green($hex), blue($hex);
 }
