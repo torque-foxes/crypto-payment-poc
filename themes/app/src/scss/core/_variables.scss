@@ -5,51 +5,142 @@ $font-path: '../../fonts' !default;
 $icon-path: '../../icons' !default;
 $image-path: '../../images' !default;
 
-$font-size-base: 1.6rem !default; // ~16px - body font-size set to 10px for easy px-rem conversion
-
-$meganav-padding-y: 3.2rem;
-$meganav-animation-time: 0.3s; // CAUTION: This time is tied to a setTimeout in Meganav.vue
 
 /* Colors */
-$color-blue: var(--blue);
-$color-grey-dark: var(--grey);
+$color-black: #000;
+$color-white: #FFF;
+$color-grey-dark: #222;
 $color-grey-light: #EEE;
 $color-grey-mid: #ADB6B8;
-$color-primary: var(--primary);
-$color-red: var(--red);
-$color-white: var(--white);
+$color-red: #F00;
+$color-green: #0F0;
+$color-blue: #00F;
+
+
+/* Fonts */
+$font-family-sans-serif: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$font-family-serif: 'TimesNewRoman', 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+$font-family-base: $font-family-sans-serif;
+
 
 /* Font weights */
-$font-weight-normal: 400;
+$font-weight-thin: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 $font-weight-extrabold: 800;
+$font-weight-black: 900;
+
+
+/* Font colours */
+$font-color-h1: $color-black;
+$font-color-h2: $color-black;
+$font-color-h3: $color-grey-dark;
+$font-color-h4: $color-grey-dark;
+$font-color-h5: $color-grey-dark;
+$font-color-h6: $color-grey-dark;
+$font-color-intro: $color-black;
+$font-color-paragraph: $color-black;
+$font-color-link: $color-blue;
+$font-color-blockquote: $color-black;
+$font-color-caption: $color-black;
+
+
+/* Font sizes */
+$font-size-base: 1.8rem !default; // ~18px - body font-size set to 10px for easy px-rem conversion
+
+$font-size-h1: 4.8rem !default;
+$font-size-h1-content: 3.8rem !default;
+$font-size-h2: 3.0rem !default;
+$font-size-h2-block: 3.6rem !default;
+$font-size-h3: 2.4rem !default;
+$font-size-h4: 2.2rem !default;
+$font-size-h5: 2.0rem !default;
+$font-size-h6: 1.8rem !default;
+
+$font-size-intro: 2.4rem !default;
+$font-size-paragraph: $font-size-base !default;
+$font-size-large-paragraph: 2.0rem !default;
+$font-size-blockquote: 2.4rem !default;
+$font-size-caption: 1.6rem !default;
+$font-size-table-head: 1.8rem !default;
+$font-size-table-cell: 1.6rem !default;
+
+$font-size-h1-mobile: 3.2rem !default;
+$font-size-h1-tablet: 3.6rem !default;
+$font-size-h2-mobile: 2.6rem !default;
+$font-size-intro-mobile: 2.0rem !default;
+
+$font-size-footer: 1.4rem !default;
+
+
+/* Line heights */
+$line-height-base: 1.6 !default;
+
+$line-height-h1: 1.1 !default;
+$line-height-h2: 1.2 !default;
+$line-height-h3: 1.3 !default;
+$line-height-h4: 1.3 !default;
+$line-height-h5: 1.3 !default;
+$line-height-h6: 1.4 !default;
+
+$line-height-intro: 1.4 !default;
+$line-height-paragraph: $line-height-base !default;
+$line-height-large-paragraph: 1.5 !default;
+$line-height-blockquote: 1.3 !default;
+$line-height-caption: 1.4 !default;
+
+$line-height-h1-mobile: 1.1 !default;
+$line-height-h1-tablet: 1.1 !default;
+$line-height-h2-mobile: 1.3 !default;
+$line-height-intro-mobile: 1.4 !default;
+
+
+/* Font spacing */
+$margin-top-h1: 0;
+$margin-bottom-h1: 2.2rem;
+$margin-top-h2: 3.0rem;
+$margin-bottom-h2: 1.2rem;
+$margin-top-h3: 2.4rem;
+$margin-bottom-h3: 1.0rem;
+$margin-top-h4: 2.0rem;
+$margin-bottom-h4: 1.0rem;
+$margin-top-h5: 2.0rem;
+$margin-bottom-h5: 0.8rem;
+$margin-top-h6: 2.0rem;
+$margin-bottom-h6: 0.6rem;
+
+$margin-top-intro: 1.2rem;
+$margin-bottom-intro: 3.0rem;
+$margin-top-paragraph: 0;
+$margin-bottom-paragraph: 1.6rem;
+$margin-top-blockquote: 3.0rem;
+$margin-bottom-blockquote: 3.0rem;
+
 
 /* Spacing */
-$footer-block-margin-bottom: 3.5rem;
+$header-spacing-bottom: 0.5em;
+$header-spacing-top: 1em;
 
-$header-margin-bottom: 0.5em;
-$header-margin-top: 1em;
+$block-spacing-top-mobile: 2rem;
+$block-spacing-bottom-mobile: 2rem;
+$block-spacing-top-tablet: 3rem;
+$block-spacing-bottom-tablet: 3rem;
+$block-spacing-top: 5rem;
+$block-spacing-bottom: 5rem;
 
-$h1-margin-bottom: $header-margin-bottom;
-$h1-margin-top: $header-margin-top;
-
-$h2-margin-bottom: $header-margin-bottom;
-$h2-margin-top: $header-margin-top;
-
-$h3-margin-bottom: $header-margin-bottom;
-$h3-margin-top: $header-margin-top;
-
-$h4-margin-bottom: $header-margin-bottom;
-$h4-margin-top: $header-margin-top;
-
-$h5-margin-bottom: $header-margin-bottom;
-$h5-margin-top: $header-margin-top;
-
-$h6-margin-bottom: $header-margin-bottom;
-$h6-margin-top: $header-margin-top;
+$footer-spacing-top: 3.5rem;
+$footer-spacing-bottom: 1rem;
 
 /**
  * Bootstrap variable overrides
  */
+
+/**
+ * Miscellaneous
+ */
+
+$meganav-padding-y: 3.2rem;
+$meganav-animation-time: 300ms; // CAUTION: This time is tied to a setTimeout in Meganav.vue
