@@ -1,6 +1,7 @@
 <?php
 
 use SilverStripe\CMS\Controllers\ContentController;
+use SilverStripe\Core\Environment;
 
 class PageController extends ContentController
 {
@@ -19,6 +20,18 @@ class PageController extends ContentController
      * </code>
      */
     private static array $allowed_actions = [];
+
+    /**
+     * Allow the BetterNavigator debug module to be shown/hidden from output.
+     *
+     * @see https://github.com/jonom/silverstripe-betternavigator
+     * @return bool
+     */
+    public function showBetterNavigator(): bool
+    {
+        // A user-defined setting
+        return !Environment::getEnv('HIDE_BETTER_NAVIGATOR');
+    }
 
     /**
      * You can include any CSS or JS required by your project after parent::init().
