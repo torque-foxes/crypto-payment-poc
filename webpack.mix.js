@@ -6,10 +6,16 @@ const mix = require("laravel-mix");
 const webpack = require("webpack");
 const fs = require("fs");
 
+// define watch options
+const browserSync = false;
+const browserSyncDomain = 'myproject.test';
+
+// define paths
 const srcFolder = `./themes/app/src`;
 const distFolder = `./themes/app/dist`;
 const publicFolder = `/_resources/${distFolder}/`;
 
+// compile
 mix
   .js(`${srcFolder}/js/app.js`, "/")
   .vue({ version: 3 })
@@ -66,7 +72,12 @@ if (process.env.NODE_ENV === "development") {
 
   // This allows you to proxy your site while watching, meaning when you change
   // your css/scss the file will get injected rather than requiring a reload
-  // mix.browserSync("your-domain.test");
+  if (browserSync) {
+    mix.browserSync({
+      proxy: browserSyncDomain,
+      files: [`${distFolder}/**.*`],
+    });
+  }
 
   // Add sourcemaps in depending on the scenario you might want to
   // use these in prod too if the unminified code is fine to share
