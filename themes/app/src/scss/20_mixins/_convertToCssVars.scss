@@ -1,0 +1,23 @@
+/**
+ * Utility mixins to covert SCSS variables to CSS variables
+ */
+
+
+/**
+ * Convert a scss map of colours into CSS variables
+ */
+@mixin convertColoursToCssVars($colours) {
+  @each $name, $hex in $colours {
+    --color-#{"" + $name}: #{$hex};
+    --color-#{"" + $name}--rgb: #{hextorgb($hex)};
+  }
+}
+
+/**
+ * Convert a scss map of variables into CSS variables
+ */
+@mixin convertVariablesToCssVars($variables) {
+  @each $name, $var in $variables {
+    --#{"" + $name}: #{$var};
+  }
+}

@@ -1,29 +1,52 @@
-/**
- * We must include our variables before bootstrap,
- * otherwise bootstrap overrides our values.
- */
+/* -------------------------------------- */
 
-@import 'core/variables';
-@import 'core/mixins';
+//      Compiled styles for the CMS       //
 
-/**
- * Include bootstrap functionality as needed.
- */
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/mixins';
-@import '~bootstrap/scss/root';
-@import '~bootstrap/scss/reboot';
-@import '~bootstrap/scss/type';
-@import '~bootstrap/scss/utilities';
+/* -------------------------------------- */
+
 
 /**
- * Add project specific typography
+ * --------
+ * Settings - global variables for the project
+ * --------
  */
-@import 'core/fonts';
-@import 'core/typography';
+
+@import '00_settings/variables';
+
 
 /**
- * Add editor styling
+ * ------
+ * Mixins - global reusable styles
+ * ------
  */
-@import 'core/tinymce';
+
+@import '20_mixins/icon';
+
+
+/**
+ * ----------
+ * Frameworks - standard styling libraries to use
+ * ----------
+ */
+
+@import '30_frameworks/bootstrap';
+
+
+/**
+ * ----
+ * Base - essential styling for the project
+ * ----
+ */
+
+@import '40_base/global';
+@import '40_base/fonts';
+@import '40_base/typography';
+
+
+/**
+* ----------
+* Frameworks - standard styling libraries to use
+* ----------
+*/
+
+@import '80_third-party/tinymce';

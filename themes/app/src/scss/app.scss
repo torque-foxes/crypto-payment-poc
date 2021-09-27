@@ -1,42 +1,98 @@
 /**
- * We must include our variables before bootstrap,
- * otherwise bootstrap overrides our values.
+ * --------
+ * Settings - global variables for the project
+ * --------
  */
 
-@import 'core/variables';
-@import 'core/breakpoints';
-@import 'core/z-index';
+@import '00_settings/variables';
+@import '00_settings/breakpoints';
+@import '00_settings/accessibility';
 
-/**
- * Include frameworks
- */
-@import 'frameworks/bootstrap';
 
 /**
- * Include core theme styles
+ * ---------
+ * Functions - global utility functions
+ * ---------
  */
-@import 'core/mixins';
-@import 'core/global';
-@import 'core/css-variables';
-@import 'core/accessibility';
-@import 'core/fonts';
-@import 'core/typography';
-@import 'core/tinymce';
-@import 'core/animations';
-@import 'core/responsive-video';
+
+@import '10_functions/hextorgb';
+
 
 /**
- * Components
+ * ------
+ * Mixins - global reusable styles
+ * ------
  */
-@import 'components/flyout-panel';
-@import 'components/meganav';
+
+@import '20_mixins/icon';
+@import '20_mixins/convertToCssVars';
+
+
 
 /**
- * Templates
+ * ----------
+ * Frameworks - standard styling libraries to use
+ * ----------
  */
-// @import 'templates/homepage';
+
+@import '30_frameworks/bootstrap';
+
 
 /**
- * Blocks
+ * ----
+ * Base - essential styling for the project
+ * ----
  */
-// @import 'blocks/blocks';
+
+@import '40_base/global';
+@import '40_base/css-variables';
+@import '40_base/fonts';
+@import '40_base/typography';
+@import '40_base/animations';
+@import '40_base/z-index';
+
+
+/**
+ * ---------
+ * Templates - styles required for page templates
+ * ---------
+ */
+
+// @import '50_templates/homepage';
+
+
+/**
+ * ------
+ * Blocks - elemental block styling
+ * ------
+ */
+
+// @import '60_blocks/content-block';
+
+
+/**
+ * ----------
+ * Components - used within templates or blocks
+ * ----------
+ */
+
+@import '70_components/meganav';
+@import '70_components/responsive-video';
+
+
+/**
+ * -----------
+ * Third-party - styling for third-party code, plugins or includes
+ * -----------
+ */
+
+@import '80_third-party/tinymce';
+
+
+/**
+ * ---------
+ * Overrides - customisations of third-party code
+ * ---------
+ */
+
+@import '90_overrides/flyout-panel';
