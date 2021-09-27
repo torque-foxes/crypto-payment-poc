@@ -8,6 +8,7 @@ const fs = require("fs");
 
 const srcFolder = `./themes/app/src`;
 const distFolder = `./themes/app/dist`;
+const publicFolder = `/_resources/${distFolder}/`;
 
 mix
   .js(`${srcFolder}/js/app.js`, "/")
@@ -16,7 +17,10 @@ mix
   .sass(`${srcFolder}/scss/editor.scss`, "/");
 
 // Places images processed in scss into themes/app/dist folder
+mix.copyDirectory(`${srcFolder}/images`, `${distFolder}/images`);
+mix.copyDirectory(`${srcFolder}/icons`, `${distFolder}/icons`);
 mix.setPublicPath(distFolder);
+mix.setResourceRoot(publicFolder); // Prefixes urls in processed css with _resources/themes/app/dist
 
 /**
  * Setup vue correctly
