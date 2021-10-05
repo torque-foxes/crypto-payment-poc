@@ -15,7 +15,7 @@
  * ---------
  */
 
-@import '10_functions/hextorgb';
+@import '10_functions/*';
 
 
 /**
@@ -24,8 +24,7 @@
  * ------
  */
 
-@import '20_mixins/icon';
-@import '20_mixins/convertToCssVars';
+@import '20_mixins/*';
 
 
 
@@ -44,13 +43,7 @@
  * ----
  */
 
-@import '40_base/global';
-@import '40_base/css-variables';
-@import '40_base/fonts';
-@import '40_base/typography';
-@import '40_base/animations';
-@import '40_base/z-index';
-
+@import '40_base/*';
 
 /**
  * ---------
@@ -58,7 +51,7 @@
  * ---------
  */
 
-// @import '50_templates/homepage';
+@import '50_templates/*';
 
 
 /**
@@ -67,7 +60,7 @@
  * ------
  */
 
-// @import '60_blocks/content-block';
+@import '60_blocks/*';
 
 
 /**
@@ -76,8 +69,7 @@
  * ----------
  */
 
-@import '70_components/meganav';
-@import '70_components/responsive-video';
+@import '70_components/*';
 
 
 /**
@@ -86,7 +78,7 @@
  * -----------
  */
 
-@import '80_third-party/tinymce';
+@import '80_third-party/*';
 
 
 /**
@@ -95,4 +87,4 @@
  * ---------
  */
 
-@import '90_overrides/flyout-panel';
+@import '90_overrides/*';

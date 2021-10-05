@@ -1,4 +1,5 @@
 const path = require("path");
+const globImporter = require('node-sass-glob-importer');
 
 module.exports = {
   stories: [
@@ -19,7 +20,11 @@ module.exports = {
         {
           loader: "sass-loader",
           options: {
-            additionalData: "$icon-path: '../icons';",
+            additionalData: "$icon-path: '../icons'; $font-path: '../fonts';$image-path: '../images';",
+            sassOptions: {
+              // Allow SCSS import wildcards
+              importer: globImporter(),
+            }
           },
         },
       ],
