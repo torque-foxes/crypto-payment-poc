@@ -6,9 +6,8 @@ const mix = require("laravel-mix");
 const webpack = require("webpack");
 const fs = require("fs");
 
-// define watch options
-const browserSync = false;
-const browserSyncDomain = 'myproject.test';
+// parse environment variables from .env
+require("dotenv").config();
 
 // define paths
 const srcFolder = `./themes/app/src`;
@@ -72,9 +71,9 @@ if (process.env.NODE_ENV === "development") {
 
   // This allows you to proxy your site while watching, meaning when you change
   // your css/scss the file will get injected rather than requiring a reload
-  if (browserSync) {
+  if (process.env.MIX_BROWSERSYNC === 'true') {
     mix.browserSync({
-      proxy: browserSyncDomain,
+      proxy: process.env.HOSTNAME,
       files: [`${distFolder}/**.*`],
     });
   }
