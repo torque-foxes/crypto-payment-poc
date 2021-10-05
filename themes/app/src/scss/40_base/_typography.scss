@@ -61,7 +61,7 @@ h6 {
 
 h1 {
   font-size: $font-size-h1-mobile;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-h1;
   line-height: $line-height-h1-mobile;
   color: $font-color-h1;
   margin-top: $margin-top-h1;
@@ -79,7 +79,7 @@ h1 {
 
 h2 {
   font-size: $font-size-h2-mobile;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-h2;
   line-height: $line-height-h2-mobile;
   color: $font-color-h2;
   margin-top: $margin-top-h2;
@@ -93,7 +93,7 @@ h2 {
 
 h3 {
   font-size: $font-size-h3;
-  font-weight: $font-weight-medium;
+  font-weight: $font-weight-h3;
   line-height: $line-height-h3;
   color: $font-color-h3;
   margin-top: $margin-top-h3;
@@ -102,7 +102,7 @@ h3 {
 
 h4 {
   font-size: $font-size-h4;
-  font-weight: $font-weight-medium;
+  font-weight: $font-weight-h4;
   line-height: $line-height-h4;
   color: $font-color-h4;
   margin-top: $margin-top-h4;
@@ -111,7 +111,7 @@ h4 {
 
 h5 {
   font-size: $font-size-h5;
-  font-weight: $font-weight-medium;
+  font-weight: $font-weight-h5;
   line-height: $line-height-h5;
   color: $font-color-h5;
   margin-top: $margin-top-h5;
@@ -120,7 +120,7 @@ h5 {
 
 h6 {
   font-size: $font-size-h6;
-  font-weight: $font-weight-medium;
+  font-weight: $font-weight-h6;
   line-height: $line-height-h6;
   color: $font-color-h6;
   margin-top: $margin-top-h6;
@@ -158,16 +158,16 @@ h6 {
  */
 
 .lead {
-  font-size: $font-size-intro-mobile;
-  line-height: $line-height-intro-mobile;
+  font-size: $font-size-lead-mobile;
+  line-height: $line-height-lead-mobile;
   font-weight: $font-weight-light;
-  color: $font-color-intro;
-  margin-top: $margin-top-intro;
-  margin-bottom: $margin-bottom-intro;
+  color: $font-color-lead;
+  margin-top: $margin-top-lead;
+  margin-bottom: $margin-bottom-lead;
 
   @include media-breakpoint-up(tablet-s) {
-    font-size: $font-size-intro;
-    line-height: $line-height-intro-mobile;
+    font-size: $font-size-lead;
+    line-height: $line-height-lead-mobile;
   }
 }
 
@@ -176,6 +176,8 @@ h6 {
   line-height: $line-height-caption;
   font-weight: $font-weight-caption;
   color: $font-color-caption;
+  margin-top: $margin-top-caption;
+  margin-bottom: $margin-bottom-caption;
 }
 
 blockquote {
