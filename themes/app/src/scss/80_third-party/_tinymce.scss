@@ -1,6 +1,13 @@
 /**
  * TinyMCE editor classes
  */
+
+.mce-content-body {
+  // add a little spacing so the text in the editor isn't
+  // pressed up against the edge
+  margin: 1rem;
+}
+
 .caption {
   &.leftAlone,
   &.left {
