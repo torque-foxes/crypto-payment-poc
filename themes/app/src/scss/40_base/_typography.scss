@@ -171,6 +171,13 @@ h6 {
   }
 }
 
+.caption {
+  font-size: $font-size-caption;
+  line-height: $line-height-caption;
+  font-weight: $font-weight-caption;
+  color: $font-color-caption;
+}
+
 blockquote {
   $blockquote-indent: 3.6rem;
 
