@@ -74,10 +74,6 @@ h1 {
   @include media-breakpoint-up(desktop-s) {
     font-size: $font-size-h1;
     line-height: $line-height-h1;
-
-    .content-page & {
-      font-size: $font-size-h1-content;
-    }
   }
 }
 
@@ -92,10 +88,6 @@ h2 {
   @include media-breakpoint-up(tablet-s) {
     font-size: $font-size-h2;
     line-height: $line-height-h2;
-
-    .block & {
-      font-size: $font-size-h1-content;
-    }
   }
 }
 
