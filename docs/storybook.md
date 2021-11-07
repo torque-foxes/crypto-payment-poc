@@ -23,6 +23,15 @@ http://localhost:6006/
 
 Any changes that are made to components whilst this is running are automatically deployed.
 
+## Using storybook for design reviews
+To use storybook in design reviews you can run a static build of storybook by running the command: `yarn storybook:static` which will output the files into a directory named `storybook-static` in the root directory of the project. You can then zip this up and share it around, this allows you to share the zip file with a designer so they can perform a review of what you've created.
+
+### Possible issues/notes
+- If you develop a block and present it out of context of the rest of the site then it is likely that you'll need to make changes once it makes it to UAT and the designer looks at it.
+- You might need to include some dist assets (e.g. images), for this you can update the command for storybook to include static files from a directory: `"storybook:build": "build-storybook -s themes/app/dist",`
+- If you're using react then there's some notes at the bottom of the page
+- This doesn't cover every design review scenario and especially for complex cases you might need to fall back to ngrok or more likely, deploying to UAT to perform the review
+
 ## Storybook Addons
 
 The default setup for Storybook simply renders the component to the page. There are a number of addons that allow inclusion
@@ -84,6 +93,40 @@ $ cd .storybook
 $ yarn build-storybook
 ```
 
+## Using storybook with react
+You'll want to use `@storybook/html` as most of your templates will still be HTML.
+For the react components, create a react decorator like so:
+```js
+import React, { StrictMode } from "react";
+import ReactDOM from "react-dom";
+import { useEffect, useMemo } from "@storybook/client-api";
+
+const reactDecorator = (story, context) => {
+  const node = useMemo(() => document.createElement("div"), [
+    context.kind,
+    context.name,
+  ]);
+  useEffect(() => () => ReactDOM.unmountComponentAtNode(node), [node]);
+  ReactDOM.render(<StrictMode>{story()}</StrictMode>, node);
+  return node;
+};
+
+export default () => reactDecorator;
+```
+Then in your story you can do the following:
+```
+import React from "react";
+import MyCustomComponent from "../themes/app/src/js/components/MyCustomComponent";
+import reactDecorator from "../.storybook/react-decorator";
+
+export default {
+  title: "My custom component",
+  decorators: [reactDecorator()],
+};
+
+export const Default = () => <MyCustomComponent />;
+```
+
 ## Future Storybook development
 
 There are currently limitations with Storybook in that React and Vue components have to be added to separate Storybooks
@@ -91,9 +134,6 @@ There are currently limitations with Storybook in that React and Vue components 
 component development. There are plans for Storybook to address this in future releases, and to also allow inclusion of HTML snippets.
 This would allow for the Styleguide and Welcome pages to be pure HTML files rather than the current necessity to wrap
 them into a Vue component.
-
-A future enhancement would also be to modify the storybook command to be able to be run from the project root, instead of inside the
-storybook folder.
 
 ## Removing Storybook
 
