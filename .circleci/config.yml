@@ -64,21 +64,31 @@ commands:
       coverage:
         type: boolean
         default: true
+      pcov:
+        type: boolean
+        # Disabled due to issues with Composer v1
+        default: false
     steps:
       - run:
           name: phpunit
           command: |
-            phpdismod xdebug
+            if << parameters.pcov >>;
+            then
+              phpdismod xdebug
+            fi
             PHPUNITARGS=""
             if << parameters.coverage >>;
             then
+              if << parameters.pcov >>;
+              then
                 # enable the line below if you are requiring private repos (e.g. silverstripeltd/elasticsearchapp)
                 # see https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
                 # composer config http-basic.github.com $SERVICE_ACCOUNT_USERNAME $SERVICE_ACCOUNT_GITHUB_API_TOKEN
                 phpenmod -v 7.4 pcov
                 COMPOSER_MEMORY_LIMIT=-1 composer require pcov/clobber --no-plugins
                 vendor/bin/pcov clobber
-                PHPUNITARGS=" --coverage-html coverage/php  --coverage-clover coverage/php/clover.xml"
+              fi
+              PHPUNITARGS=" --coverage-html coverage/php  --coverage-clover coverage/php/clover.xml"
             fi
             vendor/bin/phpunit --verbose $PHPUNITARGS
   js-tests:
