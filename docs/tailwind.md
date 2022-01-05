@@ -71,9 +71,11 @@ Open `webpack.mix.js`:
 
 ```
 # Existing stuff
-const mix = require('laravel-mix');
-// eslint-disable-next-line import/no-extraneous-dependencies
-const StyleLintPlugin = require('stylelint-webpack-plugin');
+/* eslint-disable import/no-extraneous-dependencies */
+const mix = require("laravel-mix");
+const webpack = require("webpack");
+const fs = require("fs");
+const globImporter = require('node-sass-glob-importer');
 
 # New stuff
 // Tailwind CSS
@@ -82,9 +84,12 @@ require('laravel-mix-tailwind');
 # Existing stuff
 ...
 
-mix.sass(`${srcFolder}/scss/app.scss`, distFolder)
-  .sass('themes/app/src/scss/editor.scss', distFolder)
-  .options({ processCssUrls: true });
+// Do the mix!
+mix
+  .js(`${srcFolder}/js/app.js`, "/")
+  .vue({ version: 3 })
+  .sass(`${srcFolder}/scss/app.scss`, "/", sassOptions)
+  .sass(`${srcFolder}/scss/editor.scss`, "/", sassOptions);
 
 # New stuff
 mix.tailwind();
@@ -102,20 +107,19 @@ $ yarn remove bootstrap
 ### Remove references to bootstrap and our existing scaffolding
 
 ```
-$ rm -rf themes/app/src/scss/components
-$ rm -rf themes/app/src/scss/core
+$ rm -rf themes/app/src/scss/*
 ```
 
-Open the following files.
+Recreate the following files.
 
-- `themes/app/src/scss/app.scss`
-- `themes/app/src/scss/editor.scss`
-
-Remove any references to `@import '~bootstrap/*` or core/component includes.
+```
+$ touch themes/app/src/scss/app.scss
+$ touch themes/app/src/scss/editor.scss
+```
 
 ### Add Tailwind base styles
 
-Add the following to `app.scss`.
+Add the following to the empty `app.scss`.
 
 ```
 /**
@@ -141,15 +145,15 @@ $ yarn add tailwindcss@latest postcss@latest postcss-nested@latest postcss-impor
 
 ### Add Tailwind config
 
-`tailwind.config.js`:
+`.storybook/tailwind.config.js`:
 ```
 module.exports = require('../tailwind.config.js');
 
 ```
 
-### Update Storybook Website config
+### Replace default Storybook website config
 
-`.storybook/webpack.config.js`:
+`.storybook/main.js`:
 ```
 const path = require('path');
 
