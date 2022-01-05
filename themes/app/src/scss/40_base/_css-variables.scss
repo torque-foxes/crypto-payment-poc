@@ -1,8 +1,9 @@
 /**
  * List the colours which should be made available as CSS variables
  *
- * For example 'black' will convert $color-black to var(--color-black)
- * and var(--color-black--rgb) so it can be used in rgba() context
+ * For example 'black' will copy `$color-black` to `var(--color-black)`
+ * in addition `var(--color-black--rgb)` will be created
+ * so it can be used in `rgba()` context, for example `rgba(var(--color-black--rgb), 0.4)`
  *
  */
 $colours-in-css: (
@@ -29,6 +30,6 @@ $vars-in-css: (
  * Create the root variable scope
  */
 :root {
-  @include convertColoursToCssVars($colours-in-css);
-  @include convertVariablesToCssVars($vars-in-css);
+  @include copyColoursToCssVars($colours-in-css);
+  @include copyVariablesToCssVars($vars-in-css);
 }
