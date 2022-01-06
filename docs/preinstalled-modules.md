@@ -47,24 +47,6 @@ trail is written into LOG_AUTH syslog facility through Monolog, and includes:
 * Page manipulations that may potentially affect the live site
 * Security-related changes such as Members being added to groups or permission changes.
 
-## Silverstripe Security Checker
-_[Repo](https://github.com/bringyourownideas/silverstripe-composer-security-checker)_
-
-Adds a task which runs a check if any of the dependencies has known security vulnerabilities.
-
-## Roave Security Advisories
-_[Repo](https://github.com/Roave/SecurityAdvisories)_
-
-This package ensures that your application doesn't have installed dependencies with known security vulnerabilities.
-
-## Silverstripe Composer Update Checker / Maintenance
-_[Repo](https://github.com/bringyourownideas/silverstripe-composer-update-checker)_
-
-Checks if any of your Composer dependencies needs to be updated, and tracks the available and latest versions that can
-be updated to.
-
-Provides a model admin where you can view your current dependencies, their versions, and what updates are available.
-
 ## Environment check
 _[Repo](https://github.com/silverstripe/silverstripe-environmentcheck)_
 
@@ -90,3 +72,28 @@ Gives developers an ability to configure cron-like tasks through the code.
 _[Repo](https://github.com/silverstripe/silverstripe-dynamodb)_
 
 This module enables storing SilverStripe sessions in DynamoDB.
+
+## MetaTitle
+_[Repo](https://github.com/kinglozzer/silverstripe-metatitle)_
+
+Adds a user editable 'MetaTitle' field to pages.
+
+## Silverstripe Trailing Slash
+_[Repo](https://github.com/axllent/silverstripe-trailing-slash)_
+
+Ensure that a single trailing slash is always added to Silverstripe URLs.
+
+## Silverstripe CMS Session Manager
+_[Repo](https://github.com/silverstripe/silverstripe-session-manager)_
+
+Allow users to manage and revoke access to multiple login sessions across devices.
+
+## FocusPoint: Smarter Image Cropping for Silverstripe
+_[Repo](https://github.com/jonom/silverstripe-focuspoint)_
+
+Module for improving automatic image cropping in SilverStripe. Adds simple art-direction control by allowing you to set and crop from a focus point instead of the centre point of an image.
+
+## Google Sitemaps Module
+_[Repo](https://github.com/wilr/silverstripe-googlesitemaps)_
+
+Provides support for the Sitemaps XML Protocol, enabling Google, Bing and other search engines to index the web pages on your site.
