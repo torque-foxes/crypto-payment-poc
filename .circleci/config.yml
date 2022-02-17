@@ -13,7 +13,7 @@ executors:
           DISPLAY: :99
           CHROME_BIN: /usr/bin/google-chrome-stable
           BASH_ENV: /root/.bashrc
-      - image: circleci/mysql:5.7
+      - image: cimg/mysql:5.7
         environment:
           MYSQL_ROOT_PASSWORD: ubuntu
           MYSQL_DATABASE: circle_test
