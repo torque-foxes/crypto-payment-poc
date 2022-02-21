@@ -13,7 +13,7 @@ require("dotenv").config();
 // define paths
 const srcFolder = `./themes/app/src`;
 const distFolder = `./themes/app/dist`;
-const publicFolder = `/_resources/${distFolder}/`;
+const publicFolder = `/_resources/${distFolder.substring(2)}/`; // remove leading ./
 
 const sassOptions = {
   sassOptions: {
