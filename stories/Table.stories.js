@@ -6,10 +6,10 @@ storiesOf("Styleguide", module).add("Table", () => ({
         <table>
           <thead>
             <tr>
-              <td>#</td>
-              <td>First Name</td>
-              <td>Last Name</td>
-              <td>Username</td>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Username</th>
             </tr>
           </thead>
           <tbody>

@@ -1,47 +1,91 @@
 /**
- * We must include our variables before bootstrap,
- * otherwise bootstrap overrides our values.
+ * --------
+ * Settings - global variables for the project
+ * --------
  */
 
-@import 'core/variables';
+@import '00_settings/variables';
+@import '00_settings/breakpoints';
+
 
 /**
- * Include bootstrap functionality as needed.
+ * ---------
+ * Functions - global utility functions
+ * ---------
  */
 
-// Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import '~bootstrap/scss/functions';
+@import '10_functions/*';
 
-// Include any default variable overrides here
-
-// Include remainder of required Bootstrap stylesheets
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/mixins';
-
-// Include any optional Bootstrap components as you like
-@import '~bootstrap/scss/root';
-@import '~bootstrap/scss/reboot';
-@import '~bootstrap/scss/type';
-@import '~bootstrap/scss/images';
-@import '~bootstrap/scss/containers';
-@import '~bootstrap/scss/grid';
-@import '~bootstrap/scss/utilities';
-
-// Utilities
-@import '~bootstrap/scss/utilities/api';
 
 /**
- * Include core theme styles
+ * ------
+ * Mixins - global reusable styles
+ * ------
  */
-@import 'core/mixins';
-@import 'core/accessibility';
-@import 'core/fonts';
-@import 'core/typography';
-@import 'core/animations';
-@import 'core/responsive-video';
+
+@import '20_mixins/*';
+
+
 
 /**
- * Include components
+ * ----------
+ * Frameworks - standard styling libraries to use
+ * ----------
  */
-@import 'components/flyout-panel';
-@import 'components/meganav';
+
+@import '30_frameworks/bootstrap';
+
+
+/**
+ * ----
+ * Base - essential styling for the project
+ * ----
+ */
+
+@import '40_base/*';
+
+/**
+ * ---------
+ * Templates - styles required for page templates
+ * ---------
+ */
+
+@import '50_templates/*';
+
+
+/**
+ * ------
+ * Blocks - elemental block styling
+ * ------
+ */
+
+@import '60_blocks/*';
+
+
+/**
+ * ----------
+ * Components - used within templates or blocks
+ * ----------
+ */
+
+@import '70_components/*';
+
+
+/**
+ * -----------
+ * Third-party - styling for third-party code, plugins or includes
+ * -----------
+ */
+
+@import '80_third-party/*';
+
+
+/**
+ * ---------
+ * Overrides - should be used for highly specific overrides (e.g. for third-party code)
+ *
+ * Only use this if you have to !
+ * ---------
+ */
+
+@import '90_overrides/*';

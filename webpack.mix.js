@@ -5,6 +5,7 @@
 const mix = require("laravel-mix");
 const webpack = require("webpack");
 const fs = require("fs");
+const globImporter = require('node-sass-glob-importer');
 
 // parse environment variables from .env
 require("dotenv").config();
@@ -12,14 +13,23 @@ require("dotenv").config();
 // define paths
 const srcFolder = `./themes/app/src`;
 const distFolder = `./themes/app/dist`;
-const publicFolder = `/_resources/${distFolder}/`;
+const publicFolder = `/_resources/${distFolder.substring(2)}/`; // remove leading ./
 
-// compile
+const sassOptions = {
+  sassOptions: {
+    // Allow SCSS import wildcards
+    importer: globImporter(),
+    // Include cache-buster on urls
+    processCssUrls: true,
+  }
+};
+
+// Do the mix!
 mix
   .js(`${srcFolder}/js/app.js`, "/")
   .vue({ version: 3 })
-  .sass(`${srcFolder}/scss/app.scss`, "/")
-  .sass(`${srcFolder}/scss/editor.scss`, "/");
+  .sass(`${srcFolder}/scss/app.scss`, "/", sassOptions)
+  .sass(`${srcFolder}/scss/editor.scss`, "/", sassOptions);
 
 // Places images processed in scss into themes/app/dist folder
 mix.copyDirectory(`${srcFolder}/images`, `${distFolder}/images`);
@@ -38,6 +48,8 @@ mix.webpackConfig({
     }),
   ],
 });
+
+
 
 /**
  * Development specific

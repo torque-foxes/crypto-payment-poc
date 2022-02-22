@@ -1,5 +1,3 @@
-@import '~bootstrap/scss/mixins/breakpoints';
-@import '../core/variables';
 
 .mega-nav {
   display: none;
@@ -88,7 +86,7 @@
     }
 
     &--current .mega-nav__link {
-      color: $color-primary;
+      color: $color-black;
       font-weight: $font-weight-bold;
     }
 
@@ -96,7 +94,7 @@
     &:hover,
     &:focus {
       .mega-nav__link {
-        color: $color-primary;
+        color: $color-black;
       }
     }
 
