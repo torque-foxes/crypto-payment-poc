@@ -41,7 +41,8 @@ This skeleton project currently has the following addons installed for use:
 - knobs: makes component properties dynamic so that you can play around and test different component states
 - links: link stories together
 - actions: inspect/document events relating to your component
-- storybook-addon-vue-info: shows component information including description, story source and property table.
+- storybook-addon-vue-info: shows component information including description, story source and property table
+- storybook/addon-a11y: Test component compliance with web accessibility standards.
 
 NB: There seems to be a bug with the rendering of the addon tabs rendered in the bottom of the storybook page. Since we
 are currently using an alpha release, this will hopefully be resolved in the near future.
