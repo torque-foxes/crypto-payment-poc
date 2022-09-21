@@ -82,5 +82,10 @@
             "type": "vcs",
             "url": "git@github.com:torque-foxes/omnipay-etherscan.git"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/src/"
+        }
+    }
 }
