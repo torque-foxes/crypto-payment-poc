@@ -50,3 +50,30 @@ the `publicResourcesFolder` variable in `webpack.mix.js`.
 ## Robots.txt
 
 Default robots.txt example file. Remember to update the sitemap location.
+
+## Crypto payment
+
+### Examples of how to connect to gateway and get a response
+
+An [Etherscan](https://rinkeby.etherscan.io/) API key is needed to enable transaction and set the value as environment variable: `ETHERSCAN_API_KEY`. The network can also be set using environment variable (this is useful when testing the application) e.g. `rinkeby`
+```
+// create the gateway object
+$gateway = Omnipay::create('Etherscan');
+
+// initialize the gateway with api key and network
+$gateway->initialize([
+    'api_key' => Environment::getEnv('ETHERSCAN_API_KEY'),
+    'network' => Environment::getEnv('ETHERSCAN_NETWORK'),
+]);
+
+// send a request to Etherscan endpoint to receive a response
+// for example, this response returns the latest balance of a wallet address
+$response = $gateway->fetchBalance(['address' => '0x12345'])->send();
+
+// get the data/results from the response object
+if ($response->isSuccessful()) {
+    $data = $response->getData();
+} else {
+    $errorMessage = $response->getMessage();
+}
+```
