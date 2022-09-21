@@ -1,0 +1,9 @@
+# Disallow enforcement of MFA on dev environment
+---
+Name: app-mfa-config
+Only:
+  environment: dev
+  moduleexists: silverstripe/totp-authenticator
+---
+SilverStripe\MFA\Service\EnforcementManager:
+  enabled: false
