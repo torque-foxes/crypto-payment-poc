@@ -33,7 +33,7 @@
  * ----------
  */
 
-@import '30_frameworks/bootstrap';
+//@import '30_frameworks/bootstrap';
 
 
 /**
@@ -42,7 +42,7 @@
  * ----
  */
 
-@import '40_base/*';
+//@import '40_base/*';
 
 /**
  * ---------
@@ -59,7 +59,7 @@
  * ------
  */
 
-@import '60_blocks/*';
+//@import '60_blocks/*';
 
 
 /**
@@ -68,7 +68,7 @@
  * ----------
  */
 
-@import '70_components/*';
+//@import '70_components/*';
 
 
 /**
@@ -89,3 +89,35 @@
  */
 
 @import '90_overrides/*';
+
+.custom-app{
+  height: 100vh;
+
+  padding: 0 2rem ;
+  color: grey;
+}
+.custom-container{
+     height: 80%;
+}
+header {
+   a {
+     text-decoration: none;
+     color:gray;
+     font-weight: 600;
+   }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .navbar_list{
+      display: flex;
+      list-style: none;
+
+      li{
+        margin: 1rem;
+      }
+    }
+  }
+}

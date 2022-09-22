@@ -1,30 +1,34 @@
-import React, {Fragment} from "react";
+import React from "react";
 import styled from "styled-components";
 
-const InputStyle = styled.input`
-  height: 1rem;
-  line-height: 1;
-  padding: 0.5rem 1rem;
-  background-color: white;
-  border-radius: 15px;
-  width:100%;
+const Button = styled.button`
+  cursor: pointer;
   display: inline-block;
-  color: black;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: medium;
+  height: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  background: #793ef9;
+  width: 10vw;
+  border: none;
   outline: none;
-  border: 1px solid gray;
-  margin: 0.25rem 0.25rem 0.5rem;
-  font-weight: 500;
-  &:focus {
-    background: lightgrey;
-    color: white;
+  color: white;
+  margin: 0.25rem;
+  &:hover {
+    background: white;
+    color: #793ef9;
+    border: 1px solid #793ef9;
   }
 `;
-
-export default function Input(props) {
-    let { type, name, placeholder } = props;
+export default function PayButton(props) {
+    let { text, onClick, type } = props;
     return (
         <>
-            <InputStyle type={type} name={name} placeholder={placeholder} />
+            <Button  type={type}  onClick={onClick} >{text}</Button>
         </>
     );
 }

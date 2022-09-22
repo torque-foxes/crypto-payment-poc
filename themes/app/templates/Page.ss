@@ -11,8 +11,7 @@
     <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> :: $SiteConfig.Title</title>
 </head>
     <body data-pagetype="$ClassName">
-
-        <div id="app">
+        <div id="app" class="custom-app">
             $Layout
         </div>
 

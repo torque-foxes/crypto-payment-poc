@@ -2,13 +2,6 @@
 .mega-nav {
   display: none;
 
-  @include media-breakpoint-up(lg) {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
 
   &__overlay {
     display: none;
