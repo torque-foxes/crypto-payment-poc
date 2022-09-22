@@ -7,30 +7,16 @@
   "scripts": {
     "dev": "npx mix",
     "watch": "npx mix watch",
-    "build": "cross-env NODE_ENV=production npx mix --production",
-    "prettier:check": "prettier --check themes/app/src/**/*.{scss,vue}",
-    "prettier:write": "prettier --write themes/app/src/**/*.{scss,vue}",
-    "test": "yarn test:app && yarn test:e2e && yarn test:coverage",
-    "test:e2e": "cypress run --browser chrome",
-    "test:app": "jest themes/app/src",
-    "test:coverage": "node nyc-coverage.js",
-    "lint:css": "stylelint themes/app/src/scss/**/*.scss themes/app/src/js/**/*.vue",
-    "lint:js": "eslint --ext .js,.vue themes/app/src/js",
-    "lint": "yarn lint:css && yarn lint:js",
-    "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook"
+    "build": "cross-env NODE_ENV=production npx mix --production"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
-    "@cypress/code-coverage": "^3.9.10",
-    "@storybook/addon-a11y": "^6.4.19",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-knobs": "^6.3.0",
     "@storybook/addon-links": "^6.4.19",
     "@storybook/builder-webpack5": "^6.4.19",
     "@storybook/manager-webpack5": "^6.4.19",
-    "@storybook/vue3": "^6.4.19",
     "@vue/compiler-sfc": "^3.1.5",
     "@vue/test-utils": "^2.0.0-rc.12",
     "babel-jest": "^26.6.3",
@@ -72,9 +58,11 @@
     "webpack": "^5.48.0"
   },
   "dependencies": {
+    "ethers": "^5.7.1",
     "promise-polyfill": "^8.2.0",
-    "vue": "^3.1",
-    "vuex": "^4.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.5"
   },
   "resolutions": {
     "webpack": "5.48.0"

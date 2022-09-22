@@ -26,8 +26,7 @@ const sassOptions = {
 
 // Do the mix!
 mix
-  .js(`${srcFolder}/js/app.js`, "/")
-  .vue({ version: 3 })
+  .js(`${srcFolder}/js/app.jsx`, "/")
   .sass(`${srcFolder}/scss/app.scss`, "/", sassOptions)
   .sass(`${srcFolder}/scss/editor.scss`, "/", sassOptions);
 
@@ -36,20 +35,6 @@ mix.copyDirectory(`${srcFolder}/images`, `${distFolder}/images`);
 mix.copyDirectory(`${srcFolder}/icons`, `${distFolder}/icons`);
 mix.setPublicPath(distFolder);
 mix.setResourceRoot(publicFolder); // Prefixes urls in processed css with _resources/themes/app/dist
-
-/**
- * Setup vue correctly
- */
-mix.webpackConfig({
-  plugins: [
-    new webpack.DefinePlugin({
-      __VUE_OPTIONS_API__: true,
-      __VUE_PROD_DEVTOOLS__: false,
-    }),
-  ],
-});
-
-
 
 /**
  * Development specific

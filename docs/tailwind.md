@@ -86,7 +86,7 @@ require('laravel-mix-tailwind');
 
 // Do the mix!
 mix
-  .js(`${srcFolder}/js/app.js`, "/")
+  .js(`${srcFolder}/js/app.jsx`, "/")
   .vue({ version: 3 })
   .sass(`${srcFolder}/scss/app.scss`, "/", sassOptions)
   .sass(`${srcFolder}/scss/editor.scss`, "/", sassOptions);
