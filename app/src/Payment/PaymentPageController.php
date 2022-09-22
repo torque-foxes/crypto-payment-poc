@@ -128,7 +128,7 @@ class PaymentPageController extends PageController
             'TransactionTime' => DBDatetime::create()->setValue($item->timeStamp)->getValue() ?? DBDatetime::now(),
             'TransactionHash' => $item->hash ?? '',
             'TransactionBlock' => Convert::raw2sql((int)($item->blockNumber)) ?? 0,
-            'TransactionStatus' => Convert::raw2sql((bool)$item->{'txreceipt_status'}) ?? 0,
+            'TransactionStatus' => Convert::raw2sql((bool)$item->{'txreceipt_status'}) ? 'success' : 'fail',
             'TransactionFrom' => $item->from ?? '',
             'TransactionTo' => $item->to ?? '',
             'TransactionValue' => Convert::raw2sql($txValue) ?? 0,
@@ -163,7 +163,7 @@ class PaymentPageController extends PageController
         $tx->TransactionTime = DBDatetime::create()->setValue($item->timeStamp)->getValue() ?? DBDatetime::now();
         $tx->TransactionHash = $item->hash ?? '';
         $tx->TransactionBlock = Convert::raw2sql((int)($item->blockNumber)) ?? 0;
-        $tx->TransactionStatus = Convert::raw2sql((bool)$item->{'txreceipt_status'}) ?? 0;
+        $tx->TransactionStatus = Convert::raw2sql((bool)$item->{'txreceipt_status'}) ? 'success' : 'fail';
         $tx->TransactionFrom = $item->from ?? '';
         $tx->TransactionTo = $item->to ?? '';
         $tx->TransactionValue = Convert::raw2sql($txValue) ?? 0;

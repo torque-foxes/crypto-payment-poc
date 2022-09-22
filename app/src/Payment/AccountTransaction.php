@@ -12,12 +12,40 @@ class AccountTransaction extends DataObject
         'TransactionTime' => 'Varchar(255)',
         'TransactionHash' => 'Varchar(255)',
         'TransactionBlock' => 'Int',
-        'TransactionStatus' => 'Boolean',
+        'TransactionStatus' => 'Varchar(32)',
         'TransactionFrom' => 'Varchar(255)',
         'TransactionTo' => 'Varchar(255)',
-        'TransactionValue' => 'Float',
-        'TransactionGasPrice' => 'Float',
-        'TransactionGasUsed' => 'Float',
-        'TransactionFee' => 'Float',
+        'TransactionValue' => 'Varchar(255)',
+        'TransactionGasPrice' => 'Varchar(255)',
+        'TransactionGasUsed' => 'Varchar(255)',
+        'TransactionFee' => 'Varchar(255)',
     ];
+
+    private static $summary_fields = [
+        'TransactionTime' => 'Date',
+        'TransactionHash' => 'Transaction',
+        'TransactionValue' => 'Value (Eth)',
+    ];
+
+    public function canEdit($member = null)
+    {
+        return false;
+    }
+
+    public function canDelete($member = null)
+    {
+        return false;
+    }
+
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
+
+        $fields->dataFieldByName('TransactionValue')->setDescription('value in Eth');
+        $fields->dataFieldByName('TransactionGasPrice')->setDescription('value in Eth');
+        $fields->dataFieldByName('TransactionGasUsed')->setDescription('units of gas used');
+        $fields->dataFieldByName('TransactionFee')->setDescription('value in Eth');
+
+        return $fields;
+    }
 }
