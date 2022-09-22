@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b0bebc792e4ecd7f5967712557af1ab",
+    "content-hash": "a3fdf03f3f280c0101b765788c20a58b",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -905,6 +905,56 @@
                 "twitter cards"
             ],
             "time": "2021-05-30T11:21:47+00:00"
+        },
+        {
+            "name": "financialplugins/omnipay-etherscan",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/torque-foxes/omnipay-etherscan.git",
+                "reference": "4304c8b0903f1dee6bb9577c0145229a2cba5a75"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/torque-foxes/omnipay-etherscan/zipball/4304c8b0903f1dee6bb9577c0145229a2cba5a75",
+                "reference": "4304c8b0903f1dee6bb9577c0145229a2cba5a75",
+                "shasum": ""
+            },
+            "require": {
+                "omnipay/common": "^3.0",
+                "php-http/guzzle7-adapter": "*"
+            },
+            "require-dev": {
+                "omnipay/tests": "^3.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Omnipay\\Etherscan\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FinancialPlugins",
+                    "email": "info@financialplugins.com"
+                }
+            ],
+            "description": "Etherscan driver for the Omnipay payment processing library",
+            "homepage": "https://github.com/financialplugins/omnipay-etherscan",
+            "keywords": [
+                "crypto",
+                "ethereum",
+                "etherscan",
+                "omnipay"
+            ],
+            "support": {
+                "source": "https://github.com/torque-foxes/omnipay-etherscan/tree/master"
+            },
+            "time": "2022-09-21T22:24:25+00:00"
         },
         {
             "name": "graze/monolog-extensions",
@@ -8298,7 +8348,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "financialplugins/omnipay-etherscan": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
