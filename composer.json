@@ -18,7 +18,8 @@
         "jonom/focuspoint": "^4.0",
         "wilr/silverstripe-googlesitemaps": "^2.2",
         "silverstripe/silverstripe-omnipay": "^3",
-        "financialplugins/omnipay-etherscan": "dev-master"
+        "financialplugins/omnipay-etherscan": "dev-master",
+        "ext-http": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",
