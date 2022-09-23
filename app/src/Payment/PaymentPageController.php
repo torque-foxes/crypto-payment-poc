@@ -65,8 +65,6 @@ class PaymentPageController extends PageController
                 $this->createTransaction($data);
             }
         }
-
-        $this->redirect($this->Link());
     }
 
     public function getTransaction()
@@ -95,8 +93,6 @@ class PaymentPageController extends PageController
                 $this->createTransaction($data);
             }
         }
-
-        $this->redirect($this->Link());
     }
 
     protected function createTransaction($item): void

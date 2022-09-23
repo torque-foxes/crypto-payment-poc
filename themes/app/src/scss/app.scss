@@ -7,7 +7,6 @@
 @import '00_settings/variables';
 @import '00_settings/breakpoints';
 
-
 /**
  * ---------
  * Functions - global utility functions
@@ -15,7 +14,6 @@
  */
 
 @import '10_functions/*';
-
 
 /**
  * ------
@@ -25,8 +23,6 @@
 
 @import '20_mixins/*';
 
-
-
 /**
  * ----------
  * Frameworks - standard styling libraries to use
@@ -34,7 +30,6 @@
  */
 
 //@import '30_frameworks/bootstrap';
-
 
 /**
  * ----
@@ -52,7 +47,6 @@
 
 @import '50_templates/*';
 
-
 /**
  * ------
  * Blocks - elemental block styling
@@ -60,7 +54,6 @@
  */
 
 //@import '60_blocks/*';
-
 
 /**
  * ----------
@@ -70,7 +63,6 @@
 
 //@import '70_components/*';
 
-
 /**
  * -----------
  * Third-party - styling for third-party code, plugins or includes
@@ -78,7 +70,6 @@
  */
 
 @import '80_third-party/*';
-
 
 /**
  * ---------
@@ -90,32 +81,33 @@
 
 @import '90_overrides/*';
 
-.custom-app{
+.custom-app {
   height: 100vh;
-
-  padding: 0 2rem ;
+  padding: 0 2rem;
   color: grey;
 }
-.custom-container{
-     height: 80%;
+
+.custom-container {
+  height: 80%;
 }
+
 header {
-   a {
-     text-decoration: none;
-     color:gray;
-     font-weight: 600;
-   }
+  a {
+    text-decoration: none;
+    color: gray;
+    font-weight: 600;
+  }
 
   .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    .navbar_list{
+    .navbar_list {
       display: flex;
       list-style: none;
 
-      li{
+      li {
         margin: 1rem;
       }
     }

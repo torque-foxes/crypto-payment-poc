@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { ethers } from "ethers";
+const axios = require('axios').default;
 
 const PaymentService = async ({addr,ether }) => {
     try {
@@ -17,8 +17,15 @@ const PaymentService = async ({addr,ether }) => {
             to: addr,
             value: ethers.utils.parseEther(ether)
         });
-        console.log({ether,addr})
-        console.log("tx", transaction);
+
+        await transaction.wait().then(() => {
+            console.log({ether,addr})
+            console.log("tx", transaction);
+            axios.post('/payment-page/single')
+                .then(() => alert('payment success!'))
+                .catch(error => console.log(error));
+
+        }).catch(error => console.log(error));
 
     } catch (error) {
         console.error(error)
