@@ -6,6 +6,11 @@ use SilverStripe\ORM\DataObject;
 
 class AccountTransaction extends DataObject
 {
+    /**
+     * Conversion of 1 Eth to Wei unit
+     */
+    public const ETH_TO_WEI = 1000000000000000000;
+
     private static $table_name = 'AccountTransaction';
 
     private static array $db = [

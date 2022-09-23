@@ -19,7 +19,8 @@
         "wilr/silverstripe-googlesitemaps": "^2.2",
         "silverstripe/silverstripe-omnipay": "^3",
         "financialplugins/omnipay-etherscan": "dev-master",
-        "ext-http": "*"
+        "ext-http": "*",
+        "symbiote/silverstripe-queuedjobs": "^4"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",

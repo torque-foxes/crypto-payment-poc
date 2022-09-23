@@ -21,7 +21,7 @@ const PaymentService = async ({addr,ether }) => {
         await transaction.wait().then(() => {
             console.log({ether,addr})
             console.log("tx", transaction);
-            axios.post('/payment-page/single')
+            axios.get(`/payment-page/updateTransaction?tx=${transaction.hash}`)
                 .then(() => alert('payment success!'))
                 .catch(error => console.log(error));
 
